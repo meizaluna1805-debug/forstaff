@@ -265,6 +265,10 @@
         padding-bottom: 12px;
     }
 
+    .fs-client-track img:nth-child(n+6) {
+        display: none;
+    }
+
     .fs-navbar-collapse {
         flex-basis: 100%;
         margin-left: 0;
@@ -294,6 +298,9 @@
     .fs-footer-cta-inner {
         flex-direction: column;
         align-items: flex-start;
+    }
+    .fs-client-track img:nth-child(n+4) {
+        display: none;
     }
 
     .fs-footer-grid {
@@ -438,4 +445,861 @@
 }
 .fs-footer-company p {
     color: #7182a3;
+}
+
+
+/* Hero */
+.fs-hero-home {
+    width: 100%;
+    overflow: hidden;
+    background: linear-gradient(90deg, #f7f9fc 0%, #f3f6fb 100%);
+    padding: 38px 0 34px;
+}
+
+.fs-home-container {
+    width: min(100% - 48px, 1260px);
+    margin-inline: auto;
+}
+
+.fs-hero-grid {
+    display: grid;
+    grid-template-columns: 42fr 58fr;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Konten hero */
+.fs-hero-content {
+    position: relative;
+    z-index: 2;
+    padding-top: 8px;
+}
+
+.fs-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 10px 24px;
+    border-radius: 999px;
+    background: #eaf1fb;
+    color: #194A97;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: .2px;
+    margin-bottom: 18px;
+}
+
+.fs-hero-content h1 {
+    margin: 0 0 18px;
+    color: #0f1b3d;
+    font-size: 64px;
+    line-height: 1.02;
+    font-weight: 800;
+    letter-spacing: -1.2px;
+}
+
+.fs-hero-content p {
+    margin: 0;
+    max-width: 500px;
+    color: #5e6f89;
+    font-size: 18px;
+    line-height: 1.72;
+}
+
+/* Tombol hero */
+.fs-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-top: 24px;
+}
+
+.fs-primary-btn,
+.fs-secondary-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0 26px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fs-primary-btn {
+    background: #194A97;
+    border: 1px solid #194A97;
+    color: white;
+}
+
+.fs-secondary-btn {
+    background: white;
+    border: 1px solid #194A97;
+    color: #194A97;
+}
+
+/* Statistik */
+.fs-stat-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 34px;
+    margin-top: 26px;
+}
+
+.fs-stat-row strong {
+    display: block;
+    margin-bottom: 4px;
+    color: #0f1b3d;
+    font-size: 19px;
+    font-weight: 800;
+}
+
+.fs-stat-row span {
+    display: block;
+    color: #66758d;
+    font-size: 13px;
+    line-height: 1.45;
+}
+
+/* Area perangkat */
+.fs-device-area {
+    position: relative;
+    height: 500px;
+    overflow: visible;
+}
+
+.fs-device-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.fs-device-bg::before {
+    content: "";
+    position: absolute;
+    width: 520px;
+    height: 520px;
+    right: 70px;
+    top: 0;
+    border-radius: 46% 54% 56% 44% / 44% 42% 58% 56%;
+    border: 1px solid rgba(25, 74, 151, .16);
+    background: linear-gradient(145deg, #dceafe 0%, #edf5ff 100%);
+    transform: rotate(-12deg);
+}
+
+.fs-device-bg::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: 0;
+    top: 90px;
+    border-radius: 58% 42% 49% 51% / 51% 45% 55% 49%;
+    background: linear-gradient(150deg, rgba(161, 197, 249, .62), rgba(223, 238, 255, .4));
+    transform: rotate(16deg);
+}
+
+.fs-device-wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+.fs-device-wrap::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    right: 0;
+    top: 30px;
+    background-image: radial-gradient(
+        rgba(25, 74, 151, .24) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 12px 12px;
+}
+
+/* Laptop dan ponsel */
+.fs-home-laptop {
+    position: absolute;
+    width: 500px;
+    right: 160px;
+    top: 85px;
+    z-index: 3;
+    animation: fsLaptopFloat 5.5s ease-in-out infinite;
+    filter: drop-shadow(0 20px 34px rgba(28, 46, 88, .18));
+}
+
+.fs-home-phone {
+    position: absolute;
+    width: 175px;
+    right: 15px;
+    top: 145px;
+    z-index: 4;
+    animation: fsPhoneFloat 4.8s ease-in-out infinite;
+    filter: drop-shadow(0 14px 26px rgba(28, 46, 88, .18));
+}
+
+/* Animasi */
+@keyframes fsLaptopFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes fsPhoneFloat {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fsLaptopFloatMobile {
+    0%, 100% {
+        transform: translateX(50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(-8px);
+    }
+}
+
+/* Solusi */
+.fs-solusi {
+    padding: 12px 0 0;
+    background: transparent;
+}
+
+.fs-solusi-box {
+    background: #ffffff;
+    border: 1px solid #e6edf7;
+    border-radius: 18px;
+    padding: 24px 20px 18px;
+    box-shadow: 0 10px 24px rgba(20, 41, 86, .04);
+}
+
+.fs-solusi h2 {
+    margin: 0 0 20px;
+    text-align: center;
+    color: #1a2340;
+    font-size: 22px;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.fs-solusi-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+}
+
+.fs-solusi-card {
+    min-height: 116px;
+    background: #f4f8fc;
+    border: 1px solid #dfe8f4;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 10px;
+    text-align: center;
+}
+
+/* Ikon solusi */
+.fs-icon {
+    width: 42px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.fs-icon svg {
+    width: 38px;
+    height: 38px;
+    stroke: #194A97;
+    fill: none;
+    stroke-width: 1.9;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    display: block;
+}
+
+.fs-solusi-card span {
+    color: #4f607a;
+    font-size: 13px;
+    line-height: 1.35;
+    font-weight: 500;
+}
+
+/* Tautan fitur */
+.fs-feature-more {
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.fs-feature-more a {
+    color: #194A97;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+    text-decoration: none !important;
+}
+
+.fs-feature-more a:hover {
+    color: #194A97;
+    text-decoration: none !important;
+}
+
+/* Laptop kecil */
+@media (max-width: 1366px) {
+    .fs-hero-content h1 {
+        font-size: 58px;
+    }
+
+    .fs-home-laptop {
+        width: 470px;
+        right: 150px;
+        top: 90px;
+    }
+
+    .fs-home-phone {
+        width: 165px;
+        right: 15px;
+        top: 145px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+
+    .fs-hero-home {
+        padding: 34px 0 28px;
+    }
+
+    .fs-home-container {
+        width: min(100% - 40px, 1260px);
+    }
+
+    .fs-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fs-hero-content h1 {
+        font-size: 52px;
+    }
+
+    .fs-hero-content p {
+        max-width: 650px;
+    }
+
+    .fs-device-area {
+        height: 430px;
+    }
+
+    .fs-device-bg::before {
+        width: 430px;
+        height: 430px;
+        right: 80px;
+    }
+
+    .fs-device-bg::after {
+        width: 260px;
+        height: 260px;
+        right: 0;
+        top: 90px;
+    }
+
+    .fs-device-wrap::before {
+        right: 12px;
+        top: 30px;
+    }
+
+    .fs-home-laptop {
+        width: 430px;
+        right: 145px;
+        top: 70px;
+    }
+
+    .fs-home-phone {
+        width: 155px;
+        right: 15px;
+        top: 115px;
+    }
+
+    .fs-solusi-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Mobile */
+@media (max-width: 767.98px) {
+    .fs-hero-home {
+        padding: 28px 0 24px;
+    }
+
+    .fs-home-container {
+        width: min(100% - 28px, 1260px);
+    }
+
+    .fs-hero-content {
+        text-align: center;
+    }
+
+    .fs-badge {
+        min-height: 38px;
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+
+    .fs-hero-content h1 {
+        font-size: 36px;
+        line-height: 1.08;
+    }
+
+    .fs-hero-content p {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .fs-hero-actions {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .fs-primary-btn,
+    .fs-secondary-btn {
+        width: 100%;
+    }
+
+    .fs-stat-row {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 12px;
+        text-align: center;
+    }
+
+    .fs-stat-row strong {
+        font-size: 17px;
+    }
+
+    .fs-stat-row span {
+        font-size: 11px;
+    }
+
+    /* Perangkat mobile */
+    .fs-device-area {
+        height: 280px;
+        margin-top: 10px;
+    }
+
+    .fs-device-bg::before {
+        width: 290px;
+        height: 290px;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .fs-device-bg::after {
+        width: 130px;
+        height: 130px;
+        right: calc(50% - 80px);
+        top: 90px;
+    }
+
+    .fs-device-wrap::before {
+        width: 100px;
+        height: 50px;
+        right: calc(50% - 145px);
+        top: 20px;
+        background-size: 9px 9px;
+    }
+
+    .fs-home-laptop {
+        width: 260px;
+        right: calc(50% + 30px);
+        top: 45px;
+        transform: translateX(50%);
+        animation-name: fsLaptopFloatMobile;
+    }
+
+    .fs-home-phone {
+        width: 95px;
+        right: calc(50% - 170px);
+        top: 70px;
+    }
+
+    /* Solusi mobile */
+    .fs-solusi-box {
+        padding: 20px 14px 18px;
+        border-radius: 16px;
+    }
+
+    .fs-solusi h2 {
+        font-size: 20px;
+    }
+
+    .fs-solusi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+
+    .fs-solusi-card {
+        min-height: 100px;
+    }
+
+    .fs-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .fs-icon svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Mobile kecil */
+@media (max-width: 480px) {
+    .fs-hero-content h1 {
+        font-size: 32px;
+    }
+
+    .fs-stat-row {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+
+    .fs-device-area {
+        height: 240px;
+    }
+
+    .fs-home-laptop {
+        width: 230px;
+        right: calc(50% + 25px);
+        top: 55px;
+    }
+
+    .fs-home-phone {
+        width: 85px;
+        right: calc(50% - 150px);
+        top: 75px;
+    }
+
+    .fs-solusi-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tentang Forstaff */
+.fs-about-preview {
+    padding: 70px 0 40px;
+}
+
+.fs-about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 35px;
+    align-items: center;
+}
+
+.fs-about-image img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+.fs-about-content {
+    background: white;
+    padding: 20px;
+}
+
+.fs-about-label {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    color: #194A97;
+    background: #eaf1fb;
+    padding: 6px 12px;
+    border-radius: 20px;
+}
+
+.fs-about-content h2 {
+    margin: 15px 0;
+    font-size: 34px;
+    line-height: 1.15;
+    color: #102049;
+}
+
+.fs-about-content p {
+    color: #66758d;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.fs-about-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.fs-about-content li {
+    margin-bottom: 10px;
+    color: #55657d;
+}
+
+.fs-about-content li span {
+    display: inline-flex;
+    width: 20px;
+    height: 20px;
+    align-items: center;
+    justify-content: center;
+    background: #194A97;
+    color: white;
+    border-radius: 50%;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+.fs-about-btn {
+    display: inline-flex;
+    padding: 10px 28px;
+    border: 1px solid #194A97;
+    border-radius: 6px;
+    color: #194A97;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* Logo klien */
+.fs-client-section {
+    margin-top: 36px;
+    padding: 32px 28px 36px;
+    border: 1px solid #dfe8f4;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(25, 74, 151, .06);
+}
+
+.fs-client-logo {
+    width: 100px;
+    height: 45px;
+    object-fit: contain;
+    opacity: .7;
+    flex-shrink: 0;
+}
+
+.fs-client-section h3 {
+    margin: 0 0 40px;
+    color: #102049;
+    font-family: inherit;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.3;
+    letter-spacing: -.4px;
+    text-align: center;
+}
+
+.fs-client-slider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.fs-client-track {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+.fs-client-track {
+    transition: opacity .18s ease;
+}
+
+.fs-client-track.is-transitioning {
+    opacity: 0;
+}
+
+.fs-client-arrow {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 50%;
+    background: #f1f5fb;
+    color: #194A97;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Artikel */
+.fs-article {
+    padding: 50px 0 70px;
+    background: #f5f8fc;
+}
+
+.fs-article > .fs-home-container {
+    padding: 26px 24px 24px;
+    border: 1px solid #dfe8f4;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(25, 74, 151, .06);
+}
+
+.fs-article-title {
+    text-align: center;
+    margin: 0 0 28px;
+    color: #102049;
+    font-size: 26px;
+    font-weight: 700;
+}
+
+.fs-article-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.fs-article-card {
+    display: flex;
+    flex-direction: column;
+    background: #ffffff;
+    border: 1px solid #e3ebf6;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: .25s ease;
+}
+
+.fs-article-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(25, 74, 151, .10);
+}
+
+.fs-article-image {
+    position: relative;
+    flex-shrink: 0;
+    width: 100%;
+    height: 90px;
+    overflow: hidden;
+}
+
+.fs-article-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fs-article-content {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 10px 18px 14px;
+}
+
+.fs-article-category {
+    position: absolute;
+    left: 18px;
+    bottom: 0;
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: 4px 4px 0 0;
+    background: #eaf1fb;
+    color: #194A97;
+    font-size: 11px;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+.fs-article-content h3 {
+    margin: 0 0 12px;
+    color: #172447;
+    font-size: 17px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.fs-article-meta {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px 26px;
+    margin-top: auto;
+    color: #71819b;
+    font-size: 13px;
+}
+
+.fs-article-meta span {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+}
+
+.fs-article-meta svg {
+    width: 14px;
+    height: 14px;
+    flex-shrink: 0;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+/* Artikel tablet */
+@media (max-width: 991px) {
+    .fs-article-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Artikel mobile */
+@media (max-width: 767px) {
+    .fs-client-section {
+        padding: 26px 16px 28px;
+        border-radius: 16px;
+    }
+
+    .fs-client-section h3 {
+        margin-bottom: 30px;
+        font-size: 22px;
+        letter-spacing: -.2px;
+    }
+
+    .fs-article {
+        padding: 40px 0;
+    }
+
+    .fs-article > .fs-home-container {
+        padding: 22px 14px;
+        border-radius: 16px;
+    }
+
+    .fs-article-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fs-article-title {
+        font-size: 22px;
+    }
 }
