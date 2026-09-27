@@ -1,0 +1,496 @@
+/* =========================
+   HARGA — HEADER
+========================= */
+
+.fs-pricing-hero {
+    position: relative;
+    overflow: hidden;
+    isolation: isolate;
+    background: #F3F8FF;
+    padding: 30px 0 28px;
+}
+
+.fs-pricing-hero::before,
+.fs-pricing-hero::after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
+    background: linear-gradient(145deg, #dcecff, #c9e1ff);
+}
+
+.fs-pricing-hero::before {
+    width: 260px;
+    height: 360px;
+    left: -50px;
+    top: -110px;
+    border-radius: 0;
+    clip-path: ellipse(90% 75% at 0% 100%);
+    transform: none;
+}
+
+.fs-pricing-hero::after {
+    width: 300px;
+    height: 260px;
+    right: -155px;
+    bottom: -170px;
+    border-radius: 55% 45% 48% 52%;
+    transform: rotate(-25deg);
+}
+
+.fs-pricing-hero-content {
+    position: relative;
+    text-align: center;
+}
+
+.fs-pricing-hero-content::before,
+.fs-pricing-hero-content::after {
+    content: "";
+    position: absolute;
+    width: 72px;
+    height: 52px;
+    background-image: radial-gradient(#b8d5f7 1px, transparent 1.5px);
+    background-size: 8px 8px;
+    pointer-events: none;
+}
+
+.fs-pricing-hero-content::before {
+    left: -15px;
+    bottom: -19px;
+}
+
+.fs-pricing-hero-content::after {
+    right: 5px;
+    top: -13px;
+}
+
+.fs-pricing-hero-label {
+    display: block;
+    margin-bottom: 10px;
+    color: #194A97;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+}
+
+.fs-pricing-hero h1 {
+    margin: 0 auto 10px;
+    color: #182346;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fs-pricing-hero p {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #63769b;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+/* HEADER HARGA — RESPONSIVE */
+@media (max-width: 767.98px) {
+    .fs-pricing-hero {
+        padding: 34px 0;
+    }
+
+    .fs-pricing-hero h1 {
+        font-size: 26px;
+    }
+
+    .fs-pricing-hero h1 br {
+        display: none;
+    }
+}
+
+/* =========================
+   HARGA — KARTU PAKET
+========================= */
+
+.fs-pricing-plans {
+    background: #ffffff;
+    padding: 22px 0 26px;
+}
+
+.fs-pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 18px;
+    align-items: start;
+    max-width: 1140px;
+    margin-inline: auto;
+}
+
+.fs-pricing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    min-height: 540px;
+    padding: 18px;
+    border: 1px solid #dce8f8;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 4px 16px rgba(25, 74, 151, 0.06);
+}
+
+.fs-pricing-card-popular {
+    border: 2px solid #194A97;
+}
+
+.fs-pricing-popular-badge {
+    position: absolute;
+    top: -13px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: #194A97;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.fs-pricing-card-heading > span {
+    color: #7182a3;
+    font-size: 13px;
+}
+
+.fs-pricing-card-heading h3 {
+    margin: 2px 0 7px;
+    color: #182346;
+    font-size: 19px;
+    font-weight: 700;
+}
+
+.fs-pricing-description {
+    min-height: 34px;
+    margin: 3px 0 9px;
+    color: #63769b;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+.fs-pricing-price {
+    margin: 0;
+    color: #194A97;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fs-pricing-period,
+.fs-pricing-minimum {
+    margin: 2px 0 0;
+    color: #63769b;
+    font-size: 12px;
+}
+
+/* =========================
+   KARTU HARGA — DAFTAR FITUR
+========================= */
+
+.fs-pricing-features-title {
+    margin: 0 0 10px;
+    color: #182346;
+    font-size: 14px;
+    line-height: 1.4;
+    font-weight: 700;
+}
+
+.fs-pricing-features ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fs-pricing-features li {
+    position: relative;
+    padding-left: 18px;
+    color: #526384;
+    font-size: 13px;
+    line-height: 1.55;
+}
+
+.fs-pricing-features li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    color: #2aaa73;
+    font-weight: 700;
+}
+
+.fs-pricing-more summary {
+    display: inline-block;
+    margin-top: 10px;
+    color: #194A97;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+    list-style: none;
+}
+
+.fs-pricing-more summary::-webkit-details-marker {
+    display: none;
+}
+
+.fs-pricing-more summary::marker {
+    content: "";
+}
+
+.fs-pricing-more ul {
+    margin-top: 0px;
+}
+
+/* Ketika fitur dibuka, hilangkan tautan awal */
+.fs-pricing-more[open] > summary {
+    display: none;
+}
+
+.fs-pricing-more-close {
+    display: block;
+    margin-top: 12px;
+    padding: 6px 12px;
+    border: 1px solid #cbdcf3;
+    border-radius: 6px;
+    background: #F3F8FF;
+    color: #194A97;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =========================
+   KARTU HARGA — TOMBOL
+========================= */
+
+.fs-pricing-actions {
+    display: grid;
+    gap: 9px;
+    margin-top: auto;
+    padding-top: 18px;
+}
+
+.fs-pricing-buy {
+    width: 100%;
+    padding: 9px 12px;
+    border: 1px solid #194A97;
+    border-radius: 7px;
+    background: #194A97;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.fs-pricing-buy:disabled {
+    opacity: 1;
+    cursor: default;
+}
+
+.fs-pricing-detail-link {
+    width: 100%;
+    padding: 2px;
+    border: 0;
+    background: transparent;
+    color: #194A97;
+    font-size: 12px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* =========================
+   KARTU HARGA — RESPONSIVE
+========================= */
+
+@media (max-width: 991.98px) {
+    .fs-pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 520px;
+        gap: 22px;
+    }
+
+    .fs-pricing-card {
+        min-height: 0;
+    }
+
+    .fs-pricing-actions {
+        margin-top: 24px;
+    }
+}
+
+
+/* =========================
+   HARGA — KONSULTASI PAKET
+========================= */
+
+.fs-pricing-consultation {
+    background: #ffffff;
+    padding: 0 0 36px;
+}
+
+.fs-pricing-consultation-box {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 26px;
+    border-radius: 14px;
+    background: #F3F8FF;
+}
+
+.fs-pricing-consultation-icon {
+    display: grid;
+    place-items: center;
+    flex: 0 0 48px;
+    width: 48px;
+    height: 48px;
+    border-radius: 10px;
+    background: #e1efff;
+    color: #194A97;
+}
+
+.fs-pricing-consultation-icon svg {
+    width: 30px;
+    height: 30px;
+}
+
+.fs-pricing-consultation-text {
+    flex: 1;
+    min-width: 0;
+}
+
+.fs-pricing-consultation-text h2 {
+    margin: 0 0 3px;
+    color: #182346;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-pricing-consultation-text p {
+    margin: 0;
+    color: #63769b;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.fs-pricing-consultation-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    flex-shrink: 0;
+    padding: 10px 18px;
+    border: 1px solid #194A97;
+    border-radius: 8px;
+    background: #ffffff;
+    color: #194A97;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fs-pricing-consultation-button:hover {
+    background: #eaf3ff;
+    color: #194A97;
+}
+
+/* KONSULTASI PAKET — RESPONSIVE HP */
+@media (max-width: 767.98px) {
+    .fs-pricing-consultation-box {
+        flex-wrap: wrap;
+        padding: 18px;
+    }
+
+    .fs-pricing-consultation-text {
+        flex-basis: calc(100% - 64px);
+    }
+
+    .fs-pricing-consultation-button {
+        width: 100%;
+    }
+}
+
+/* =========================
+   HARGA — FAQ
+========================= */
+
+.fs-pricing-faq {
+    background: #ffffff;
+    padding: 0 0 28px;
+}
+
+.fs-pricing-faq h2 {
+    margin: 0 0 12px;
+    color: #182346;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-pricing-faq-list {
+    display: grid;
+    gap: 7px;
+}
+
+.fs-pricing-faq-item {
+    border: 1px solid #dce8f8;
+    border-radius: 10px;
+    background: #ffffff;
+    color: #526384;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.fs-pricing-faq-item summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    min-height: 42px;
+    padding: 8px 16px;
+    cursor: pointer;
+    list-style: none;
+}
+
+.fs-pricing-faq-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.fs-pricing-faq-item summary::marker {
+    content: "";
+}
+
+.fs-pricing-faq-plus {
+    flex-shrink: 0;
+    color: #194A97;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.fs-pricing-faq-plus::before {
+    content: "+";
+}
+
+.fs-pricing-faq-item[open] .fs-pricing-faq-plus::before {
+    content: "−";
+}
+
+.fs-pricing-faq-item p {
+    margin: 0;
+    padding: 0 16px 14px;
+    color: #63769b;
+}
+
+/* FAQ — RESPONSIVE HP */
+@media (max-width: 767.98px) {
+    .fs-pricing-faq h2 {
+        font-size: 19px;
+    }
+
+    .fs-pricing-faq-item summary {
+        min-height: 46px;
+    }
+}
