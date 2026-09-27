@@ -1,5 +1,5 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
-
+@import './pages/about.css';
 :root {
     --fs-primary: #194A97;
     --fs-white: #FFFFFF;
@@ -1303,3 +1303,4 @@
         font-size: 22px;
     }
 }
+

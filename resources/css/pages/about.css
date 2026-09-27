@@ -1,0 +1,852 @@
+/* =========================
+   ABOUT HERO
+========================= */
+
+.fs-about-hero-section {
+
+    background: #f3f8ff;
+
+    overflow: hidden;
+
+}
+
+
+.fs-about-hero {
+    position: relative;
+    min-height: 310px;
+
+    display: grid;
+    grid-template-columns: 40% 60%;
+    align-items: stretch;
+
+    background: 
+    linear-gradient(
+        90deg,
+        #f3f8ff 0%,
+        #f3f8ff 42%,
+        rgba(243,248,255,0.35) 60%,
+        rgba(243,248,255,0) 100%
+    );
+
+}
+
+/* =========================
+   CONTENT LEFT
+========================= */
+
+.fs-about-hero-content {
+
+    padding: 45px 0;
+
+    position: relative;
+
+    z-index: 2;
+
+}
+
+
+.fs-breadcrumb {
+
+    color:#7182a3;
+
+    font-size:13px;
+
+    margin-bottom:22px;
+
+}
+
+
+.fs-breadcrumb span {
+
+    margin:0 8px;
+
+}
+
+
+
+.fs-about-badge {
+
+    display:inline-flex;
+
+    background:#dcecff;
+
+    color:#194A97;
+
+    padding:6px 15px;
+
+    border-radius:20px;
+
+    font-size:12px;
+
+    font-weight:600;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.fs-about-hero h1 {
+
+    color:#182346;
+
+    font-size:42px;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    margin-bottom:18px;
+
+}
+
+
+
+.fs-about-hero p {
+
+    max-width:420px;
+
+    color:#63769b;
+
+    font-size:16px;
+
+    line-height:1.6;
+
+}
+
+
+
+/* =========================
+   IMAGE RIGHT
+========================= */
+
+.fs-about-hero-image {
+    height: 390px;
+    position: relative;
+    margin-right: -46px;
+    margin-bottom: 0;
+}
+
+
+.fs-about-hero-image img {
+    display: block;
+
+    width:100%;
+
+    height:100%;
+
+    object-fit:cover;
+
+    object-position:center;
+
+}
+
+
+
+/* HALUSKAN TRANSISI GAMBAR */
+
+.fs-about-hero-image::before {
+
+    content:"";
+
+    position:absolute;
+
+    left:-120px;
+
+    top:0;
+
+    width:150px;
+
+    height:100%;
+
+
+    background:
+    linear-gradient(
+        90deg,
+        #f3f8ff 0%,
+        rgba(243,248,255,0) 100%
+    );
+
+
+    z-index:1;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+
+@media(max-width:991.98px){
+
+
+    .fs-about-hero {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .fs-about-hero-content {
+
+        padding: 45px 0 30px;
+
+    }
+
+
+    .fs-about-hero-image {
+
+        height: 330px;
+
+    }
+
+
+}
+
+
+
+
+/* =========================
+   ABOUT STATISTIC
+========================= */
+
+
+.fs-about-statistic{
+
+    background:#ffffff;
+
+    padding:15px 0 20px;
+
+}
+
+
+
+.fs-about-statistic-wrapper{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    align-items:center;
+
+    padding:10px 0;
+
+    margin-left:-8px;
+
+}
+
+
+
+.fs-about-stat-item{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    padding:0 25px 0 0;
+
+    min-height:65px;
+
+    border-right:1px solid #e5edf8;
+
+}
+
+
+
+.fs-about-stat-item:not(:first-child){
+
+    padding-left:20px;
+
+}
+
+
+
+.fs-about-stat-item:last-child{
+
+    border-right:none;
+
+}
+
+
+
+.fs-about-stat-icon{
+
+    width:46px;
+
+    height:46px;
+
+    border-radius:50%;
+
+    background:#eaf3ff;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    color:#194A97;
+
+}
+
+
+
+.fs-about-stat-icon svg{
+
+    width:30px;
+
+    height:30px;
+
+}
+
+
+.fs-about-stat-icon svg path,
+.fs-about-stat-icon svg circle{
+
+    stroke-width:2.5;
+
+}
+.fs-about-stat-item h3{
+
+    margin:0;
+
+    color:#194A97;
+
+    font-size:24px;
+
+    font-weight:700;
+
+    line-height:1.2;
+
+}
+
+
+
+.fs-about-stat-item p{
+
+    margin:4px 0 0;
+
+    color:#7182a3;
+
+    font-size:12px;
+
+    line-height:1.45;
+
+}
+
+
+
+.fs-stat-industry{
+
+    font-size:17px!important;
+
+}
+
+
+
+
+
+/* =========================
+   ABOUT STORY
+========================= */
+
+.fs-about-story{
+    padding:0 0 45px;
+    background:#ffffff;
+}
+
+
+.fs-about-story-wrapper{
+    display:grid;
+    grid-template-columns:minmax(0, 45fr) minmax(0, 55fr);
+    align-items:start;
+    gap:45px;
+}
+
+
+/* IMAGE */
+
+.fs-about-story-image img{
+
+    width:100%;
+
+    height:300px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+}
+
+
+/* CONTENT */
+
+.fs-about-story-content{
+
+    padding-top:5px;
+
+}
+
+.fs-about-story-badge{
+    display:inline-flex;
+    align-items:center;
+    background:#eaf3ff;
+    color:#194A97;
+    padding:5px 13px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:600;
+    margin-bottom:14px;
+}
+
+
+
+.fs-about-story-content h2{
+
+    color:#182346;
+
+    font-size:38px;
+
+    line-height:1.15;
+
+    font-weight:700;
+
+    margin-bottom:15px;
+
+}
+
+
+.fs-about-story-content h2 span{
+
+    color:#194A97;
+
+}
+
+
+
+.fs-about-story-content p{
+
+    max-width:430px;
+
+    color:#63769b;
+
+    font-size:15px;
+
+    line-height:1.65;
+
+    margin-bottom:18px;
+
+    text-align:justify;
+}
+
+@media(max-width:767.98px){
+
+
+    .fs-about-hero h1 {
+
+        font-size: 34px;
+
+    }
+
+
+}
+
+/* =========================
+   OUR PURPOSE
+========================= */
+
+.fs-about-purpose{
+    background:#f3f8ff;
+    padding:18px 0 22px;
+}
+
+.fs-about-purpose-layout{
+    display:grid;
+    grid-template-columns:minmax(0, 3.4fr) minmax(0, 1fr);
+    gap:42px;
+    align-items:start;
+}
+
+.fs-about-purpose-main{
+    min-width:0;
+}
+
+.fs-about-purpose-badge{
+    display:inline-flex;
+    align-items:center;
+    padding:5px 13px;
+    border-radius:20px;
+    background:#dcecff;
+    color:#194A97;
+    font-size:11px;
+    font-weight:600;
+    line-height:1.2;
+}
+
+.fs-about-purpose-main h2{
+    margin:8px 0 5px;
+    color:#182346;
+    font-size:32px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.fs-about-purpose-main h2 span{
+    color:#194A97;
+}
+
+.fs-about-purpose-intro{
+    margin:0 0 10px;
+    color:#63769b;
+    font-size:14px;
+    line-height:1.5;
+}
+
+.fs-about-purpose-cards{
+    display:grid;
+    grid-template-columns:repeat(3, minmax(0, 1fr));
+    gap:14px;
+}
+
+.fs-about-purpose-card{
+    min-width:0;
+    min-height:145px;
+    padding:13px 15px;
+    border-radius:11px;
+    background:#ffffff;
+}
+
+.fs-about-purpose-card svg{
+    display:block;
+    width:26px;
+    height:26px;
+    margin-bottom:9px;
+    color:#194A97;
+}
+
+.fs-about-purpose-card p{
+    margin:0;
+    color:#526384;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.fs-about-purpose-card ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+
+.fs-about-purpose-card li{
+    position:relative;
+    padding-left:17px;
+    color:#526384;
+    font-size:14px;
+    line-height:1.4;
+}
+
+.fs-about-purpose-card li::before{
+    content:"✓";
+    position:absolute;
+    left:0;
+    top:2px;
+    display:grid;
+    place-items:center;
+    width:12px;
+    height:12px;
+    border-radius:50%;
+    background:#194A97;
+    color:#ffffff;
+    font-size:9px;
+    font-weight:700;
+}
+
+.fs-about-purpose-quote{
+    margin:5px 0 0;
+    padding:0;
+}
+
+.fs-about-purpose-quote-mark{
+    display:block;
+    height:40px;
+    color:#c5ddfb;
+    font-family:Georgia, serif;
+    font-size:72px;
+    line-height:.85;
+}
+
+.fs-about-purpose-quote p{
+    max-width:230px;
+    margin:4px 0 0;
+    color:#526384;
+    font-size:16px;
+    line-height:1.4;
+}
+
+.fs-about-purpose-quote p::after{
+    content:"";
+    display:block;
+    width:40px;
+    height:3px;
+    margin-top:14px;
+    background:#194A97;
+}
+
+
+
+
+
+/* =========================
+   OUR TEAM
+========================= */
+
+.fs-about-team{
+    background:#ffffff;
+    padding:18px 0 12px;
+}
+
+.fs-about-team-layout{
+    display:grid;
+    grid-template-columns:minmax(0, 1.1fr) minmax(0, 1.9fr);
+    align-items:center;
+    gap:36px;
+}
+
+.fs-about-team-badge{
+    display:inline-flex;
+    padding:5px 13px;
+    border-radius:20px;
+    background:#eaf3ff;
+    color:#194A97;
+    font-size:11px;
+    font-weight:600;
+}
+
+.fs-about-team-content h2{
+    margin:10px 0 8px;
+    color:#182346;
+    font-size:32px;
+    line-height:1.2;
+    font-weight:700;
+}
+
+.fs-about-team-content h2 span{
+    color:#194A97;
+}
+
+.fs-about-team-content p{
+    max-width:390px;
+    margin:0 0 12px;
+    color:#63769b;
+    font-size:14px;
+    line-height:1.45;
+}
+
+.fs-about-team-button{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+    padding:8px 16px;
+    border:1px solid #194A97;
+    border-radius:5px;
+    background:#ffffff;
+    color:#194A97;
+    font-size:13px;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.fs-about-team-button:hover{
+    background:#f3f8ff;
+    color:#194A97;
+}
+
+.fs-about-team-image img{
+    display:block;
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:12px;
+}
+
+/* =========================
+   ABOUT METRICS
+========================= */
+
+.fs-about-metrics{
+    background:#ffffff;
+    padding:0 0 12px;
+}
+
+.fs-about-metrics-grid{
+    display:grid;
+    grid-template-columns:repeat(4, minmax(0, 1fr));
+    padding:14px 0;
+    border-radius:12px;
+    background:#f3f8ff;
+}
+
+.fs-about-metrics-item{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    min-width:0;
+    padding:0 12px;
+    text-align:center;
+    border-right:1px solid #dbe7f6;
+}
+
+.fs-about-metrics-item:last-child{
+    border-right:0;
+}
+
+.fs-about-metrics-item strong{
+    color:#194A97;
+    font-size:24px;
+    line-height:1.2;
+}
+
+.fs-about-metrics-item span{
+    margin-top:3px;
+    color:#63769b;
+    font-size:12px;
+    line-height:1.35;
+}
+
+
+
+
+/* =========================
+   ABOUT RESPONSIVE
+========================= */
+
+@media(max-width:991.98px){
+    /* Tampilkan seluruh gambar hero pada tablet dan HP */
+    .fs-about-hero-image{
+        margin-right:0;
+        margin-bottom:0;
+        height:auto;
+    }
+
+    .fs-about-hero-image img{
+        display:block;
+        height:auto;
+        object-fit:contain;
+    }
+    .fs-about-hero-image::before{
+        display:none;
+    }
+
+    .fs-about-story-wrapper{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .fs-about-story-image img{
+        height:auto;
+        aspect-ratio:16 / 9;
+    }
+
+    .fs-about-purpose-layout{
+        grid-template-columns:1fr;
+        gap:22px;
+    }
+
+    .fs-about-purpose-quote p{
+        max-width:520px;
+    }
+
+    /* OUR TEAM: teks di atas, foto di bawah */
+    .fs-about-team-layout{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .fs-about-team-image img{
+        height:auto;
+        aspect-ratio:16 / 9;
+    }
+    
+
+        /* ABOUT METRICS: dua kolom pada tablet */
+    .fs-about-metrics-grid{
+        grid-template-columns:repeat(2, minmax(0, 1fr));
+    }
+
+    .fs-about-metrics-item{
+        padding:14px 10px;
+    }
+
+    .fs-about-metrics-item:nth-child(2){
+        border-right:0;
+    }
+
+    .fs-about-metrics-item:nth-child(-n+2){
+        border-bottom:1px solid #dbe7f6;
+    }
+}
+
+@media(max-width:767.98px){
+    .fs-about-statistic-wrapper{
+        grid-template-columns:1fr;
+        margin-left:0;
+    }
+
+    .fs-about-stat-item,
+    .fs-about-stat-item:not(:first-child){
+        padding:14px 0;
+        border-right:0;
+        border-bottom:1px solid #e5edf8;
+    }
+
+    .fs-about-stat-item:last-child{
+        border-bottom:0;
+    }
+
+    .fs-about-stat-icon{
+        flex-shrink:0;
+    }
+
+    .fs-about-story-content p{
+        max-width:100%;
+        text-align:left;
+    }
+
+    .fs-about-purpose{
+        padding:30px 0;
+    }
+
+    .fs-about-purpose-main h2{
+        font-size:28px;
+    }
+
+    .fs-about-purpose-cards{
+        grid-template-columns:1fr;
+    }
+
+    .fs-about-purpose-card{
+        min-height:auto;
+    }
+
+    /* OUR TEAM: jarak dan judul pada HP */
+    .fs-about-team{
+        padding:30px 0;
+    }
+
+    .fs-about-team-content h2{
+        font-size:28px;
+    }
+
+        /* ABOUT METRICS: ukuran angka dan label pada HP */
+    .fs-about-metrics-item strong{
+        font-size:22px;
+    }
+
+    .fs-about-metrics-item span{
+        font-size:11px;
+    }
+}
