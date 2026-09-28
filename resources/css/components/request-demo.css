@@ -321,8 +321,9 @@
     }
 
     .fs-request-demo-brand img {
-        width: 36px;
-        height: 36px;
+    width: 100px;
+    height: auto;
+    object-fit: contain;
     }
 
     .fs-request-demo-main h2 {

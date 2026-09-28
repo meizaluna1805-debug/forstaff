@@ -11,7 +11,7 @@
             {{-- PANEL KIRI: INFORMASI DAN GAMBAR DEVICES --}}
             <div class="fs-request-demo-panel">
                 <div class="fs-request-demo-panel-copy">
-                    <h3>Kelola SDM<br>Lebih Mudah<br>Bersama Forstaff</h3>
+                    <h3>Kelola SDM <br>Lebih Mudah <br>Bersama Forstaff</h3>
                     <p>
                         Kenali fitur Forstaff dan temukan solusi yang sesuai
                         dengan kebutuhan tim Anda.
@@ -29,7 +29,7 @@
             <div class="fs-request-demo-main">
                 <div class="fs-request-demo-top">
                     <div class="fs-request-demo-brand">
-                        <img src="{{ asset('images/forstaff-logo.png') }}" alt="">
+                        <img src="{{ asset('images/forstaff-logo.png') }}" alt="Forstaff">
                     </div>
 
                     <button
@@ -104,23 +104,28 @@
                         >
                     </div>
 
+                    {{-- Jumlah karyawan diisi sendiri --}}
                     <div class="fs-request-demo-field fs-request-demo-field-wide">
                         <label for="demoEmployeeCount">Jumlah Karyawan</label>
-                        <select id="demoEmployeeCount" name="employee_count">
-                            <option value="" selected disabled>
-                                Pilih jumlah karyawan
-                            </option>
-                            {{-- Pilihan ditambahkan setelah datanya dipastikan. --}}
-                        </select>
+                        <input
+                            id="demoEmployeeCount"
+                            name="employee_count"
+                            type="number"
+                            min="1"
+                            inputmode="numeric"
+                            placeholder="Contoh: 25"
+                        >
                     </div>
 
+                    {{-- Pilihan kebutuhan mengikuti paket Forstaff yang sudah ada --}}
                     <div class="fs-request-demo-field fs-request-demo-field-wide">
                         <label for="demoFocus">Kebutuhan / Fokus Demo</label>
                         <select id="demoFocus" name="demo_focus">
-                            <option value="" selected disabled>
-                                Pilih kebutuhan Anda
-                            </option>
-                            {{-- Pilihan ditambahkan setelah datanya dipastikan. --}}
+                            <option value="" selected disabled>Pilih kebutuhan Anda</option>
+                            <option value="attendance">Absensi dan kehadiran karyawan</option>
+                            <option value="attendance_slip_gaji">Absensi dan slip gaji</option>
+                            <option value="full_hris">Manajemen HR lengkap (Full HRIS)</option>
+                            <option value="konsultasi">Belum yakin, ingin konsultasi</option>
                         </select>
                     </div>
 
