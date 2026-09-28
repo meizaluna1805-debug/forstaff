@@ -1,0 +1,336 @@
+/* =========================
+   REQUEST DEMO — GLOBAL MODAL
+========================= */
+
+.fs-request-demo-dialog {
+    width: calc(100% - 32px);
+    max-width: 1084px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.fs-demo-modal.fs-request-demo-content {
+    display: grid;
+    grid-template-columns: 38% minmax(0, 62%);
+    min-height: 790px;
+    overflow: hidden;
+    border: 0;
+    border-radius: 12px;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(10, 35, 80, 0.2);
+}
+
+/* PANEL KIRI */
+
+.fs-request-demo-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    padding: 90px 40px 0;
+    background: #194A97;
+    color: #ffffff;
+}
+
+.fs-request-demo-panel::before,
+.fs-request-demo-panel::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    background: rgba(104, 172, 255, 0.28);
+}
+
+.fs-request-demo-panel::before {
+    width: 280px;
+    height: 280px;
+    right: -110px;
+    bottom: -100px;
+}
+
+.fs-request-demo-panel::after {
+    width: 190px;
+    height: 190px;
+    left: -105px;
+    bottom: 170px;
+}
+
+.fs-request-demo-panel-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.fs-request-demo-panel h3 {
+    margin: 0 0 18px;
+    color: #ffffff;
+    font-size: 43px;
+    font-weight: 700;
+    line-height: 1.08;
+}
+
+.fs-request-demo-panel p {
+    max-width: 340px;
+    margin: 0;
+    color: #ffffff;
+    font-size: 19px;
+    line-height: 1.45;
+}
+
+.fs-request-demo-devices {
+    position: relative;
+    z-index: 1;
+    display: block;
+    width: 115%;
+    max-width: none;
+    height: auto;
+    margin: auto 0 30px -7%;
+    object-fit: contain;
+}
+
+/* PANEL KANAN */
+
+.fs-request-demo-main {
+    min-width: 0;
+    padding: 20px 34px 26px 44px;
+}
+
+.fs-request-demo-top {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 18px;
+}
+
+.fs-request-demo-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #194A97;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.fs-request-demo-brand img {
+    width: 130px;
+    height: 42px;
+}
+
+.fs-request-demo-close.btn-close {
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    margin: 0;
+    padding: 0;
+    border-radius: 50%;
+    background-color: #eef0fa;
+    opacity: 1;
+}
+
+.fs-request-demo-main h2 {
+    margin: 0 0 8px;
+    color: #182346;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+.fs-request-demo-intro {
+    margin: 0 0 15px;
+    color: #304b83;
+    font-size: 18px;
+    line-height: 1.4;
+}
+
+/* FORM */
+
+.fs-request-demo-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 26px;
+    row-gap: 12px;
+}
+
+.fs-request-demo-field {
+    min-width: 0;
+}
+
+.fs-request-demo-field-wide {
+    grid-column: 1 / -1;
+}
+
+.fs-request-demo-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: #182346;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.fs-request-demo-field label span {
+    color: #e53935;
+}
+
+.fs-request-demo-field input,
+.fs-request-demo-field select,
+.fs-request-demo-field textarea {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    border: 1px solid #b9d3ff;
+    border-radius: 6px;
+    background-color: #ffffff;
+    color: #182346;
+    font: inherit;
+    font-size: 15px;
+}
+
+.fs-request-demo-field input,
+.fs-request-demo-field select {
+    height: 43px;
+    padding: 0 15px;
+}
+
+.fs-request-demo-field textarea {
+    min-height: 74px;
+    padding: 11px 15px;
+    resize: vertical;
+}
+
+.fs-request-demo-field input::placeholder,
+.fs-request-demo-field textarea::placeholder {
+    color: #8192c8;
+}
+
+.fs-request-demo-field input:focus,
+.fs-request-demo-field select:focus,
+.fs-request-demo-field textarea:focus {
+    border-color: #194A97;
+    outline: 2px solid rgba(25, 74, 151, 0.15);
+}
+
+.fs-request-demo-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    width: 100%;
+    min-height: 55px;
+    margin-top: 4px;
+    border: 0;
+    border-radius: 6px;
+    background: #194A97;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.fs-request-demo-submit:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+/* REQUEST DEMO — RESPONSIVE TABLET */
+
+@media (max-width: 991.98px) {
+    .fs-demo-modal.fs-request-demo-content {
+        grid-template-columns: 34% minmax(0, 66%);
+        min-height: 0;
+    }
+
+    .fs-request-demo-panel {
+        padding: 70px 22px 0;
+    }
+
+    .fs-request-demo-panel h3 {
+        font-size: 30px;
+    }
+
+    .fs-request-demo-panel p {
+        font-size: 15px;
+    }
+
+    .fs-request-demo-main {
+        padding: 20px 24px 24px;
+    }
+
+    .fs-request-demo-main h2 {
+        font-size: 30px;
+    }
+
+    .fs-request-demo-intro {
+        font-size: 15px;
+    }
+}
+
+
+/* Layar laptop pendek: perkecil seluruh popup, termasuk isinya */
+@media (min-width: 992px) and (max-height: 700px) {
+    .fs-request-demo-dialog {
+        zoom: 0.68;
+    }
+}
+
+/* REQUEST DEMO — RESPONSIVE HP */
+
+@media (max-width: 767.98px) {
+    .fs-request-demo-dialog {
+        width: calc(100% - 20px);
+        margin: 10px auto;
+    }
+
+    .fs-demo-modal.fs-request-demo-content {
+        grid-template-columns: 1fr;
+    }
+
+    .fs-request-demo-panel {
+        min-height: 155px;
+        padding: 22px 70px 22px 22px;
+    }
+
+    .fs-request-demo-panel h3 {
+        margin-bottom: 8px;
+        font-size: 24px;
+    }
+
+    .fs-request-demo-panel h3 br {
+        display: none;
+    }
+
+    .fs-request-demo-panel p {
+        font-size: 13px;
+    }
+
+    .fs-request-demo-devices {
+        display: none;
+    }
+
+    .fs-request-demo-main {
+        padding: 18px;
+    }
+
+    .fs-request-demo-top {
+        margin-bottom: 12px;
+    }
+
+    .fs-request-demo-brand {
+        font-size: 23px;
+    }
+
+    .fs-request-demo-brand img {
+        width: 36px;
+        height: 36px;
+    }
+
+    .fs-request-demo-main h2 {
+        font-size: 27px;
+    }
+
+    .fs-request-demo-form {
+        grid-template-columns: 1fr;
+        gap: 12px;
+    }
+}

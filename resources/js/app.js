@@ -1,4 +1,4 @@
-
+import 'bootstrap';
 // ==== Slider Logo Klien ====
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.fs-client-slider');

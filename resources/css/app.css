@@ -1,6 +1,7 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 @import './pages/about.css';
 @import './pages/harga.css';
+@import './components/request-demo.css';
 
 :root {
     --fs-primary: #194A97;
