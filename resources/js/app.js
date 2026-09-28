@@ -1,5 +1,6 @@
+import 'bootstrap';
 
-// ==== Slider Logo Klien ====
+// ==== Slider Logo Klien (running text + tombol kiri/kanan) ====
 document.addEventListener('DOMContentLoaded', function () {
     const slider = document.querySelector('.fs-client-slider');
     if (!slider) return;
@@ -7,58 +8,104 @@ document.addEventListener('DOMContentLoaded', function () {
     const track = slider.querySelector('.fs-client-track');
     const btnLeft = slider.querySelector('.fs-client-arrow.left');
     const btnRight = slider.querySelector('.fs-client-arrow.right');
-
     if (!track) return;
 
-    // Ambil data logo asli dari HTML blade (hanya dibaca, tidak dihapus dari file blade)
-    const originalLogos = Array.from(track.querySelectorAll('img')).map(function (img) {
+    // Baca data logo dari blade (file blade tidak perlu diubah)
+    const logos = Array.from(track.querySelectorAll('img')).map(function (img) {
         return { src: img.src, alt: img.alt };
     });
+    if (logos.length === 0) return;
 
-    const total = originalLogos.length;
-    if (total === 0) return;
+    const SPEED = 40; // kecepatan running (px per detik), ubah sesuai selera
+    const GAP = 20;   // jarak antar kartu (px)
 
-    const SLOT_COUNT = 7; // jumlah slot maksimum (desktop). Tablet/mobile disembunyikan via CSS.
-    let startIndex = 0;
+    // Bangun rail: 2 salinan logo supaya putarannya mulus tanpa putus
+    const rail = document.createElement('div');
+    rail.className = 'fs-client-rail';
+    rail.style.gap = GAP + 'px';
 
-    // Bangun slot tetap di dalam track
-    track.innerHTML = '';
-    const slots = [];
-    for (let i = 0; i < SLOT_COUNT; i++) {
-        const img = document.createElement('img');
-        img.className = 'fs-client-logo';
-        track.appendChild(img);
-        slots.push(img);
-    }
+    const cards = [];
+    for (let copy = 0; copy < 2; copy++) {
+        logos.forEach(function (logo) {
+            const card = document.createElement('div');
+            card.className = 'fs-client-card';
+            if (copy === 1) card.setAttribute('aria-hidden', 'true');
 
-    function renderSlots() {
-        slots.forEach(function (img, i) {
-            const logo = originalLogos[(startIndex + i) % total];
+            const img = document.createElement('img');
+            img.className = 'fs-client-logo';
             img.src = logo.src;
-            img.alt = logo.alt;
+            img.alt = copy === 0 ? logo.alt : '';
+            img.draggable = false;
+
+            card.appendChild(img);
+            rail.appendChild(card);
+            cards.push(card);
         });
     }
+    track.innerHTML = '';
+    track.appendChild(rail);
 
-    function goTo(direction) {
-        track.classList.add('is-transitioning');
-        window.setTimeout(function () {
-            startIndex = (startIndex + direction + total) % total;
-            renderSlots();
-            track.classList.remove('is-transitioning');
-        }, 180);
+    let offset = 0;
+    let pending = 0; // sisa geseran dari klik tombol
+    let paused = false;
+    let last = null;
+    let pitch = 0;
+    let setWidth = 0;
+
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+    // Jumlah logo yang terlihat: desktop 5, tablet 3, HP 2
+    function getVisible() {
+        if (window.innerWidth >= 992) return 5;
+        if (window.innerWidth >= 576) return 3;
+        return 2;
     }
 
-    if (btnRight) {
-        btnRight.addEventListener('click', function () {
-            goTo(1);
-        });
+    function wrap(v) {
+        return ((v % setWidth) + setWidth) % setWidth;
     }
 
-    if (btnLeft) {
-        btnLeft.addEventListener('click', function () {
-            goTo(-1);
-        });
+    function layout() {
+        const visible = getVisible();
+        const cardW = (track.clientWidth - GAP * (visible - 1)) / visible;
+        if (cardW <= 0) return;
+        cards.forEach(function (c) { c.style.width = cardW + 'px'; });
+        pitch = cardW + GAP;
+        setWidth = pitch * logos.length;
+        offset = wrap(offset);
     }
 
-    renderSlots();
+    function frame(now) {
+        if (last === null) last = now;
+        const dt = Math.min((now - last) / 1000, 0.05);
+        last = now;
+
+        if (setWidth > 0) {
+            if (!paused && !reduceMotion) offset += SPEED * dt;
+
+            if (pending !== 0) {
+                const step = Math.abs(pending) < 0.5 ? pending : pending * 0.18;
+                offset += step;
+                pending -= step;
+            }
+
+            offset = wrap(offset);
+            rail.style.transform = 'translate3d(' + (-offset) + 'px, 0, 0)';
+        }
+        requestAnimationFrame(frame);
+    }
+
+    if (btnRight) btnRight.addEventListener('click', function () { pending += pitch; });
+    if (btnLeft) btnLeft.addEventListener('click', function () { pending -= pitch; });
+
+    // Berhenti sebentar saat di-hover / fokus
+    track.addEventListener('mouseenter', function () { paused = true; });
+    track.addEventListener('mouseleave', function () { paused = false; });
+    slider.addEventListener('focusin', function () { paused = true; });
+    slider.addEventListener('focusout', function () { paused = false; });
+
+    window.addEventListener('resize', layout);
+
+    layout();
+    requestAnimationFrame(frame);
 });
