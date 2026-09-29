@@ -1,0 +1,220 @@
+/* =========================
+   REGISTER — HALAMAN
+========================= */
+
+.fs-register-page {
+    position: relative;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 5% 12%, #e8f2ff 0 110px, transparent 111px),
+        radial-gradient(circle at 96% 90%, #e8f2ff 0 150px, transparent 151px),
+        #f7f9fc;
+}
+
+.fs-register-back {
+    position: absolute;
+    top: 20px;
+    right: max(24px, calc((100vw - 1260px) / 2));
+    color: #194a97;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fs-register-back:hover {
+    color: #123b7c;
+    text-decoration: underline;
+}
+
+/* =========================
+   REGISTER — KARTU DAN LOGO
+========================= */
+
+.fs-register-card {
+    position: relative;
+    width: min(100%, 420px);
+    padding: 16px 24px;
+    border: 1px solid #e5edf8;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 12px 36px rgba(25, 74, 151, 0.10);
+}
+
+.fs-register-brand {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 9px;
+}
+
+.fs-register-brand img {
+    display: block;
+    width: 150px;
+    height: auto;
+    max-height: 48px;
+    object-fit: contain;
+}
+
+.fs-register-heading {
+    margin-bottom: 12px;
+    text-align: center;
+}
+
+.fs-register-heading h1 {
+    margin: 0 0 4px;
+    color: #182346;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fs-register-heading p {
+    margin: 0;
+    color: #63769b;
+    font-size: 13px;
+    line-height: 1.35;
+}
+
+/* =========================
+   REGISTER — FORM
+========================= */
+
+.fs-register-form {
+    display: grid;
+    gap: 5px;
+}
+
+.fs-register-field label {
+    display: block;
+    margin-bottom: 3px;
+    color: #182346;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.fs-register-field input {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 0 12px;
+    border: 1px solid #d5e2f2;
+    border-radius: 7px;
+    background: #ffffff;
+    color: #182346;
+    font: inherit;
+    font-size: 13px;
+}
+
+.fs-register-field input::placeholder {
+    color: #95a3b8;
+}
+
+.fs-register-field input:focus {
+    border-color: #194a97;
+    outline: 3px solid rgba(25, 74, 151, 0.12);
+}
+
+.fs-register-submit,
+.fs-register-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 38px;
+    border-radius: 7px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.fs-register-submit {
+    margin-top: 4px;
+    border: 1px solid #194a97;
+    background: #194a97;
+    color: #ffffff;
+}
+
+.fs-register-submit:hover {
+    background: #123b7c;
+}
+
+.fs-register-divider {
+    position: relative;
+    margin: 10px 0;
+    color: #7182a3;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fs-register-divider::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    height: 1px;
+    background: #e5edf8;
+}
+
+.fs-register-divider span {
+    position: relative;
+    padding: 0 10px;
+    background: #ffffff;
+}
+
+.fs-register-google {
+    border: 1px solid #d5e2f2;
+    background: #ffffff;
+    color: #182346;
+}
+
+.fs-register-google:hover {
+    background: #f7f9fc;
+}
+
+.fs-register-login {
+    margin: 10px 0 0;
+    color: #63769b;
+    font-size: 12px;
+    text-align: center;
+}
+
+.fs-register-login a,
+.fs-register-login span {
+    color: #194a97;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+/* =========================
+   REGISTER — RESPONSIVE
+========================= */
+
+@media (max-width: 767.98px) {
+    .fs-register-page {
+        padding: 70px 16px 24px;
+    }
+
+    .fs-register-back {
+        top: 20px;
+        right: 18px;
+    }
+
+    .fs-register-card {
+        padding: 22px;
+    }
+
+    .fs-register-field input {
+        height: 40px;
+    }
+}
+
+@media (max-width: 380px) {
+    .fs-register-card {
+        padding: 20px 16px;
+    }
+}
