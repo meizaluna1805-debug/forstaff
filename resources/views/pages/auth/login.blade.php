@@ -14,7 +14,7 @@
             ← Kembali ke Website
         </a>
 
-        {{-- KARTU LOGIN — MENGGUNAKAN UKURAN DAN LATAR REGISTER --}}
+        {{-- KARTU LOGIN --}}
         <div class="fs-register-card">
             <div class="fs-register-brand">
                 <img
@@ -87,23 +87,12 @@
                     </div>
                 </div>
 
-                <div class="fs-register-login text-end mt-1">
-                    @if (Route::has('password.request'))
-                        <a href="{{ route('password.request') }}">
-                            Lupa password?
-                        </a>
-                    @else
-                        {{-- Diaktifkan saat fitur reset password tersedia --}}
-                        <span aria-disabled="true">Lupa password?</span>
-                    @endif
-                </div>
-
                 <button class="fs-register-submit" type="button">
                     Login
                 </button>
             </form>
 
-            {{-- GOOGLE — INTEGRASI OAUTH DIPASANG PADA TAHAP BACKEND --}}
+            {{-- GOOGLE --}}
             <div class="fs-register-divider">
                 <span>atau masuk dengan</span>
             </div>
