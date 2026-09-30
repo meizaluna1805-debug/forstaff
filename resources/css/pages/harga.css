@@ -6,9 +6,11 @@
     position: relative;
     overflow: hidden;
     isolation: isolate;
-    background: #F3F8FF;
-    padding: 30px 0 28px;
+    background: #f7f9fc;
+    padding: 24px 0 22px;
 }
+
+/* Siluet abu muda di sisi kiri dan kanan */
 
 .fs-pricing-hero::before,
 .fs-pricing-hero::after {
@@ -16,7 +18,7 @@
     position: absolute;
     z-index: -1;
     pointer-events: none;
-    background: linear-gradient(145deg, #dcecff, #c9e1ff);
+    background: linear-gradient(145deg, #edf0f4, #e5e9ee);
 }
 
 .fs-pricing-hero::before {
@@ -43,13 +45,15 @@
     text-align: center;
 }
 
+/* Titik dekoratif pada header */
+
 .fs-pricing-hero-content::before,
 .fs-pricing-hero-content::after {
     content: "";
     position: absolute;
     width: 72px;
     height: 52px;
-    background-image: radial-gradient(#b8d5f7 1px, transparent 1.5px);
+    background-image: radial-gradient(#d1d8e2 1px, transparent 1.5px);
     background-size: 8px 8px;
     pointer-events: none;
 }
@@ -75,7 +79,7 @@
 
 .fs-pricing-hero h1 {
     margin: 0 auto 10px;
-    color: #182346;
+    color: #12489D;
     font-size: 32px;
     font-weight: 700;
     line-height: 1.2;
@@ -89,10 +93,11 @@
     line-height: 1.5;
 }
 
-/* HEADER HARGA — RESPONSIVE */
+/* HEADER HARGA — RESPONSIVE HP */
+
 @media (max-width: 767.98px) {
     .fs-pricing-hero {
-        padding: 34px 0;
+        padding: 20px 0 18px;
     }
 
     .fs-pricing-hero h1 {
@@ -129,10 +134,32 @@
     min-width: 0;
     min-height: 540px;
     padding: 18px;
-    border: 1px solid #dce8f8;
+    border: 1px solid #e5e7eb;
     border-radius: 12px;
     background: #ffffff;
     box-shadow: 0 4px 16px rgba(25, 74, 151, 0.06);
+    animation: fs-pricing-card-float 5s ease-in-out infinite;
+}
+
+/* Jeda berbeda agar ketiga kartu tidak bergerak bersamaan */
+
+.fs-pricing-card:nth-child(2) {
+    animation-delay: -1.6s;
+}
+
+.fs-pricing-card:nth-child(3) {
+    animation-delay: -3.2s;
+}
+
+@keyframes fs-pricing-card-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-5px);
+    }
 }
 
 .fs-pricing-card-popular {
@@ -241,10 +268,11 @@
 }
 
 .fs-pricing-more ul {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
-/* Ketika fitur dibuka, hilangkan tautan awal */
+/* Setelah fitur dibuka, sembunyikan tulisan jumlah fitur */
+
 .fs-pricing-more[open] > summary {
     display: none;
 }
@@ -253,9 +281,9 @@
     display: block;
     margin-top: 12px;
     padding: 6px 12px;
-    border: 1px solid #cbdcf3;
+    border: 1px solid #e5e7eb;
     border-radius: 6px;
-    background: #F3F8FF;
+    background: #f7f9fc;
     color: #194A97;
     font-size: 12px;
     font-weight: 600;
@@ -300,9 +328,7 @@
     cursor: pointer;
 }
 
-/* =========================
-   KARTU HARGA — RESPONSIVE
-========================= */
+/* KARTU HARGA — RESPONSIVE TABLET DAN HP */
 
 @media (max-width: 991.98px) {
     .fs-pricing-grid {
@@ -320,6 +346,13 @@
     }
 }
 
+/* Matikan gerakan jika pengguna menonaktifkan animasi */
+
+@media (prefers-reduced-motion: reduce) {
+    .fs-pricing-card {
+        animation: none;
+    }
+}
 
 /* =========================
    HARGA — KONSULTASI PAKET
@@ -336,7 +369,7 @@
     gap: 16px;
     padding: 18px 26px;
     border-radius: 14px;
-    background: #F3F8FF;
+    background: #f7f9fc;
 }
 
 .fs-pricing-consultation-icon {
@@ -345,8 +378,9 @@
     flex: 0 0 48px;
     width: 48px;
     height: 48px;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
-    background: #e1efff;
+    background: #f7f9fc;
     color: #194A97;
 }
 
@@ -362,7 +396,7 @@
 
 .fs-pricing-consultation-text h2 {
     margin: 0 0 3px;
-    color: #182346;
+    color: #12489D;
     font-size: 17px;
     font-weight: 700;
     line-height: 1.3;
@@ -392,11 +426,12 @@
 }
 
 .fs-pricing-consultation-button:hover {
-    background: #eaf3ff;
+    background: #f7f9fc;
     color: #194A97;
 }
 
 /* KONSULTASI PAKET — RESPONSIVE HP */
+
 @media (max-width: 767.98px) {
     .fs-pricing-consultation-box {
         flex-wrap: wrap;
@@ -423,7 +458,7 @@
 
 .fs-pricing-faq h2 {
     margin: 0 0 12px;
-    color: #182346;
+    color: #12489D;
     font-size: 22px;
     font-weight: 700;
     line-height: 1.3;
@@ -435,7 +470,7 @@
 }
 
 .fs-pricing-faq-item {
-    border: 1px solid #dce8f8;
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
     background: #ffffff;
     color: #526384;
@@ -485,6 +520,7 @@
 }
 
 /* FAQ — RESPONSIVE HP */
+
 @media (max-width: 767.98px) {
     .fs-pricing-faq h2 {
         font-size: 19px;
