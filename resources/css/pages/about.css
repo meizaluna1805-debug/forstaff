@@ -1,852 +1,999 @@
 /* =========================
-   ABOUT HERO
+   ABOUT — HERO
 ========================= */
 
 .fs-about-hero-section {
-
-    background: #f3f8ff;
-
+    background: #f7f9fc;
     overflow: hidden;
-
 }
-
 
 .fs-about-hero {
     position: relative;
-    min-height: 310px;
+    box-sizing: border-box;
+    min-height: 560px;
+    padding: 78px 0;
 
     display: grid;
-    grid-template-columns: 40% 60%;
-    align-items: stretch;
+    grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
+    align-items: start;
 
-    background: 
-    linear-gradient(
+    background: linear-gradient(
         90deg,
-        #f3f8ff 0%,
-        #f3f8ff 42%,
-        rgba(243,248,255,0.35) 60%,
-        rgba(243,248,255,0) 100%
+        #f7f9fc 0%,
+        #f7f9fc 42%,
+        rgba(247, 249, 252, 0.35) 60%,
+        rgba(247, 249, 252, 0) 100%
     );
-
 }
-
-/* =========================
-   CONTENT LEFT
-========================= */
 
 .fs-about-hero-content {
-
-    padding: 45px 0;
-
     position: relative;
-
     z-index: 2;
+    min-width: 0;
 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    padding: 0;
+    transform: none;
 }
 
+/* HERO — BREADCRUMB */
 
 .fs-breadcrumb {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 8px;
 
-    color:#7182a3;
-
-    font-size:13px;
-
-    margin-bottom:22px;
-
+    margin-bottom: 22px;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
+.fs-breadcrumb a {
+    color: #6680aa;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.fs-breadcrumb a[aria-current="page"] {
+    color: #194a97;
+    font-weight: 700;
+}
 
 .fs-breadcrumb span {
-
-    margin:0 8px;
-
+    margin: 0;
+    color: #9badc7;
+    font-size: 17px;
+    font-weight: 400;
 }
 
-
-
-.fs-about-badge {
-
-    display:inline-flex;
-
-    background:#dcecff;
-
-    color:#194A97;
-
-    padding:6px 15px;
-
-    border-radius:20px;
-
-    font-size:12px;
-
-    font-weight:600;
-
-    margin-bottom:18px;
-
+.fs-breadcrumb a:hover {
+    color: #194a97;
+    text-decoration: underline;
 }
 
-
+/* HERO — JUDUL DAN PARAGRAF */
 
 .fs-about-hero h1 {
-
-    color:#182346;
-
-    font-size:42px;
-
-    line-height:1.15;
-
-    font-weight:700;
-
-    margin-bottom:18px;
-
+    margin-bottom: 18px;
+    color: #12489d;
+    font-size: 48px;
+    font-weight: 800;
+    line-height: 1.1;
 }
 
-
-
-.fs-about-hero p {
-
-    max-width:420px;
-
-    color:#63769b;
-
-    font-size:16px;
-
-    line-height:1.6;
-
+.fs-about-hero-content > p {
+    max-width: 420px;
+    color: #63769b;
+    font-size: 17px;
+    line-height: 1.6;
 }
 
+/* HERO — DUA TOMBOL */
 
+.fs-about-hero-actions {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
 
-/* =========================
-   IMAGE RIGHT
-========================= */
+    width: 100%;
+    margin-top: 20px;
+}
+
+.fs-about-hero-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 44px;
+    padding: 10px 16px;
+
+    border: 1px solid #194a97;
+    border-radius: 7px;
+
+    font-family: inherit;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+
+    cursor: pointer;
+    transition:
+        background-color 180ms ease,
+        color 180ms ease,
+        border-color 180ms ease;
+}
+
+.fs-about-hero-button-outline {
+    background: #ffffff;
+    color: #194a97;
+}
+
+.fs-about-hero-button-outline:hover {
+    background: #f7f9fc;
+    color: #123b7c;
+    border-color: #123b7c;
+}
+
+.fs-about-hero-button-primary {
+    background: #194a97;
+    color: #ffffff;
+}
+
+.fs-about-hero-button-primary:hover {
+    background: #123b7c;
+    color: #ffffff;
+    border-color: #123b7c;
+}
+
+.fs-about-hero-button:focus-visible {
+    outline: 3px solid rgba(25, 74, 151, 0.25);
+    outline-offset: 3px;
+}
+
+/* HERO — GAMBAR */
 
 .fs-about-hero-image {
-    height: 390px;
-    position: relative;
-    margin-right: -46px;
-    margin-bottom: 0;
-}
+    width: min(92%, 585px);
+    align-self: start;
+    justify-self: center;
 
+    overflow: hidden;
+    border: 1px solid #e5e7eb;
+    border-radius: 14px;
+
+    box-shadow: 0 8px 24px rgba(25, 74, 151, 0.08);
+
+    animation: fs-about-hero-float 5s ease-in-out infinite;
+    transition: box-shadow 220ms ease;
+}
 
 .fs-about-hero-image img {
     display: block;
-
-    width:100%;
-
-    height:100%;
-
-    object-fit:cover;
-
-    object-position:center;
-
+    width: 100%;
+    height: auto;
 }
 
-
-
-/* HALUSKAN TRANSISI GAMBAR */
-
-.fs-about-hero-image::before {
-
-    content:"";
-
-    position:absolute;
-
-    left:-120px;
-
-    top:0;
-
-    width:150px;
-
-    height:100%;
-
-
-    background:
-    linear-gradient(
-        90deg,
-        #f3f8ff 0%,
-        rgba(243,248,255,0) 100%
-    );
-
-
-    z-index:1;
-
+.fs-about-hero-image:hover {
+    box-shadow: 0 12px 28px rgba(25, 74, 151, 0.13);
 }
 
+/* HERO — ANIMASI GAMBAR */
+
+@keyframes fs-about-hero-float {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-6px);
+    }
+}
 
 /* =========================
-   RESPONSIVE
+   ABOUT — STATISTIK ATAS
 ========================= */
 
-
-@media(max-width:991.98px){
-
-
-    .fs-about-hero {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    .fs-about-hero-content {
-
-        padding: 45px 0 30px;
-
-    }
-
-
-    .fs-about-hero-image {
-
-        height: 330px;
-
-    }
-
-
+.fs-about-statistic {
+    background: #ffffff;
+    padding: 30px 0 35px;
 }
 
+/* Satu kotak border membungkus ketiga statistik */
 
+.fs-about-statistic-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: center;
 
+    margin: 0;
+    padding: 22px 24px;
 
-/* =========================
-   ABOUT STATISTIC
-========================= */
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #ffffff;
 
-
-.fs-about-statistic{
-
-    background:#ffffff;
-
-    padding:15px 0 20px;
-
+    box-shadow: 0 6px 20px rgba(25, 74, 151, 0.04);
 }
 
+.fs-about-stat-item {
+    display: flex;
+    align-items: center;
+    gap: 20px;
 
+    min-width: 0;
+    min-height: 75px;
+    padding: 0 25px 0 0;
 
-.fs-about-statistic-wrapper{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    align-items:center;
-
-    padding:10px 0;
-
-    margin-left:-8px;
-
+    border-right: 1px solid #e5e7eb;
 }
 
-
-
-.fs-about-stat-item{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    padding:0 25px 0 0;
-
-    min-height:65px;
-
-    border-right:1px solid #e5edf8;
-
+.fs-about-stat-item:not(:first-child) {
+    padding-left: 20px;
 }
 
-
-
-.fs-about-stat-item:not(:first-child){
-
-    padding-left:20px;
-
+.fs-about-stat-item:last-child {
+    padding-right: 0;
+    border-right: none;
 }
 
-
-
-.fs-about-stat-item:last-child{
-
-    border-right:none;
-
+.fs-about-stat-item > div:last-child {
+    min-width: 0;
 }
 
+.fs-about-stat-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 
+    width: 64px;
+    height: 64px;
 
-.fs-about-stat-icon{
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
 
-    width:46px;
-
-    height:46px;
-
-    border-radius:50%;
-
-    background:#eaf3ff;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    color:#194A97;
-
+    background: #f7f9fc;
+    color: #194a97;
 }
 
-
-
-.fs-about-stat-icon svg{
-
-    width:30px;
-
-    height:30px;
-
+.fs-about-stat-icon svg {
+    width: 39px;
+    height: 39px;
 }
-
 
 .fs-about-stat-icon svg path,
-.fs-about-stat-icon svg circle{
-
-    stroke-width:2.5;
-
-}
-.fs-about-stat-item h3{
-
-    margin:0;
-
-    color:#194A97;
-
-    font-size:24px;
-
-    font-weight:700;
-
-    line-height:1.2;
-
+.fs-about-stat-icon svg circle {
+    stroke-width: 2.5;
 }
 
-
-
-.fs-about-stat-item p{
-
-    margin:4px 0 0;
-
-    color:#7182a3;
-
-    font-size:12px;
-
-    line-height:1.45;
-
+.fs-about-stat-item h3 {
+    margin: 0;
+    color: #194a97;
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-
-
-.fs-stat-industry{
-
-    font-size:17px!important;
-
+.fs-about-stat-item p {
+    margin: 5px 0 0;
+    color: #7182a3;
+    font-size: 16px;
+    line-height: 1.45;
 }
 
-
-
-
-
-/* =========================
-   ABOUT STORY
-========================= */
-
-.fs-about-story{
-    padding:0 0 45px;
-    background:#ffffff;
-}
-
-
-.fs-about-story-wrapper{
-    display:grid;
-    grid-template-columns:minmax(0, 45fr) minmax(0, 55fr);
-    align-items:start;
-    gap:45px;
-}
-
-
-/* IMAGE */
-
-.fs-about-story-image img{
-
-    width:100%;
-
-    height:300px;
-
-    object-fit:cover;
-
-    border-radius:14px;
-
-}
-
-
-/* CONTENT */
-
-.fs-about-story-content{
-
-    padding-top:5px;
-
-}
-
-.fs-about-story-badge{
-    display:inline-flex;
-    align-items:center;
-    background:#eaf3ff;
-    color:#194A97;
-    padding:5px 13px;
-    border-radius:20px;
-    font-size:11px;
-    font-weight:600;
-    margin-bottom:14px;
-}
-
-
-
-.fs-about-story-content h2{
-
-    color:#182346;
-
-    font-size:38px;
-
-    line-height:1.15;
-
-    font-weight:700;
-
-    margin-bottom:15px;
-
-}
-
-
-.fs-about-story-content h2 span{
-
-    color:#194A97;
-
-}
-
-
-
-.fs-about-story-content p{
-
-    max-width:430px;
-
-    color:#63769b;
-
-    font-size:15px;
-
-    line-height:1.65;
-
-    margin-bottom:18px;
-
-    text-align:justify;
-}
-
-@media(max-width:767.98px){
-
-
-    .fs-about-hero h1 {
-
-        font-size: 34px;
-
-    }
-
-
+.fs-stat-industry {
+    font-size: 23px !important;
 }
 
 /* =========================
-   OUR PURPOSE
+   ABOUT — OUR STORY
 ========================= */
 
-.fs-about-purpose{
-    background:#f3f8ff;
-    padding:18px 0 22px;
+.fs-about-story {
+    padding: 45px 0 70px;
+    background: #ffffff;
+
+    /* Jarak aman ketika tombol hero menuju section ini */
+    scroll-margin-top: 100px;
 }
 
-.fs-about-purpose-layout{
-    display:grid;
-    grid-template-columns:minmax(0, 3.4fr) minmax(0, 1fr);
-    gap:42px;
-    align-items:start;
+.fs-about-story-wrapper {
+    display: grid;
+    grid-template-columns: minmax(0, 45fr) minmax(0, 55fr);
+    align-items: start;
+    gap: 45px;
 }
 
-.fs-about-purpose-main{
-    min-width:0;
+/* OUR STORY — GAMBAR */
+
+.fs-about-story-image {
+    min-width: 0;
 }
 
-.fs-about-purpose-badge{
-    display:inline-flex;
-    align-items:center;
-    padding:5px 13px;
-    border-radius:20px;
-    background:#dcecff;
-    color:#194A97;
-    font-size:11px;
-    font-weight:600;
-    line-height:1.2;
+.fs-about-story-image img {
+    display: block;
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 14px;
 }
 
-.fs-about-purpose-main h2{
-    margin:8px 0 5px;
-    color:#182346;
-    font-size:32px;
-    line-height:1.2;
-    font-weight:700;
+/* OUR STORY — KONTEN */
+
+.fs-about-story-content {
+    min-width: 0;
+    padding-top: 5px;
 }
 
-.fs-about-purpose-main h2 span{
-    color:#194A97;
+.fs-about-story-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 13px;
+    margin-bottom: 14px;
+
+    border-radius: 20px;
+    background: #f7f9fc;
+    color: #194a97;
+
+    font-size: 11px;
+    font-weight: 600;
 }
 
-.fs-about-purpose-intro{
-    margin:0 0 10px;
-    color:#63769b;
-    font-size:14px;
-    line-height:1.5;
+.fs-about-story-content h2 {
+    margin-bottom: 15px;
+    color: #12489d;
+    font-size: 38px;
+    font-weight: 700;
+    line-height: 1.15;
 }
 
-.fs-about-purpose-cards{
-    display:grid;
-    grid-template-columns:repeat(3, minmax(0, 1fr));
-    gap:14px;
+.fs-about-story-content h2 span {
+    color: #12489d;
 }
 
-.fs-about-purpose-card{
-    min-width:0;
-    min-height:145px;
-    padding:13px 15px;
-    border-radius:11px;
-    background:#ffffff;
-}
+.fs-about-story-content p {
+    max-width: 430px;
+    margin-bottom: 18px;
 
-.fs-about-purpose-card svg{
-    display:block;
-    width:26px;
-    height:26px;
-    margin-bottom:9px;
-    color:#194A97;
-}
-
-.fs-about-purpose-card p{
-    margin:0;
-    color:#526384;
-    font-size:14px;
-    line-height:1.4;
-}
-
-.fs-about-purpose-card ul{
-    margin:0;
-    padding:0;
-    list-style:none;
-}
-
-.fs-about-purpose-card li{
-    position:relative;
-    padding-left:17px;
-    color:#526384;
-    font-size:14px;
-    line-height:1.4;
-}
-
-.fs-about-purpose-card li::before{
-    content:"✓";
-    position:absolute;
-    left:0;
-    top:2px;
-    display:grid;
-    place-items:center;
-    width:12px;
-    height:12px;
-    border-radius:50%;
-    background:#194A97;
-    color:#ffffff;
-    font-size:9px;
-    font-weight:700;
-}
-
-.fs-about-purpose-quote{
-    margin:5px 0 0;
-    padding:0;
-}
-
-.fs-about-purpose-quote-mark{
-    display:block;
-    height:40px;
-    color:#c5ddfb;
-    font-family:Georgia, serif;
-    font-size:72px;
-    line-height:.85;
-}
-
-.fs-about-purpose-quote p{
-    max-width:230px;
-    margin:4px 0 0;
-    color:#526384;
-    font-size:16px;
-    line-height:1.4;
-}
-
-.fs-about-purpose-quote p::after{
-    content:"";
-    display:block;
-    width:40px;
-    height:3px;
-    margin-top:14px;
-    background:#194A97;
-}
-
-
-
-
-
-/* =========================
-   OUR TEAM
-========================= */
-
-.fs-about-team{
-    background:#ffffff;
-    padding:18px 0 12px;
-}
-
-.fs-about-team-layout{
-    display:grid;
-    grid-template-columns:minmax(0, 1.1fr) minmax(0, 1.9fr);
-    align-items:center;
-    gap:36px;
-}
-
-.fs-about-team-badge{
-    display:inline-flex;
-    padding:5px 13px;
-    border-radius:20px;
-    background:#eaf3ff;
-    color:#194A97;
-    font-size:11px;
-    font-weight:600;
-}
-
-.fs-about-team-content h2{
-    margin:10px 0 8px;
-    color:#182346;
-    font-size:32px;
-    line-height:1.2;
-    font-weight:700;
-}
-
-.fs-about-team-content h2 span{
-    color:#194A97;
-}
-
-.fs-about-team-content p{
-    max-width:390px;
-    margin:0 0 12px;
-    color:#63769b;
-    font-size:14px;
-    line-height:1.45;
-}
-
-.fs-about-team-button{
-    display:inline-flex;
-    align-items:center;
-    gap:12px;
-    padding:8px 16px;
-    border:1px solid #194A97;
-    border-radius:5px;
-    background:#ffffff;
-    color:#194A97;
-    font-size:13px;
-    font-weight:600;
-    text-decoration:none;
-}
-
-.fs-about-team-button:hover{
-    background:#f3f8ff;
-    color:#194A97;
-}
-
-.fs-about-team-image img{
-    display:block;
-    width:100%;
-    height:220px;
-    object-fit:cover;
-    border-radius:12px;
+    color: #63769b;
+    font-size: 15px;
+    line-height: 1.65;
+    text-align: justify;
 }
 
 /* =========================
-   ABOUT METRICS
+   ABOUT — OUR PURPOSE
 ========================= */
 
-.fs-about-metrics{
-    background:#ffffff;
-    padding:0 0 12px;
+.fs-about-purpose {
+    background: #f7f9fc;
+    padding: 60px 0 65px;
 }
 
-.fs-about-metrics-grid{
-    display:grid;
-    grid-template-columns:repeat(4, minmax(0, 1fr));
-    padding:14px 0;
-    border-radius:12px;
-    background:#f3f8ff;
+.fs-about-purpose-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 3.4fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 42px;
 }
 
-.fs-about-metrics-item{
-    display:flex;
-    flex-direction:column;
-    align-items:center;
-    justify-content:center;
-    min-width:0;
-    padding:0 12px;
-    text-align:center;
-    border-right:1px solid #dbe7f6;
+.fs-about-purpose-main {
+    min-width: 0;
 }
 
-.fs-about-metrics-item:last-child{
-    border-right:0;
+.fs-about-purpose-badge {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 5px 13px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #f7f9fc;
+    color: #194a97;
+
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.2;
 }
 
-.fs-about-metrics-item strong{
-    color:#194A97;
-    font-size:24px;
-    line-height:1.2;
+.fs-about-purpose-main h2 {
+    margin: 8px 0 5px;
+    color: #12489d;
+    font-size: 35px;
+    font-weight: 700;
+    line-height: 1.2;
 }
 
-.fs-about-metrics-item span{
-    margin-top:3px;
-    color:#63769b;
-    font-size:12px;
-    line-height:1.35;
+.fs-about-purpose-main h2 span {
+    color: #12489d;
 }
 
+.fs-about-purpose-intro {
+    margin: 0 0 14px;
+    color: #63769b;
+    font-size: 15px;
+    line-height: 1.5;
+}
 
+/* OUR PURPOSE — TIGA KARTU */
 
+.fs-about-purpose-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 14px;
+}
+
+.fs-about-purpose-card {
+    min-width: 0;
+    min-height: 160px;
+    padding: 17px 18px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 11px;
+    background: #ffffff;
+}
+
+.fs-about-purpose-card svg {
+    display: block;
+    width: 29px;
+    height: 29px;
+    margin-bottom: 10px;
+    color: #194a97;
+}
+
+.fs-about-purpose-card p {
+    margin: 0;
+    color: #526384;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.fs-about-purpose-card ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.fs-about-purpose-card li {
+    position: relative;
+    padding-left: 17px;
+
+    color: #526384;
+    font-size: 15px;
+    line-height: 1.45;
+}
+
+.fs-about-purpose-card li::before {
+    content: "✓";
+    position: absolute;
+    left: 0;
+    top: 2px;
+
+    display: grid;
+    place-items: center;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+    background: #194a97;
+    color: #ffffff;
+
+    font-size: 9px;
+    font-weight: 700;
+}
+
+/* OUR PURPOSE — KUTIPAN */
+
+.fs-about-purpose-quote {
+    min-width: 0;
+    margin: 5px 0 0;
+    padding: 0;
+}
+
+.fs-about-purpose-quote-mark {
+    display: block;
+    height: 40px;
+    color: #e5e7eb;
+
+    font-family: Georgia, serif;
+    font-size: 72px;
+    line-height: 0.85;
+}
+
+.fs-about-purpose-quote p {
+    max-width: 230px;
+    margin: 4px 0 0;
+
+    color: #526384;
+    font-size: 17px;
+    line-height: 1.45;
+}
+
+.fs-about-purpose-quote p::after {
+    content: "";
+    display: block;
+
+    width: 40px;
+    height: 3px;
+    margin-top: 14px;
+
+    background: #194a97;
+}
 
 /* =========================
-   ABOUT RESPONSIVE
+   ABOUT — OUR TEAM
 ========================= */
 
-@media(max-width:991.98px){
-    /* Tampilkan seluruh gambar hero pada tablet dan HP */
-    .fs-about-hero-image{
-        margin-right:0;
-        margin-bottom:0;
-        height:auto;
-    }
-
-    .fs-about-hero-image img{
-        display:block;
-        height:auto;
-        object-fit:contain;
-    }
-    .fs-about-hero-image::before{
-        display:none;
-    }
-
-    .fs-about-story-wrapper{
-        grid-template-columns:1fr;
-        gap:22px;
-    }
-
-    .fs-about-story-image img{
-        height:auto;
-        aspect-ratio:16 / 9;
-    }
-
-    .fs-about-purpose-layout{
-        grid-template-columns:1fr;
-        gap:22px;
-    }
-
-    .fs-about-purpose-quote p{
-        max-width:520px;
-    }
-
-    /* OUR TEAM: teks di atas, foto di bawah */
-    .fs-about-team-layout{
-        grid-template-columns:1fr;
-        gap:20px;
-    }
-
-    .fs-about-team-image img{
-        height:auto;
-        aspect-ratio:16 / 9;
-    }
-    
-
-        /* ABOUT METRICS: dua kolom pada tablet */
-    .fs-about-metrics-grid{
-        grid-template-columns:repeat(2, minmax(0, 1fr));
-    }
-
-    .fs-about-metrics-item{
-        padding:14px 10px;
-    }
-
-    .fs-about-metrics-item:nth-child(2){
-        border-right:0;
-    }
-
-    .fs-about-metrics-item:nth-child(-n+2){
-        border-bottom:1px solid #dbe7f6;
-    }
+.fs-about-team {
+    background: #ffffff;
+    padding: 58px 0 48px;
 }
 
-@media(max-width:767.98px){
-    .fs-about-statistic-wrapper{
-        grid-template-columns:1fr;
-        margin-left:0;
+.fs-about-team-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.9fr);
+    align-items: center;
+    gap: 36px;
+}
+
+.fs-about-team-content {
+    min-width: 0;
+}
+
+.fs-about-team-badge {
+    display: inline-flex;
+    padding: 6px 14px;
+
+    border-radius: 20px;
+    background: #f7f9fc;
+    color: #194a97;
+
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.fs-about-team-content h2 {
+    margin: 10px 0 10px;
+    color: #12489d;
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fs-about-team-content h2 span {
+    color: #12489d;
+}
+
+.fs-about-team-content p {
+    max-width: 410px;
+    margin: 0 0 16px;
+
+    color: #63769b;
+    font-size: 16px;
+    line-height: 1.55;
+}
+
+.fs-about-team-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 10px 18px;
+    border: 1px solid #194a97;
+    border-radius: 5px;
+
+    background: #ffffff;
+    color: #194a97;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.fs-about-team-button:hover {
+    background: #f7f9fc;
+    color: #194a97;
+}
+
+.fs-about-team-button:focus-visible {
+    outline: 3px solid rgba(25, 74, 151, 0.25);
+    outline-offset: 3px;
+}
+
+.fs-about-team-image {
+    min-width: 0;
+}
+
+.fs-about-team-image img {
+    display: block;
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+/* =========================
+   ABOUT — BERSAMA FORSTAFF
+   Pengganti statistik bawah
+========================= */
+
+.fs-about-connection {
+    padding: 35px 0 65px;
+    background: #ffffff;
+}
+
+.fs-about-connection-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr);
+    align-items: start;
+    gap: 36px;
+}
+
+/* BERSAMA FORSTAFF — JUDUL KIRI */
+
+.fs-about-connection-intro {
+    min-width: 0;
+}
+
+.fs-about-connection-label {
+    display: block;
+    margin-bottom: 10px;
+
+    color: #194a97;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: 0.06em;
+}
+
+.fs-about-connection-intro h2 {
+    margin: 0 0 14px;
+
+    color: #12489d;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.fs-about-connection-intro p {
+    margin: 0;
+
+    color: #63769b;
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+/* BERSAMA FORSTAFF — EMPAT POIN */
+
+.fs-about-connection-points {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    margin: 0;
+    padding: 12px 0 0;
+    list-style: none;
+}
+
+.fs-about-connection-item {
+    position: relative;
+    min-width: 0;
+    padding: 0 18px 0 0;
+}
+
+.fs-about-connection-item:last-child {
+    padding-right: 0;
+}
+
+/* Garis penghubung antartitik */
+
+.fs-about-connection-item::before {
+    content: "";
+    position: absolute;
+    z-index: 0;
+
+    top: 7px;
+    left: 7px;
+    right: -7px;
+    height: 2px;
+
+    background: #e5e7eb;
+}
+
+.fs-about-connection-item:last-child::before {
+    display: none;
+}
+
+/* Titik dan nomor */
+
+.fs-about-connection-marker {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+
+    margin-bottom: 10px;
+}
+
+.fs-about-connection-dot {
+    display: block;
+    flex-shrink: 0;
+
+    width: 16px;
+    height: 16px;
+
+    border: 3px solid #ffffff;
+    border-radius: 50%;
+
+    background: #194a97;
+    box-shadow: 0 0 0 1px #194a97;
+}
+
+.fs-about-connection-number {
+    color: #194a97;
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-about-connection-item h3 {
+    margin: 0 0 8px;
+
+    color: #12489d;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.fs-about-connection-item p {
+    margin: 0;
+
+    color: #63769b;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* =========================
+   ABOUT — RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+    /* HERO */
+
+    .fs-about-hero {
+        min-height: 0;
+        padding: 0 0 40px;
+        grid-template-columns: 1fr;
+    }
+
+    .fs-about-hero-content {
+        padding: 55px 0 40px;
+        transform: none;
+    }
+
+    .fs-about-hero-image {
+        margin: 0;
+        height: auto;
+    }
+
+    .fs-about-hero-image img {
+        height: auto;
+        object-fit: contain;
+    }
+
+    /* STATISTIK ATAS
+       Ditumpuk agar teks dan ikon tidak sesak */
+
+    .fs-about-statistic-wrapper {
+        grid-template-columns: 1fr;
+        padding: 10px 24px;
     }
 
     .fs-about-stat-item,
-    .fs-about-stat-item:not(:first-child){
-        padding:14px 0;
-        border-right:0;
-        border-bottom:1px solid #e5edf8;
+    .fs-about-stat-item:not(:first-child) {
+        padding: 20px 0;
+        border-right: 0;
+        border-bottom: 1px solid #e5e7eb;
     }
 
-    .fs-about-stat-item:last-child{
-        border-bottom:0;
+    .fs-about-stat-item:last-child {
+        border-bottom: 0;
     }
 
-    .fs-about-stat-icon{
-        flex-shrink:0;
+    /* OUR STORY */
+
+    .fs-about-story-wrapper {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-    .fs-about-story-content p{
-        max-width:100%;
-        text-align:left;
+    .fs-about-story-image img {
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
-    .fs-about-purpose{
-        padding:30px 0;
+    /* OUR PURPOSE */
+
+    .fs-about-purpose-layout {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-    .fs-about-purpose-main h2{
-        font-size:28px;
+    .fs-about-purpose-quote p {
+        max-width: 520px;
     }
 
-    .fs-about-purpose-cards{
-        grid-template-columns:1fr;
+    /* OUR TEAM */
+
+    .fs-about-team-layout {
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
-    .fs-about-purpose-card{
-        min-height:auto;
+    .fs-about-team-image img {
+        height: auto;
+        aspect-ratio: 16 / 9;
     }
 
-    /* OUR TEAM: jarak dan judul pada HP */
-    .fs-about-team{
-        padding:30px 0;
+    /* BERSAMA FORSTAFF */
+
+    .fs-about-connection-layout {
+        grid-template-columns: 1fr;
+        gap: 28px;
     }
 
-    .fs-about-team-content h2{
-        font-size:28px;
+    .fs-about-connection-intro {
+        max-width: 620px;
     }
 
-        /* ABOUT METRICS: ukuran angka dan label pada HP */
-    .fs-about-metrics-item strong{
-        font-size:22px;
+    .fs-about-connection-points {
+        padding-top: 0;
+    }
+}
+
+/* =========================
+   ABOUT — RESPONSIVE HP
+========================= */
+
+@media (max-width: 767.98px) {
+    /* HERO */
+
+    .fs-about-hero h1 {
+        font-size: 34px;
     }
 
-    .fs-about-metrics-item span{
-        font-size:11px;
+    .fs-about-hero-actions {
+        gap: 10px;
+    }
+
+    .fs-about-hero-button {
+        width: 100%;
+    }
+
+    /* STATISTIK ATAS */
+
+    .fs-about-statistic-wrapper {
+        padding: 10px 18px;
+    }
+
+    .fs-about-stat-item,
+    .fs-about-stat-item:not(:first-child) {
+        padding: 14px 0;
+    }
+
+    /* OUR STORY */
+
+    .fs-about-story-content p {
+        max-width: 100%;
+        text-align: left;
+    }
+
+    /* OUR PURPOSE */
+
+    .fs-about-purpose {
+        padding: 40px 0;
+    }
+
+    .fs-about-purpose-main h2 {
+        font-size: 28px;
+    }
+
+    .fs-about-purpose-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .fs-about-purpose-card {
+        min-height: auto;
+    }
+
+    /* OUR TEAM */
+
+    .fs-about-team {
+        padding: 40px 0;
+    }
+
+    .fs-about-team-content h2 {
+        font-size: 30px;
+    }
+
+    /* BERSAMA FORSTAFF
+       Empat poin menjadi susunan vertikal */
+
+    .fs-about-connection {
+        padding: 25px 0 45px;
+    }
+
+    .fs-about-connection-intro h2 {
+        font-size: 28px;
+    }
+
+    .fs-about-connection-points {
+        grid-template-columns: 1fr;
+    }
+
+    .fs-about-connection-item,
+    .fs-about-connection-item:last-child {
+        padding: 0 0 28px 36px;
+    }
+
+    .fs-about-connection-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .fs-about-connection-item::before {
+        top: 7px;
+        bottom: -7px;
+        left: 7px;
+        right: auto;
+
+        width: 2px;
+        height: auto;
+    }
+
+    .fs-about-connection-marker {
+        position: static;
+        margin-bottom: 6px;
+    }
+
+    .fs-about-connection-dot {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+    }
+
+    .fs-about-connection-item h3 {
+        margin-bottom: 6px;
+        font-size: 18px;
+    }
+}
+
+/* =========================
+   ABOUT — AKSESIBILITAS ANIMASI
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .fs-about-hero-image {
+        animation: none;
+        transition: none;
+    }
+
+    .fs-about-hero-button {
+        transition: none;
     }
 }
