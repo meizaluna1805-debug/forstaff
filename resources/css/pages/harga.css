@@ -141,7 +141,7 @@
     animation: fs-pricing-card-float 5s ease-in-out infinite;
 }
 
-/* Jeda berbeda agar ketiga kartu tidak bergerak bersamaan */
+/* Jeda animasi masing-masing kartu */
 
 .fs-pricing-card:nth-child(2) {
     animation-delay: -1.6s;
@@ -208,11 +208,17 @@
     line-height: 1.2;
 }
 
+/* Periode, minimal user, dan biaya server memakai style yang sama */
+
 .fs-pricing-period,
-.fs-pricing-minimum {
+.fs-pricing-minimum,
+.fs-pricing-server {
     margin: 2px 0 0;
     color: #63769b;
     font-size: 12px;
+    font-family: inherit;
+    font-weight: 400;
+    line-height: 1.5;
 }
 
 /* =========================
@@ -346,7 +352,7 @@
     }
 }
 
-/* Matikan gerakan jika pengguna menonaktifkan animasi */
+/* Matikan gerakan sesuai preferensi pengguna */
 
 @media (prefers-reduced-motion: reduce) {
     .fs-pricing-card {

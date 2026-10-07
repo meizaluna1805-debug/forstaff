@@ -13,8 +13,8 @@
                 </h1>
 
                 <p>
-                    Solusi fleksibel untuk berbagai skala bisnis. Semua harga di bawah menggunakan
-                    biaya normal.
+                    Solusi fleksibel untuk berbagai skala bisnis. Semua harga
+                    di bawah menggunakan biaya normal.
                 </p>
             </div>
         </section>
@@ -28,6 +28,7 @@
                     'description' => 'Solusi absensi dan manajemen kehadiran karyawan.',
                     'price' => 'Rp 12.000',
                     'minimum' => 'Minimal 20 user (Rp 240.000/bulan)',
+                    'server' => 'Biaya server: Rp 200.000/bulan',
                     'preview' => [
                         'Dashboard (Tingkat Kehadiran Harian)',
                         'Laporan Kehadiran Staff',
@@ -52,6 +53,7 @@
                     'description' => 'Solusi lengkap untuk absensi dan pengelolaan payroll.',
                     'price' => 'Rp 17.000',
                     'minimum' => 'Minimal 20 user (Rp 340.000/bulan)',
+                    'server' => 'Biaya server: Rp 250.000/bulan',
                     'preview' => [
                         'Seluruh fitur Paket 1',
                         'Total Beban Gaji Bulanan (Payroll)',
@@ -71,6 +73,7 @@
                     'description' => 'Solusi manajemen HR lengkap untuk pertumbuhan bisnis Anda.',
                     'price' => 'Rp 22.000',
                     'minimum' => 'Minimal 20 user (Rp 440.000/bulan)',
+                    'server' => 'Biaya server: Rp 300.000/bulan',
                     'preview' => [
                         'Seluruh fitur Paket 2',
                         'Headcount & Turnover Rate',
@@ -120,24 +123,42 @@
                     @foreach ($pricingPackages as $package)
                         <article class="fs-pricing-card {{ $package['number'] === 2 ? 'fs-pricing-card-popular' : '' }}">
                             @if ($package['number'] === 2)
-                                <span class="fs-pricing-popular-badge">★ Paling Populer</span>
+                                <span class="fs-pricing-popular-badge">
+                                    ★ Paling Populer
+                                </span>
                             @endif
 
                             <div class="fs-pricing-card-heading">
                                 <span>Paket {{ $package['number'] }}</span>
+
                                 <h3>{{ $package['name'] }}</h3>
 
                                 <p class="fs-pricing-description">
                                     {{ $package['description'] }}
                                 </p>
 
-                                <p class="fs-pricing-price">{{ $package['price'] }}</p>
-                                <p class="fs-pricing-period">/ user / bulan</p>
-                                <p class="fs-pricing-minimum">{{ $package['minimum'] }}</p>
+                                <p class="fs-pricing-price">
+                                    {{ $package['price'] }}
+                                </p>
+
+                                <p class="fs-pricing-period">
+                                    / user / bulan
+                                </p>
+
+                                <p class="fs-pricing-minimum">
+                                    {{ $package['minimum'] }}
+                                </p>
+
+                                {{-- BIAYA SERVER PAKET --}}
+                                <p class="fs-pricing-server">
+                                    {{ $package['server'] }}
+                                </p>
                             </div>
 
                             <div class="fs-pricing-features border-top pt-3 mt-3">
-                                <h4 class="fs-pricing-features-title">Fitur utama:</h4>
+                                <h4 class="fs-pricing-features-title">
+                                    Fitur utama:
+                                </h4>
 
                                 <ul class="list-unstyled">
                                     @foreach ($package['preview'] as $feature)
