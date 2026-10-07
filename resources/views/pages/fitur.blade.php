@@ -989,4 +989,48 @@
 
 </section>
 
+</section>
+
+<section class="fs-feature-demo">
+    <div class="fs-feature-container">
+
+        <div class="fs-feature-demo-card">
+
+            <div class="fs-feature-demo-image-wrap">
+                <img
+                    src="{{ asset('images/team/ria.png') }}"
+                    alt="Tim Forstaff"
+                    class="fs-feature-demo-image"
+                    loading="lazy"
+                >
+            </div>
+
+            <div class="fs-feature-demo-content">
+
+                <h2>
+                    Ingin tahu lebih banyak
+                    <span>tentang cara kerja Forstaff?</span>
+                </h2>
+
+                <p>
+                    Ajukan demo dan tim kami akan membantu Anda
+                    memahami fitur Forstaff sesuai kebutuhan perusahaan.
+                </p>
+
+                <button
+                    type="button"
+                    class="fs-feature-demo-button"
+                    data-bs-toggle="modal"
+                    data-bs-target="#requestDemoModal"
+                >
+                    Request Demo
+                    <span aria-hidden="true">→</span>
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
 @endsection
