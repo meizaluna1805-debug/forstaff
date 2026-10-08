@@ -1,0 +1,834 @@
+/* =========================
+   POPUP BUY — DASAR
+========================= */
+
+.fs-buy-modal {
+    --fs-buy-primary: #194a97;
+    --fs-buy-heading: #182346;
+    --fs-buy-text: #63769b;
+    --fs-buy-light: #f7f9fc;
+    --fs-buy-border: #dce5f0;
+
+    color: var(--fs-buy-heading);
+    font-family: inherit;
+}
+
+.fs-buy-modal [hidden] {
+    display: none !important;
+}
+
+.fs-buy-modal,
+.fs-buy-modal *,
+.fs-buy-modal *::before,
+.fs-buy-modal *::after {
+    box-sizing: border-box;
+}
+
+.fs-buy-modal button,
+.fs-buy-modal input {
+    font-family: inherit;
+}
+
+.fs-buy-modal .fs-buy-dialog {
+    width: calc(100% - 32px);
+    max-width: 900px;
+    margin: 28px auto;
+}
+
+.fs-buy-modal .fs-buy-dialog.is-compact {
+    max-width: 660px;
+}
+
+.fs-buy-content {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    border: 0;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 20px 60px rgba(10, 35, 80, 0.2);
+}
+
+/* =========================
+   POPUP BUY — TOMBOL TUTUP
+========================= */
+
+.fs-buy-close.btn-close {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    z-index: 5;
+
+    width: 34px;
+    height: 34px;
+    margin: 0;
+    padding: 0;
+
+    border-radius: 50%;
+    background-color: #f0f3f8;
+    background-size: 11px;
+    opacity: 1;
+}
+
+.fs-buy-close.btn-close:hover {
+    background-color: #e5eaf2;
+}
+
+.fs-buy-modal button:focus-visible,
+.fs-buy-modal a:focus-visible {
+    outline: 3px solid rgba(25, 74, 151, 0.3);
+    outline-offset: 3px;
+}
+
+/* =========================
+   POPUP BUY — SUSUNAN FORM
+========================= */
+
+.fs-buy-order {
+    display: grid;
+    grid-template-columns: minmax(0, 37fr) minmax(0, 63fr);
+}
+
+/* =========================
+   POPUP BUY — PANEL KIRI
+========================= */
+
+.fs-buy-panel {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    overflow: hidden;
+    padding: 28px 26px 22px;
+
+    background: var(--fs-buy-primary);
+    color: #ffffff;
+}
+
+.fs-buy-panel::before,
+.fs-buy-panel::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.07);
+    pointer-events: none;
+}
+
+.fs-buy-panel::before {
+    width: 260px;
+    height: 260px;
+    right: -140px;
+    bottom: -100px;
+}
+
+.fs-buy-panel::after {
+    width: 170px;
+    height: 170px;
+    left: -110px;
+    bottom: 100px;
+}
+
+.fs-buy-brand {
+    position: relative;
+    z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    justify-content: center;
+
+    max-width: 100%;
+    margin-bottom: 28px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background: #ffffff;
+}
+
+.fs-buy-brand img {
+    display: block;
+    width: 120px;
+    max-width: 100%;
+    height: 38px;
+    object-fit: contain;
+}
+
+.fs-buy-panel-copy {
+    position: relative;
+    z-index: 1;
+}
+
+.fs-buy-panel-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 13px;
+    padding: 5px 11px;
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.fs-buy-panel h3 {
+    margin: 0 0 13px;
+    color: #ffffff;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.fs-buy-panel p {
+    margin: 0;
+    color: #ffffff;
+    font-size: 13px;
+    line-height: 1.65;
+}
+
+.fs-buy-devices {
+    position: relative;
+    z-index: 1;
+    display: block;
+
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    max-height: 210px;
+    margin: auto auto 0;
+    padding-top: 24px;
+
+    object-fit: contain;
+}
+
+/* =========================
+   POPUP BUY — PANEL KANAN
+========================= */
+
+.fs-buy-main {
+    min-width: 0;
+    padding: 46px 28px 28px;
+}
+
+.fs-buy-heading {
+    margin-bottom: 18px;
+}
+
+.fs-buy-eyebrow {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--fs-buy-primary);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    line-height: 1.4;
+}
+
+.fs-buy-heading h3 {
+    margin: 0 0 8px;
+    color: var(--fs-buy-heading);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.25;
+}
+
+.fs-buy-heading p {
+    margin: 0;
+    color: var(--fs-buy-text);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   POPUP BUY — PAKET TERPILIH
+========================= */
+
+.fs-buy-summary {
+    display: grid;
+    grid-template-columns: 36px minmax(0, 1fr);
+    align-items: start;
+    column-gap: 11px;
+    row-gap: 10px;
+
+    margin-bottom: 20px;
+    padding: 15px;
+
+    border: 1px solid var(--fs-buy-border);
+    border-radius: 10px;
+    background: var(--fs-buy-light);
+}
+
+.fs-buy-summary-icon {
+    display: grid;
+    place-items: center;
+    width: 36px;
+    height: 36px;
+
+    border: 1px solid var(--fs-buy-border);
+    border-radius: 8px;
+    background: #ffffff;
+    color: var(--fs-buy-primary);
+}
+
+.fs-buy-summary-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.fs-buy-summary-copy {
+    min-width: 0;
+}
+
+.fs-buy-summary-label {
+    display: block;
+    margin-bottom: 4px;
+    color: var(--fs-buy-text);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.fs-buy-summary h4,
+.fs-buy-success-summary h4 {
+    margin: 0 0 7px;
+    color: var(--fs-buy-heading);
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.fs-buy-summary-price {
+    margin: 0 0 5px;
+    color: var(--fs-buy-primary);
+    line-height: 1.5;
+}
+
+.fs-buy-summary-price strong {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.fs-buy-summary-price span {
+    color: var(--fs-buy-text);
+    font-size: 12px;
+}
+
+.fs-buy-summary-note {
+    margin: 2px 0 0;
+    color: var(--fs-buy-text);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.fs-buy-change {
+    grid-column: 2;
+    justify-self: start;
+
+    margin: 0;
+    padding: 4px 0;
+    border: 0;
+    background: transparent;
+
+    color: var(--fs-buy-primary);
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.fs-buy-change:hover {
+    text-decoration: underline;
+}
+
+/* =========================
+   POPUP BUY — INPUT FORM
+========================= */
+
+.fs-buy-form {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 13px 16px;
+}
+
+.fs-buy-field {
+    min-width: 0;
+}
+
+.fs-buy-field-wide {
+    grid-column: 1 / -1;
+}
+
+.fs-buy-field label {
+    display: block;
+    margin-bottom: 5px;
+    color: var(--fs-buy-heading);
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.4;
+}
+
+.fs-buy-field input {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    height: 42px;
+    padding: 0 11px;
+
+    border: 1px solid #ccd9e9;
+    border-radius: 7px;
+    background: #ffffff;
+
+    color: var(--fs-buy-heading);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.fs-buy-field input::placeholder {
+    color: #8997ac;
+    opacity: 1;
+}
+
+.fs-buy-field input:focus {
+    border-color: var(--fs-buy-primary);
+    outline: 3px solid rgba(25, 74, 151, 0.12);
+}
+
+.fs-buy-error {
+    margin: 0;
+    padding: 10px 12px;
+    border: 1px solid #f0c7c7;
+    border-radius: 7px;
+    background: #fff5f5;
+
+    color: #b42318;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* =========================
+   POPUP BUY — TOMBOL
+========================= */
+
+.fs-buy-submit,
+.fs-buy-button-primary,
+.fs-buy-button-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+    min-height: 44px;
+    padding: 10px 18px;
+    border: 1px solid var(--fs-buy-primary);
+    border-radius: 7px;
+
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+
+    transition:
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.fs-buy-submit,
+.fs-buy-button-primary {
+    background: var(--fs-buy-primary);
+    color: #ffffff;
+}
+
+.fs-buy-submit {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.fs-buy-submit:not(:disabled):hover,
+.fs-buy-button-primary:not(:disabled):hover {
+    border-color: #123b7c;
+    background: #123b7c;
+    color: #ffffff;
+}
+
+.fs-buy-button-outline {
+    background: #ffffff;
+    color: var(--fs-buy-primary);
+}
+
+.fs-buy-button-outline:hover {
+    background: var(--fs-buy-light);
+    color: var(--fs-buy-primary);
+}
+
+.fs-buy-submit:disabled {
+    opacity: 1;
+    cursor: not-allowed;
+}
+
+.fs-buy-button-primary:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* =========================
+   POPUP BUY — PILIH PAKET
+========================= */
+
+.fs-buy-package-view {
+    padding: 42px 30px 28px;
+}
+
+.fs-buy-package-view .fs-buy-heading {
+    padding-right: 20px;
+}
+
+.fs-buy-package-list {
+    display: grid;
+    gap: 12px;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+.fs-buy-package-option {
+    position: relative;
+    display: block;
+    min-width: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.fs-buy-package-radio {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    z-index: 1;
+
+    width: 17px;
+    height: 17px;
+    margin: 0;
+    accent-color: var(--fs-buy-primary);
+    cursor: pointer;
+}
+
+.fs-buy-package-card {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: start;
+    gap: 14px;
+
+    min-width: 0;
+    padding: 16px 15px 16px 44px;
+    border: 1px solid var(--fs-buy-border);
+    border-radius: 10px;
+    background: #ffffff;
+
+    transition:
+        border-color 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.fs-buy-package-option:hover .fs-buy-package-card {
+    border-color: #9eafd0;
+}
+
+.fs-buy-package-radio:checked + .fs-buy-package-card {
+    border-color: var(--fs-buy-primary);
+    background: var(--fs-buy-light);
+    box-shadow: inset 0 0 0 1px var(--fs-buy-primary);
+}
+
+.fs-buy-package-radio:focus-visible + .fs-buy-package-card {
+    outline: 3px solid rgba(25, 74, 151, 0.25);
+    outline-offset: 3px;
+}
+
+.fs-buy-package-copy,
+.fs-buy-package-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+}
+
+.fs-buy-package-number {
+    margin-bottom: 3px;
+    color: var(--fs-buy-text);
+    font-size: 11px;
+    line-height: 1.4;
+}
+
+.fs-buy-package-name {
+    color: var(--fs-buy-heading);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.4;
+    overflow-wrap: anywhere;
+}
+
+.fs-buy-package-popular {
+    display: inline-flex;
+    margin-top: 7px;
+    padding: 3px 8px;
+    border-radius: 20px;
+    background: var(--fs-buy-primary);
+
+    color: #ffffff;
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1.5;
+}
+
+.fs-buy-package-price {
+    color: var(--fs-buy-primary);
+    font-size: 19px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-buy-package-period {
+    margin: 2px 0 5px;
+    color: var(--fs-buy-text);
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+.fs-buy-package-note {
+    margin-top: 2px;
+    color: var(--fs-buy-text);
+    font-size: 11px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.fs-buy-package-actions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* =========================
+   POPUP BUY — KONFIRMASI SUKSES
+========================= */
+
+.fs-buy-success {
+    padding: 44px 34px 32px;
+    text-align: center;
+}
+
+.fs-buy-success-icon {
+    display: grid;
+    place-items: center;
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 18px;
+
+    border-radius: 50%;
+    background: #e9f7ee;
+    color: #249b59;
+}
+
+.fs-buy-success h3 {
+    max-width: 440px;
+    margin: 0 auto 12px;
+    color: var(--fs-buy-heading);
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-buy-success-description {
+    max-width: 480px;
+    margin: 0 auto 20px;
+    color: var(--fs-buy-text);
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+.fs-buy-success-summary {
+    max-width: 440px;
+    margin: 0 auto 20px;
+    padding: 17px 20px;
+
+    border: 1px solid var(--fs-buy-border);
+    border-radius: 10px;
+    background: var(--fs-buy-light);
+    text-align: left;
+}
+
+.fs-buy-home-button {
+    width: 100%;
+    max-width: 440px;
+}
+
+/* =========================
+   POPUP BUY — RESPONSIVE TABLET
+========================= */
+
+@media (max-width: 991.98px) {
+    .fs-buy-order {
+        grid-template-columns: minmax(0, 35fr) minmax(0, 65fr);
+    }
+
+    .fs-buy-panel {
+        padding: 26px 20px 20px;
+    }
+
+    .fs-buy-panel h3 {
+        font-size: 25px;
+    }
+
+    .fs-buy-main {
+        padding: 46px 22px 24px;
+    }
+
+    .fs-buy-heading h3 {
+        font-size: 23px;
+    }
+
+    .fs-buy-form {
+        column-gap: 12px;
+    }
+}
+
+/* =========================
+   POPUP BUY — RESPONSIVE HP
+========================= */
+
+@media (max-width: 767.98px) {
+    .fs-buy-modal .fs-buy-dialog {
+        width: calc(100% - 24px);
+        max-width: 540px;
+        margin: 12px auto;
+    }
+
+    .fs-buy-content {
+        border-radius: 12px;
+    }
+
+    .fs-buy-order {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .fs-buy-panel {
+        padding: 22px;
+    }
+
+    .fs-buy-brand {
+        margin-bottom: 18px;
+    }
+
+    .fs-buy-brand img {
+        width: 112px;
+        height: 34px;
+    }
+
+    .fs-buy-panel h3 {
+        font-size: 25px;
+    }
+
+    .fs-buy-panel h3 br {
+        display: none;
+    }
+
+    .fs-buy-panel p {
+        max-width: 400px;
+    }
+
+    .fs-buy-devices {
+        width: 70%;
+        max-width: 220px;
+        max-height: 150px;
+        margin: 18px auto 0;
+        padding-top: 0;
+    }
+
+    .fs-buy-main {
+        padding: 24px 20px;
+    }
+
+    .fs-buy-heading h3 {
+        font-size: 23px;
+    }
+
+    .fs-buy-field input {
+        min-height: 44px;
+        font-size: 16px;
+    }
+
+    .fs-buy-package-view {
+        padding: 48px 20px 24px;
+    }
+
+    .fs-buy-success {
+        padding: 48px 22px 26px;
+    }
+
+    .fs-buy-success h3 {
+        font-size: 23px;
+    }
+}
+
+/* =========================
+   POPUP BUY — RESPONSIVE HP KECIL
+========================= */
+
+@media (max-width: 479.98px) {
+    .fs-buy-form {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 13px;
+    }
+
+    .fs-buy-panel,
+    .fs-buy-main {
+        padding-right: 18px;
+        padding-left: 18px;
+    }
+
+    .fs-buy-summary {
+        padding: 12px;
+        column-gap: 9px;
+    }
+
+    .fs-buy-summary h4 {
+        font-size: 14px;
+    }
+
+    .fs-buy-package-card {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 10px;
+    }
+
+    .fs-buy-package-actions {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 9px;
+    }
+
+    .fs-buy-package-view {
+        padding-right: 16px;
+        padding-left: 16px;
+    }
+
+    .fs-buy-success-summary {
+        padding: 15px;
+    }
+}
+
+/* =========================
+   POPUP BUY — PREFERENSI GERAK
+========================= */
+
+@media (prefers-reduced-motion: reduce) {
+    .fs-buy-modal *,
+    .fs-buy-modal *::before,
+    .fs-buy-modal *::after {
+        transition: none !important;
+    }
+}
