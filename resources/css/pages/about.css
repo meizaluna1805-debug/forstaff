@@ -796,8 +796,7 @@
         object-fit: contain;
     }
 
-    /* STATISTIK ATAS
-       Ditumpuk agar teks dan ikon tidak sesak */
+    /* STATISTIK ATAS*/
 
     .fs-about-statistic-wrapper {
         grid-template-columns: 1fr;
@@ -846,9 +845,12 @@
     }
 
     .fs-about-team-image img {
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+}
 
     /* BERSAMA FORSTAFF */
 
