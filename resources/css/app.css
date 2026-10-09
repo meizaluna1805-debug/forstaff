@@ -1,5 +1,10 @@
 @import './home.css';
 @import 'bootstrap/dist/css/bootstrap.min.css';
+@import './fitur.css';
+@import './portofolio.css';
+@import './kontak.css';
+@import './blog.css';
+@import './blog-detail.css';
 
 :root {
     --fs-primary: #194A97;
