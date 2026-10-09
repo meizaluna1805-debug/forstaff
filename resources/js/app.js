@@ -1,4 +1,5 @@
 import 'bootstrap';
+import './components/buy-modal';
 
 // ==== Slider Logo Klien (running text + tombol kiri/kanan) ====
 document.addEventListener('DOMContentLoaded', function () {

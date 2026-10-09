@@ -188,17 +188,21 @@
                             </div>
 
                             <div class="fs-pricing-actions">
-                                {{-- Diaktifkan saat pop-up Buy tersedia --}}
-                                <button
+                               <button
                                     class="fs-pricing-buy"
                                     type="button"
-                                    disabled
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#buyModal"
+                                    data-buy-package="{{ $package['number'] }}"
                                 >
                                     Beli Sekarang
                                 </button>
 
                                 {{-- Menuju halaman Fitur --}}
-                                <a class="fs-pricing-detail-link" href="{{ url('/fitur') }}">
+                                <a
+                                    class="fs-pricing-detail-link"
+                                    href="{{ url('/fitur') }}"
+                                >
                                     Lihat Detail Fitur →
                                 </a>
                             </div>
@@ -208,33 +212,36 @@
             </div>
         </section>
 
-        
         {{-- SECTION 3: KONSULTASI PAKET --}}
-        <section class="fs-pricing-consultation" aria-labelledby="fs-pricing-consultation-title">
+        <section
+            class="fs-pricing-consultation"
+            aria-labelledby="fs-pricing-consultation-title"
+        >
             <div class="fs-container">
                 <div class="fs-pricing-consultation-box">
-                <span class="fs-pricing-consultation-icon" aria-hidden="true">
-                    <svg
-                        width="30"
-                        height="30"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        style="width:30px;height:30px;flex:none;color:#194A97"
-                    >
-                        <path
-                            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.04 9.91a16 16 0 0 0 6.05 6.05l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                        />
-                    </svg>
-                </span>
+                    <span class="fs-pricing-consultation-icon" aria-hidden="true">
+                        <svg
+                            width="30"
+                            height="30"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            style="width:30px;height:30px;flex:none;color:#194A97"
+                        >
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.08 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.68 2.81a2 2 0 0 1-.45 2.11L8.04 9.91a16 16 0 0 0 6.05 6.05l1.27-1.27a2 2 0 0 1 2.11-.45c.91.32 1.85.55 2.81.68A2 2 0 0 1 22 16.92Z"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </span>
 
                     <div class="fs-pricing-consultation-text">
                         <h2 id="fs-pricing-consultation-title">
                             Butuh konsultasi untuk menentukan paket yang sesuai?
                         </h2>
+
                         <p>Tim kami siap membantu Anda.</p>
                     </div>
 
@@ -242,13 +249,14 @@
                         class="fs-pricing-consultation-button"
                         href="{{ Route::has('contact') ? route('contact') : url('/kontak') }}"
                     >
-                        Hubungi Kami <span aria-hidden="true">→</span>
+                        Hubungi Kami
+                        <span aria-hidden="true">→</span>
                     </a>
                 </div>
             </div>
         </section>
 
-                {{-- SECTION 4: PERTANYAAN YANG SERING DIAJUKAN --}}
+        {{-- SECTION 4: PERTANYAAN YANG SERING DIAJUKAN --}}
         @php
             $pricingFaqs = [
                 [
@@ -280,15 +288,22 @@
 
         <section class="fs-pricing-faq" aria-labelledby="fs-pricing-faq-title">
             <div class="fs-container">
-                <h2 id="fs-pricing-faq-title">Pertanyaan yang Sering Diajukan</h2>
+                <h2 id="fs-pricing-faq-title">
+                    Pertanyaan yang Sering Diajukan
+                </h2>
 
                 <div class="fs-pricing-faq-list">
                     @foreach ($pricingFaqs as $faq)
                         <details class="fs-pricing-faq-item">
                             <summary>
                                 <span>{{ $faq['question'] }}</span>
-                                <span class="fs-pricing-faq-plus" aria-hidden="true"></span>
+
+                                <span
+                                    class="fs-pricing-faq-plus"
+                                    aria-hidden="true"
+                                ></span>
                             </summary>
+
                             <p>{{ $faq['answer'] }}</p>
                         </details>
                     @endforeach

@@ -2,6 +2,7 @@
 @import './pages/about.css';
 @import './pages/harga.css';
 @import './components/request-demo.css';
+@import './components/buy-modal.css';
 
 :root {
     --fs-primary: #194A97;

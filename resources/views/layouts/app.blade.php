@@ -19,5 +19,6 @@
     @include('components.footer-cta')
     @include('partials.footer')
     @include('components.request-demo-modal')
+    @include('components.buy-modal')
 </body>
 </html>
