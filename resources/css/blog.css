@@ -1,0 +1,930 @@
+/* =====================================================
+   BLOG PAGE
+===================================================== */
+
+.fs-blog {
+    width: 100%;
+    overflow-x: hidden;
+
+    background: #ffffff;
+    color: #1f3558;
+
+    font-family: "Instrument Sans", sans-serif;
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
+
+.fs-blog .fs-blog-hero {
+    position: relative;
+
+    min-height: 320px;
+
+    overflow: hidden;
+
+    background: #f7f9fc;
+}
+
+
+/* =====================================================
+   HERO CONTAINER
+===================================================== */
+
+.fs-blog .fs-blog-hero-container {
+    position: relative;
+    z-index: 3;
+
+    width: min(calc(100% - 48px), 1260px);
+    min-height: 320px;
+
+    margin-inline: auto;
+
+    display: flex;
+    align-items: center;
+}
+
+
+/* =====================================================
+   HERO CONTENT
+===================================================== */
+
+.fs-blog .fs-blog-hero-content {
+    width: 48%;
+    max-width: 600px;
+
+    padding: 42px 0 46px;
+}
+
+
+/* =====================================================
+   BREADCRUMB
+===================================================== */
+
+.fs-blog .fs-blog-breadcrumb {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 16px;
+
+    color: #6680aa;
+
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.fs-blog .fs-blog-breadcrumb a {
+    color: #6680aa;
+
+    font-weight: 500;
+
+    text-decoration: none;
+
+    transition: color 0.2s ease;
+}
+
+.fs-blog .fs-blog-breadcrumb a:hover {
+    color: #194a97;
+}
+
+.fs-blog .fs-blog-breadcrumb [aria-current="page"] {
+    color: #194a97;
+
+    font-weight: 700;
+}
+
+.fs-blog .fs-blog-breadcrumb-separator {
+    color: #9badc7;
+
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1;
+}
+
+
+/* =====================================================
+   HERO TITLE
+===================================================== */
+
+.fs-blog .fs-blog-hero-content h1 {
+    margin: 0 0 12px;
+
+    color: #12489d;
+
+    font-size: clamp(35px, 3.2vw, 50px);
+    font-weight: 750;
+    line-height: 1.08;
+
+    letter-spacing: -1.3px;
+}
+
+
+/* =====================================================
+   HERO DESCRIPTION
+===================================================== */
+
+.fs-blog .fs-blog-hero-content > p {
+    max-width: 570px;
+
+    margin: 0;
+
+    color: #6280ae;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.58;
+}
+
+
+/* =====================================================
+   HERO MEDIA
+===================================================== */
+
+.fs-blog .fs-blog-hero-media {
+    position: absolute;
+    z-index: 1;
+
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: 54%;
+
+    overflow: hidden;
+}
+
+
+/* =====================================================
+   HERO IMAGE TRANSITION
+===================================================== */
+
+.fs-blog .fs-blog-hero-media::before {
+    content: "";
+
+    position: absolute;
+    z-index: 2;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    width: 28%;
+
+    background: linear-gradient(
+        90deg,
+        #f7f9fc 0%,
+        rgba(247, 249, 252, 0.95) 20%,
+        rgba(247, 249, 252, 0.55) 55%,
+        rgba(247, 249, 252, 0) 100%
+    );
+
+    pointer-events: none;
+}
+
+
+/* =====================================================
+   HERO IMAGE
+===================================================== */
+
+.fs-blog .fs-blog-hero-image {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center center;
+}
+
+
+/* =====================================================
+   BLOG CONTENT
+===================================================== */
+
+.fs-blog .fs-blog-content {
+    padding: 36px 0 60px;
+
+    background: #ffffff;
+}
+
+.fs-blog .fs-blog-container {
+    width: min(calc(100% - 48px), 1260px);
+
+    margin-inline: auto;
+}
+
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
+.fs-blog .fs-blog-search {
+    display: grid;
+
+    grid-template-columns:
+        minmax(0, 1fr)
+        140px;
+
+    gap: 14px;
+
+    margin-bottom: 36px;
+}
+
+
+/* =====================================================
+   SEARCH FIELD
+===================================================== */
+
+.fs-blog .fs-blog-search-field {
+    position: relative;
+
+    min-width: 0;
+}
+
+.fs-blog .fs-blog-search-field svg {
+    position: absolute;
+
+    top: 50%;
+    left: 18px;
+
+    width: 21px;
+    height: 21px;
+
+    color: #7892b7;
+
+    transform: translateY(-50%);
+
+    pointer-events: none;
+}
+
+.fs-blog .fs-blog-search-field input {
+    display: block;
+
+    width: 100%;
+    height: 50px;
+
+    padding: 0 18px 0 51px;
+
+    border: 1px solid #dce5f0;
+    border-radius: 7px;
+
+    outline: none;
+
+    background: #ffffff;
+    color: #344b6e;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+
+    box-shadow:
+        0 5px 18px rgba(25, 74, 151, 0.035);
+
+    transition:
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fs-blog .fs-blog-search-field input::placeholder {
+    color: #9babc0;
+}
+
+.fs-blog .fs-blog-search-field input:focus {
+    border-color: #194a97;
+
+    box-shadow:
+        0 0 0 3px rgba(25, 74, 151, 0.07);
+}
+
+
+/* =====================================================
+   SEARCH BUTTON
+===================================================== */
+
+.fs-blog .fs-blog-search-button {
+    height: 50px;
+
+    padding: 0 24px;
+
+    border: 1px solid #194a97;
+    border-radius: 7px;
+
+    background: #1260c9;
+    color: #ffffff;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 650;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease,
+        transform 0.2s ease;
+}
+
+.fs-blog .fs-blog-search-button:hover {
+    background: #194a97;
+    border-color: #194a97;
+
+    box-shadow:
+        0 7px 18px rgba(25, 74, 151, 0.14);
+
+    transform: translateY(-1px);
+}
+
+
+/* =====================================================
+   ARTICLE GRID
+===================================================== */
+
+.fs-blog .fs-blog-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0, 1fr));
+
+    gap: 26px;
+}
+
+
+/* =====================================================
+   ARTICLE CARD
+===================================================== */
+
+.fs-blog .fs-blog-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    height: 100%;
+
+    overflow: hidden;
+
+    border: 1px solid #e3e9f1;
+    border-radius: 8px;
+
+    background: #ffffff;
+
+    transition:
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease;
+}
+
+.fs-blog .fs-blog-card:hover {
+    border-color: #cad9ee;
+
+    box-shadow:
+        0 10px 30px rgba(25, 74, 151, 0.075);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================================
+   ARTICLE IMAGE
+===================================================== */
+
+.fs-blog .fs-blog-card-image-link {
+    display: block;
+
+    overflow: hidden;
+
+    background: #eef3f8;
+}
+
+.fs-blog .fs-blog-card-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8.9;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+.fs-blog .fs-blog-card:hover .fs-blog-card-image {
+    transform: scale(1.025);
+}
+
+
+/* =====================================================
+   ARTICLE BODY
+===================================================== */
+
+.fs-blog .fs-blog-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 17px 18px 18px;
+}
+
+
+/* =====================================================
+   ARTICLE DATE
+===================================================== */
+
+.fs-blog .fs-blog-card-date {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #7892b7;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   ARTICLE TITLE
+===================================================== */
+
+.fs-blog .fs-blog-card-title {
+    margin: 0 0 9px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    letter-spacing: -0.25px;
+}
+
+.fs-blog .fs-blog-card-title a {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    color: #12489d;
+
+    text-decoration: none;
+
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    transition: color 0.2s ease;
+}
+
+.fs-blog .fs-blog-card-title a:hover {
+    color: #194a97;
+}
+
+
+/* =====================================================
+   ARTICLE EXCERPT
+===================================================== */
+
+.fs-blog .fs-blog-card-excerpt {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    min-height: 66px;
+
+    margin: 0 0 18px;
+
+    color: #6b7f9e;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/* =====================================================
+   ARTICLE LINK
+===================================================== */
+
+.fs-blog .fs-blog-card-link {
+    display: inline-flex;
+    align-items: center;
+
+    align-self: flex-start;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    color: #1260c9;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.fs-blog .fs-blog-card-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.fs-blog .fs-blog-card-link:hover {
+    gap: 10px;
+
+    color: #194a97;
+}
+
+
+/* =====================================================
+   PAGINATION
+===================================================== */
+
+.fs-blog .fs-blog-pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    margin-top: 42px;
+}
+
+.fs-blog .fs-blog-page-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 38px;
+    height: 38px;
+
+    padding: 0;
+
+    border: 1px solid transparent;
+    border-radius: 50%;
+
+    background: transparent;
+    color: #6f85a7;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fs-blog .fs-blog-page-button:hover {
+    border-color: #d8e4f3;
+
+    background: #f3f7fc;
+    color: #194a97;
+}
+
+.fs-blog .fs-blog-page-button.active {
+    border-color: #1260c9;
+
+    background: #1260c9;
+    color: #ffffff;
+
+    box-shadow:
+        0 5px 14px rgba(18, 96, 201, 0.14);
+}
+
+.fs-blog .fs-blog-page-arrow {
+    border-color: #e2e9f2;
+
+    background: #ffffff;
+    color: #1260c9;
+
+    font-size: 22px;
+    font-weight: 500;
+}
+
+
+/* =====================================================
+   LARGE TABLET
+===================================================== */
+
+@media (max-width: 1199.98px) {
+
+    .fs-blog .fs-blog-hero-content {
+        width: 49%;
+    }
+
+    .fs-blog .fs-blog-hero-media {
+        width: 53%;
+    }
+
+    .fs-blog .fs-blog-grid {
+        gap: 22px;
+    }
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 991.98px) {
+
+    .fs-blog .fs-blog-hero,
+    .fs-blog .fs-blog-hero-container {
+        min-height: 300px;
+    }
+
+    .fs-blog .fs-blog-hero-content {
+        width: 50%;
+        max-width: 470px;
+
+        padding: 36px 0 40px;
+    }
+
+    .fs-blog .fs-blog-hero-content h1 {
+        font-size: 39px;
+    }
+
+    .fs-blog .fs-blog-hero-content > p {
+        font-size: 14.5px;
+    }
+
+    .fs-blog .fs-blog-hero-media {
+        width: 52%;
+    }
+
+
+    /* CONTENT */
+
+    .fs-blog .fs-blog-content {
+        padding: 32px 0 54px;
+    }
+
+
+    /* ARTICLE GRID */
+
+    .fs-blog .fs-blog-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px;
+    }
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 767.98px) {
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .fs-blog .fs-blog-hero {
+        display: flex;
+        flex-direction: column;
+
+        min-height: auto;
+    }
+
+    .fs-blog .fs-blog-hero-container {
+        order: 1;
+
+        width: min(calc(100% - 32px), 1260px);
+        min-height: auto;
+    }
+
+    .fs-blog .fs-blog-hero-content {
+        width: 100%;
+        max-width: none;
+
+        padding: 31px 0 33px;
+    }
+
+    .fs-blog .fs-blog-breadcrumb {
+        margin-bottom: 13px;
+    }
+
+    .fs-blog .fs-blog-hero-content h1 {
+        margin-bottom: 11px;
+
+        font-size: 35px;
+        line-height: 1.1;
+
+        letter-spacing: -0.9px;
+    }
+
+    .fs-blog .fs-blog-hero-content > p {
+        max-width: 540px;
+
+        font-size: 15px;
+    }
+
+
+    /* =================================================
+       HERO IMAGE
+    ================================================= */
+
+    .fs-blog .fs-blog-hero-media {
+        position: relative;
+        order: 2;
+
+        top: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+        height: 245px;
+    }
+
+    .fs-blog .fs-blog-hero-media::before {
+        top: 0;
+        right: 0;
+        bottom: auto;
+        left: 0;
+
+        width: 100%;
+        height: 48px;
+
+        background: linear-gradient(
+            180deg,
+            #f7f9fc 0%,
+            rgba(247, 249, 252, 0) 100%
+        );
+    }
+
+    .fs-blog .fs-blog-hero-image {
+        object-position: center center;
+    }
+
+
+    /* =================================================
+       CONTENT
+    ================================================= */
+
+    .fs-blog .fs-blog-content {
+        padding: 28px 0 48px;
+    }
+
+    .fs-blog .fs-blog-container {
+        width: min(calc(100% - 32px), 1260px);
+    }
+
+
+    /* =================================================
+       SEARCH
+    ================================================= */
+
+    .fs-blog .fs-blog-search {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 28px;
+    }
+
+    .fs-blog .fs-blog-search-button {
+        width: 100%;
+    }
+
+
+    /* =================================================
+       ARTICLE GRID
+    ================================================= */
+
+    .fs-blog .fs-blog-grid {
+        grid-template-columns: 1fr;
+
+        gap: 20px;
+    }
+
+    .fs-blog .fs-blog-card-image {
+        aspect-ratio: 16 / 8.5;
+    }
+
+    .fs-blog .fs-blog-card-excerpt {
+        min-height: auto;
+    }
+
+
+    /* =================================================
+       PAGINATION
+    ================================================= */
+
+    .fs-blog .fs-blog-pagination {
+        margin-top: 34px;
+    }
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+===================================================== */
+
+@media (max-width: 480px) {
+
+    .fs-blog .fs-blog-hero-container,
+    .fs-blog .fs-blog-container {
+        width: min(calc(100% - 28px), 1260px);
+    }
+
+
+    /* =================================================
+       HERO
+    ================================================= */
+
+    .fs-blog .fs-blog-hero-content {
+        padding: 27px 0 29px;
+    }
+
+    .fs-blog .fs-blog-hero-content h1 {
+        font-size: 31px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .fs-blog .fs-blog-hero-content > p {
+        font-size: 14.5px;
+    }
+
+    .fs-blog .fs-blog-hero-media {
+        height: 220px;
+    }
+
+
+    /* =================================================
+       CONTENT
+    ================================================= */
+
+    .fs-blog .fs-blog-content {
+        padding: 24px 0 42px;
+    }
+
+
+    /* =================================================
+       SEARCH
+    ================================================= */
+
+    .fs-blog .fs-blog-search-field input,
+    .fs-blog .fs-blog-search-button {
+        height: 47px;
+    }
+
+    .fs-blog .fs-blog-search-field input {
+        padding-left: 47px;
+    }
+
+    .fs-blog .fs-blog-search-field svg {
+        left: 16px;
+
+        width: 19px;
+        height: 19px;
+    }
+
+
+    /* =================================================
+       CARD
+    ================================================= */
+
+    .fs-blog .fs-blog-card-body {
+        padding: 15px 15px 17px;
+    }
+
+    .fs-blog .fs-blog-card-title {
+        font-size: 17px;
+    }
+
+    .fs-blog .fs-blog-card-excerpt {
+        font-size: 13.5px;
+    }
+
+
+    /* =================================================
+       PAGINATION
+    ================================================= */
+
+    .fs-blog .fs-blog-pagination {
+        gap: 6px;
+    }
+
+    .fs-blog .fs-blog-page-button {
+        width: 36px;
+        height: 36px;
+    }
+}

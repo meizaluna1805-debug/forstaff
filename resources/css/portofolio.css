@@ -1,0 +1,839 @@
+.fs-portfolio {
+    --fs-primary: #194A97;
+    --fs-primary-dark: #103e84;
+    --fs-primary-soft: #eaf3ff;
+    --fs-bg: #f7f9fc;
+    --fs-white: #ffffff;
+    --fs-text: #194A97;
+    --fs-muted: #6680aa;
+    --fs-line: #dfe8f3;
+    --fs-line-soft: #eaf0f7;
+
+    color: var(--fs-text);
+}
+
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.fs-portfolio-container {
+    width: min(calc(100% - 48px), 1260px);
+    margin-inline: auto;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.fs-portfolio-hero {
+    width: 100%;
+    background: #f7f9fc;
+    overflow: hidden;
+}
+
+.fs-portfolio-hero-grid {
+    min-height: 274px;
+
+    display: grid;
+    grid-template-columns: 46% 54%;
+
+    align-items: stretch;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.fs-portfolio-hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    padding: 30px 42px 32px 0;
+}
+
+
+/* Breadcrumb */
+
+.fs-portfolio-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    margin-bottom: 15px;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    color: #6680aa;
+}
+
+.fs-portfolio-breadcrumb span:last-child {
+    color: #194A97;
+    font-weight: 700;
+}
+
+.fs-portfolio-breadcrumb a {
+    color: #6680aa;
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.fs-portfolio-breadcrumb a:hover {
+    color: #194A97;
+}
+
+.fs-breadcrumb-separator {
+    color: #9badc7;
+    font-size: 17px;
+    line-height: 1;
+}
+
+
+/* Heading */
+
+.fs-portfolio-hero h1 {
+    max-width: 520px;
+
+    margin: 0 0 12px;
+
+    color: #12489d;
+
+    font-size: clamp(35px, 3.2vw, 50px);
+    font-weight: 750;
+    line-height: 1.05;
+
+    letter-spacing: -1.3px;
+}
+
+
+/* Paragraph */
+
+.fs-portfolio-hero-content > p {
+    max-width: 520px;
+
+    margin: 0;
+
+    color: #6280ae;
+
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.fs-portfolio-hero-image {
+    position: relative;
+
+    min-height: 274px;
+
+    overflow: hidden;
+}
+
+.fs-portfolio-hero-image::before {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            90deg,
+            #f7f9fc 0%,
+            rgba(247, 249, 252, 0.64) 9%,
+            rgba(247, 249, 252, 0.08) 28%,
+            rgba(247, 249, 252, 0) 45%
+        );
+}
+
+.fs-portfolio-hero-image::after {
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    z-index: 1;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255, 255, 255, 0) 58%,
+            rgba(25, 74, 151, 0.05) 100%
+        );
+}
+
+.fs-portfolio-hero-image img {
+    width: 100%;
+    height: 100%;
+
+    min-height: 274px;
+
+    display: block;
+
+    object-fit: cover;
+    object-position: center;
+
+    filter:
+        saturate(0.88)
+        brightness(1.04)
+        contrast(0.94);
+
+    transform: scale(1.015);
+}
+
+
+/* Hero handwriting text */
+
+.fs-portfolio-hero-note {
+    position: absolute;
+    z-index: 2;
+
+    top: 72px;
+    left: 30%;
+
+    transform: translateX(-50%) rotate(-4deg);
+
+    color: #1261d7;
+
+    font-family: "Segoe Print", "Comic Sans MS", cursive;
+    font-size: clamp(12px, 1vw, 17px);
+    font-weight: 500;
+    font-style: italic;
+
+    line-height: 1.08;
+    text-align: left;
+
+    width: 135px;
+    white-space: normal;
+
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.fs-portfolio-hero-note span {
+    display: block;
+    width: 48px;
+    height: 3px;
+    margin: 5px 0 0 52px;
+    border-radius: 999px;
+    background: #1261d7;
+    transform: rotate(-10deg);
+}
+
+
+/* =========================================================
+   STATISTICS
+========================================================= */
+
+.fs-portfolio-stats {
+    background: #ffffff;
+
+    border-bottom: 1px solid #edf2f8;
+}
+
+.fs-stats-grid {
+    min-height: 110px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    align-items: center;
+}
+
+.fs-stat-item {
+    min-height: 62px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 20px;
+
+    padding: 12px 48px;
+
+    border-right: 1px solid #dbe5f1;
+}
+
+.fs-stat-item:first-child {
+    padding-left: 0;
+}
+
+.fs-stat-item-last {
+    border-right: 0;
+    padding-right: 0;
+}
+
+
+/* Icon */
+
+.fs-stat-icon {
+    width: 57px;
+    height: 57px;
+
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 14px;
+
+    background: #eef6ff;
+}
+
+.fs-stat-icon svg {
+    width: 29px;
+    height: 29px;
+
+    stroke: #1261dc;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+
+/* Statistics text */
+
+.fs-stat-item strong {
+    display: block;
+
+    margin-bottom: 1px;
+
+    color: #12489d;
+
+    font-size: 19px;
+    font-weight: 750;
+
+    line-height: 1.1;
+}
+
+.fs-stat-item p {
+    margin: 0;
+
+    color: #325d9a;
+
+    font-size: 13px;
+    font-weight: 500;
+
+    line-height: 1.25;
+}
+
+.fs-stat-item p span {
+    color: #7890b5;
+    font-weight: 400;
+}
+
+
+/* =========================================================
+   PORTFOLIO SHOWCASE
+========================================================= */
+
+.fs-portfolio-showcase {
+    padding: 38px 0 64px;
+
+    background: #ffffff;
+}
+
+
+/* =========================================================
+   INTRO PORTFOLIO
+========================================================= */
+
+.fs-portfolio-intro {
+    position: relative;
+
+    padding: 25px 30px 24px;
+
+    margin-bottom: 26px;
+
+    border: 1px solid #e1eaf4;
+    border-radius: 13px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff 0%,
+            #fbfdff 55%,
+            #f8fbff 100%
+        );
+
+    box-shadow:
+        0 5px 22px rgba(25, 74, 151, 0.025);
+}
+
+.fs-portfolio-intro::before {
+    content: "";
+
+    position: absolute;
+
+    top: 18px;
+    bottom: 18px;
+    left: 0;
+
+    width: 3px;
+
+    border-radius: 0 10px 10px 0;
+
+    background: #194A97;
+}
+
+
+/* Eyebrow */
+
+.fs-portfolio-eyebrow {
+    display: inline-flex;
+    align-items: center;
+
+    min-height: 24px;
+
+    margin-bottom: 8px;
+
+    padding: 4px 12px;
+
+    border-radius: 999px;
+
+    background: #eaf3ff;
+
+    color: #194A97;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.35px;
+}
+
+
+/* Title */
+
+.fs-portfolio-intro h2 {
+    margin: 0 0 11px;
+
+    color: #12489d;
+
+    font-size: clamp(29px, 2.45vw, 38px);
+    font-weight: 750;
+
+    line-height: 1.05;
+
+    letter-spacing: -0.75px;
+}
+
+
+/* Paragraph */
+
+.fs-portfolio-description {
+    max-width: 1160px;
+}
+
+.fs-portfolio .fs-portfolio-description p {
+    margin: 0 0 10px;
+    color: #4B5563;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+}
+
+.fs-portfolio .fs-portfolio-description p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =========================================================
+   CLIENT GRID
+   Scoped khusus halaman Portofolio agar tidak mengubah
+   slider client pada halaman lain.
+========================================================= */
+
+.fs-portfolio .fs-client-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================================
+   CLIENT CARD
+========================================================= */
+
+.fs-portfolio .fs-client-card {
+    flex:
+        0 0
+        calc((100% - 60px) / 5);
+
+    min-height: 205px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding: 19px 16px 17px;
+
+    border: 1px solid #dce7f2;
+    border-radius: 4px;
+
+    background: #ffffff;
+
+    text-align: center;
+
+    transition:
+        transform 0.22s ease,
+        box-shadow 0.22s ease,
+        border-color 0.22s ease;
+}
+
+.fs-portfolio .fs-client-card:hover {
+    transform: translateY(-3px);
+
+    border-color: #bdd0e8;
+
+    box-shadow:
+        0 10px 24px rgba(25, 74, 151, 0.08);
+}
+
+
+/* Client logo */
+
+.fs-portfolio .fs-client-logo {
+    width: 100%;
+    height: 104px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 6px;
+}
+
+.fs-portfolio .fs-client-logo img {
+    max-width: 138px;
+    max-height: 96px;
+
+    width: auto;
+    height: auto;
+
+    display: block;
+
+    object-fit: contain;
+}
+
+
+/* Client text */
+
+.fs-portfolio .fs-client-content h3 {
+    margin: 0 0 4px;
+
+    color: #16489b;
+
+    font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.15;
+}
+
+.fs-portfolio .fs-client-content p {
+    max-width: 175px;
+
+    margin: 0 auto;
+
+    color: #6683b3;
+
+    font-size: 14px;
+    font-weight: 400;
+
+    line-height: 1.25;
+}
+
+
+/* =========================================================
+   RESPONSIVE - LARGE TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .fs-portfolio-container {
+        width: min(calc(100% - 40px), 1100px);
+    }
+
+    .fs-stat-item {
+        padding-inline: 26px;
+    }
+
+    .fs-portfolio .fs-client-card {
+        flex-basis:
+            calc((100% - 45px) / 4);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 991.98px) {
+
+    .fs-portfolio-hero-grid {
+        grid-template-columns: 48% 52%;
+    }
+
+    .fs-portfolio-hero-content {
+        padding-right: 26px;
+    }
+
+    .fs-portfolio-hero h1 {
+        font-size: 36px;
+    }
+
+    .fs-portfolio-hero-note {
+        left: 57%;
+        font-size: 21px;
+    }
+
+    .fs-stats-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .fs-stat-item {
+        gap: 13px;
+
+        padding-inline: 18px;
+    }
+
+    .fs-stat-icon {
+        width: 48px;
+        height: 48px;
+
+        border-radius: 12px;
+    }
+
+    .fs-stat-icon svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .fs-stat-item strong {
+        font-size: 16px;
+    }
+
+    .fs-stat-item p {
+        font-size: 11px;
+    }
+
+    .fs-portfolio .fs-client-card {
+        flex-basis:
+            calc((100% - 30px) / 3);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 767.98px) {
+
+    .fs-portfolio-container {
+        width: min(calc(100% - 30px), 1260px);
+    }
+
+
+    /* Hero */
+
+    .fs-portfolio-hero-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .fs-portfolio-hero-content {
+        padding: 30px 0 27px;
+    }
+
+    .fs-portfolio-hero h1 {
+        max-width: 100%;
+
+        font-size: 36px;
+
+        letter-spacing: -0.8px;
+    }
+
+    .fs-portfolio-hero-content > p {
+        max-width: 100%;
+    }
+
+    .fs-portfolio-hero-image {
+        min-height: 230px;
+
+        border-radius: 12px 12px 0 0;
+    }
+
+    .fs-portfolio-hero-image img {
+        min-height: 230px;
+
+        object-position: center;
+    }
+
+    .fs-portfolio-hero-image::before {
+        background:
+            linear-gradient(
+                180deg,
+                rgba(247, 249, 252, 0.35) 0%,
+                rgba(247, 249, 252, 0) 38%
+            );
+    }
+
+    .fs-portfolio-hero-note {
+        top: 31px;
+        left: 56%;
+
+        font-size: 23px;
+    }
+
+
+    /* Stats */
+
+    .fs-stats-grid {
+        grid-template-columns: 1fr;
+
+        padding: 12px 0;
+    }
+
+    .fs-stat-item {
+        min-height: 80px;
+
+        padding: 13px 0;
+
+        border-right: 0;
+        border-bottom: 1px solid #e4ebf4;
+    }
+
+    .fs-stat-item:last-child {
+        border-bottom: 0;
+    }
+
+    .fs-stat-icon {
+        width: 52px;
+        height: 52px;
+    }
+
+    .fs-stat-item strong {
+        font-size: 18px;
+    }
+
+    .fs-stat-item p {
+        font-size: 12px;
+    }
+
+
+    /* Portfolio */
+
+    .fs-portfolio-showcase {
+        padding: 28px 0 48px;
+    }
+
+    .fs-portfolio-intro {
+        padding: 22px 20px 21px;
+
+        margin-bottom: 20px;
+
+        border-radius: 11px;
+    }
+
+    .fs-portfolio-intro h2 {
+        font-size: 30px;
+    }
+
+    .fs-portfolio-description p {
+        font-size: 13px;
+
+        line-height: 1.6;
+    }
+
+
+    /* Cards */
+
+    .fs-portfolio .fs-client-grid {
+        gap: 12px;
+    }
+
+    .fs-portfolio .fs-client-card {
+        flex-basis:
+            calc((100% - 12px) / 2);
+
+        min-height: 183px;
+
+        padding: 15px 11px;
+    }
+
+    .fs-portfolio .fs-client-logo {
+        height: 88px;
+    }
+
+    .fs-portfolio .fs-client-logo img {
+        max-width: 113px;
+        max-height: 82px;
+    }
+
+    .fs-portfolio .fs-client-content h3 {
+        font-size: 15px;
+    }
+
+    .fs-portfolio .fs-client-content p {
+        font-size: 12px;
+    }
+}
+
+
+/* =========================================================
+   EXTRA SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+    .fs-portfolio-container {
+        width: calc(100% - 24px);
+    }
+
+    .fs-portfolio-hero h1 {
+        font-size: 32px;
+    }
+
+    .fs-portfolio-hero-note {
+        left: 58%;
+
+        font-size: 19px;
+    }
+
+    .fs-portfolio .fs-client-card {
+        min-height: 172px;
+
+        padding-inline: 8px;
+    }
+
+    .fs-portfolio .fs-client-logo {
+        height: 80px;
+    }
+
+    .fs-portfolio .fs-client-logo img {
+        max-width: 102px;
+        max-height: 75px;
+    }
+
+    .fs-portfolio .fs-client-content h3 {
+        font-size: 14px;
+    }
+
+    .fs-portfolio .fs-client-content p {
+        font-size: 11.5px;
+    }
+}
