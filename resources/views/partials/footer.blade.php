@@ -50,9 +50,13 @@
                         @foreach ($items as $item)
                             <li>
                                 @if (Route::has($item['route']))
-                                    <a href="{{ route($item['route']) }}">{{ $item['label'] }}</a>
+                                    <a href="{{ route($item['route']) }}">
+                                        {{ $item['label'] }}
+                                    </a>
                                 @else
-                                    <span class="fs-footer-pending">{{ $item['label'] }}</span>
+                                    <a href="#" onclick="event.preventDefault()">
+                                        {{ $item['label'] }}
+                                    </a>
                                 @endif
                             </li>
                         @endforeach
