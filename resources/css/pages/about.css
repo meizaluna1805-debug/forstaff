@@ -1,6 +1,4 @@
-/* =========================
-   ABOUT — HERO
-========================= */
+/* ABOUT — HERO */
 
 .fs-about-hero-section {
     background: #f7f9fc;
@@ -12,11 +10,9 @@
     box-sizing: border-box;
     min-height: 560px;
     padding: 78px 0;
-
     display: grid;
     grid-template-columns: minmax(0, 40fr) minmax(0, 60fr);
     align-items: start;
-
     background: linear-gradient(
         90deg,
         #f7f9fc 0%,
@@ -30,24 +26,19 @@
     position: relative;
     z-index: 2;
     min-width: 0;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
-
     padding: 0;
     transform: none;
 }
-
-/* HERO — BREADCRUMB */
 
 .fs-breadcrumb {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 8px;
-
     margin-bottom: 22px;
     font-size: 13px;
     line-height: 1.5;
@@ -76,13 +67,11 @@
     text-decoration: underline;
 }
 
-/* HERO — JUDUL DAN PARAGRAF */
-
 .fs-about-hero h1 {
     margin-bottom: 18px;
     color: #12489d;
     font-size: 48px;
-    font-weight: 800;
+    font-weight: 700;
     line-height: 1.1;
 }
 
@@ -93,14 +82,11 @@
     line-height: 1.6;
 }
 
-/* HERO — DUA TOMBOL */
-
 .fs-about-hero-actions {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
     gap: 12px;
-
     width: 100%;
     margin-top: 20px;
 }
@@ -110,20 +96,16 @@
     align-items: center;
     justify-content: center;
     gap: 10px;
-
     min-height: 44px;
     padding: 10px 16px;
-
     border: 1px solid #194a97;
     border-radius: 7px;
-
     font-family: inherit;
     font-size: 14px;
     font-weight: 600;
     line-height: 1.4;
     text-align: center;
     text-decoration: none;
-
     cursor: pointer;
     transition:
         background-color 180ms ease,
@@ -158,19 +140,14 @@
     outline-offset: 3px;
 }
 
-/* HERO — GAMBAR */
-
 .fs-about-hero-image {
     width: min(92%, 585px);
     align-self: start;
     justify-self: center;
-
     overflow: hidden;
     border: 1px solid #e5e7eb;
     border-radius: 14px;
-
     box-shadow: 0 8px 24px rgba(25, 74, 151, 0.08);
-
     animation: fs-about-hero-float 5s ease-in-out infinite;
     transition: box-shadow 220ms ease;
 }
@@ -185,8 +162,6 @@
     box-shadow: 0 12px 28px rgba(25, 74, 151, 0.13);
 }
 
-/* HERO — ANIMASI GAMBAR */
-
 @keyframes fs-about-hero-float {
     0%,
     100% {
@@ -198,29 +173,50 @@
     }
 }
 
-/* =========================
-   ABOUT — STATISTIK ATAS
-========================= */
+/* ABOUT — LABEL SECTION */
+
+.fs-about-story-badge,
+.fs-about-purpose-badge,
+.fs-about-team-badge,
+.fs-about-connection-label {
+    display: inline-flex;
+    align-items: center;
+    padding: 5px 13px;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #f7f9fc;
+    color: #194a97;
+    font-family: inherit;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: normal;
+}
+
+.fs-about-story-badge {
+    margin-bottom: 14px;
+}
+
+.fs-about-connection-label {
+    margin-bottom: 10px;
+}
+
+/* ABOUT — STATISTIK ATAS */
 
 .fs-about-statistic {
     background: #ffffff;
     padding: 30px 0 35px;
 }
 
-/* Satu kotak border membungkus ketiga statistik */
-
 .fs-about-statistic-wrapper {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     align-items: center;
-
     margin: 0;
     padding: 22px 24px;
-
     border: 1px solid #e5e7eb;
     border-radius: 16px;
     background: #ffffff;
-
     box-shadow: 0 6px 20px rgba(25, 74, 151, 0.04);
 }
 
@@ -228,11 +224,9 @@
     display: flex;
     align-items: center;
     gap: 20px;
-
     min-width: 0;
     min-height: 75px;
     padding: 0 25px 0 0;
-
     border-right: 1px solid #e5e7eb;
 }
 
@@ -254,13 +248,10 @@
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
-
     width: 64px;
     height: 64px;
-
     border: 1px solid #e5e7eb;
     border-radius: 50%;
-
     background: #f7f9fc;
     color: #194a97;
 }
@@ -294,15 +285,11 @@
     font-size: 23px !important;
 }
 
-/* =========================
-   ABOUT — OUR STORY
-========================= */
+/* ABOUT — OUR STORY */
 
 .fs-about-story {
     padding: 45px 0 70px;
     background: #ffffff;
-
-    /* Jarak aman ketika tombol hero menuju section ini */
     scroll-margin-top: 100px;
 }
 
@@ -312,8 +299,6 @@
     align-items: start;
     gap: 45px;
 }
-
-/* OUR STORY — GAMBAR */
 
 .fs-about-story-image {
     min-width: 0;
@@ -327,32 +312,15 @@
     border-radius: 14px;
 }
 
-/* OUR STORY — KONTEN */
-
 .fs-about-story-content {
     min-width: 0;
     padding-top: 5px;
 }
 
-.fs-about-story-badge {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 5px 13px;
-    margin-bottom: 14px;
-
-    border-radius: 20px;
-    background: #f7f9fc;
-    color: #194a97;
-
-    font-size: 11px;
-    font-weight: 600;
-}
-
 .fs-about-story-content h2 {
     margin-bottom: 15px;
     color: #12489d;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.15;
 }
@@ -364,16 +332,13 @@
 .fs-about-story-content p {
     max-width: 430px;
     margin-bottom: 18px;
-
     color: #63769b;
     font-size: 15px;
     line-height: 1.65;
     text-align: justify;
 }
 
-/* =========================
-   ABOUT — OUR PURPOSE
-========================= */
+/* ABOUT — OUR PURPOSE */
 
 .fs-about-purpose {
     background: #f7f9fc;
@@ -391,26 +356,10 @@
     min-width: 0;
 }
 
-.fs-about-purpose-badge {
-    display: inline-flex;
-    align-items: center;
-
-    padding: 5px 13px;
-    border: 1px solid #e5e7eb;
-    border-radius: 20px;
-
-    background: #f7f9fc;
-    color: #194a97;
-
-    font-size: 11px;
-    font-weight: 600;
-    line-height: 1.2;
-}
-
 .fs-about-purpose-main h2 {
     margin: 8px 0 5px;
     color: #12489d;
-    font-size: 35px;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -426,8 +375,6 @@
     line-height: 1.5;
 }
 
-/* OUR PURPOSE — TIGA KARTU */
-
 .fs-about-purpose-cards {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -438,7 +385,6 @@
     min-width: 0;
     min-height: 160px;
     padding: 17px 18px;
-
     border: 1px solid #e5e7eb;
     border-radius: 11px;
     background: #ffffff;
@@ -450,6 +396,29 @@
     height: 29px;
     margin-bottom: 10px;
     color: #194a97;
+}
+
+.fs-about-purpose-card-heading {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 0;
+    margin-bottom: 10px;
+}
+
+.fs-about-purpose-card-heading svg {
+    flex: 0 0 29px;
+    margin: 0;
+}
+
+.fs-about-purpose-card-heading h3 {
+    min-width: 0;
+    margin: 0;
+    color: #194a97;
+    font-family: inherit;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1.3;
 }
 
 .fs-about-purpose-card p {
@@ -468,7 +437,6 @@
 .fs-about-purpose-card li {
     position: relative;
     padding-left: 17px;
-
     color: #526384;
     font-size: 15px;
     line-height: 1.45;
@@ -479,26 +447,21 @@
     position: absolute;
     left: 0;
     top: 2px;
-
     display: grid;
     place-items: center;
-
     width: 12px;
     height: 12px;
-
     border-radius: 50%;
     background: #194a97;
     color: #ffffff;
-
     font-size: 9px;
     font-weight: 700;
 }
 
-/* OUR PURPOSE — KUTIPAN */
-
 .fs-about-purpose-quote {
     min-width: 0;
-    margin: 5px 0 0;
+    align-self: end;
+    margin: 0;
     padding: 0;
 }
 
@@ -506,7 +469,6 @@
     display: block;
     height: 40px;
     color: #e5e7eb;
-
     font-family: Georgia, serif;
     font-size: 72px;
     line-height: 0.85;
@@ -515,7 +477,6 @@
 .fs-about-purpose-quote p {
     max-width: 230px;
     margin: 4px 0 0;
-
     color: #526384;
     font-size: 17px;
     line-height: 1.45;
@@ -524,50 +485,34 @@
 .fs-about-purpose-quote p::after {
     content: "";
     display: block;
-
     width: 40px;
     height: 3px;
     margin-top: 14px;
-
     background: #194a97;
 }
 
-/* =========================
-   ABOUT — OUR TEAM
-========================= */
+/* ABOUT — OUR TEAM */
 
 .fs-about-team {
     background: #ffffff;
-    padding: 58px 0 48px;
+    padding: 58px 0 75px;
 }
 
 .fs-about-team-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1.1fr) minmax(0, 1.9fr);
+    grid-template-columns: minmax(0, 52fr) minmax(0, 48fr);
     align-items: center;
-    gap: 36px;
+    gap: 45px;
 }
 
 .fs-about-team-content {
     min-width: 0;
 }
 
-.fs-about-team-badge {
-    display: inline-flex;
-    padding: 6px 14px;
-
-    border-radius: 20px;
-    background: #f7f9fc;
-    color: #194a97;
-
-    font-size: 12px;
-    font-weight: 600;
-}
-
 .fs-about-team-content h2 {
-    margin: 10px 0 10px;
+    margin: 10px 0;
     color: #12489d;
-    font-size: 36px;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.2;
 }
@@ -577,26 +522,23 @@
 }
 
 .fs-about-team-content p {
-    max-width: 410px;
+    max-width: 460px;
     margin: 0 0 16px;
-
     color: #63769b;
     font-size: 16px;
     line-height: 1.55;
+    text-align: left;
 }
 
 .fs-about-team-button {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-
     padding: 10px 18px;
     border: 1px solid #194a97;
     border-radius: 5px;
-
     background: #ffffff;
     color: #194a97;
-
     font-size: 14px;
     font-weight: 600;
     text-decoration: none;
@@ -614,21 +556,26 @@
 
 .fs-about-team-image {
     min-width: 0;
+    width: 93.75%;
+    justify-self: start;
+}
+
+@media (min-width: 992px) {
+    .fs-about-team-image {
+        position: relative;
+        top: 25px;
+        left: -45px;
+    }
 }
 
 .fs-about-team-image img {
     display: block;
     width: 100%;
-    height: 220px;
-
-    object-fit: cover;
-    border-radius: 12px;
+    height: auto;
+    border-radius: 14px;
 }
 
-/* =========================
-   ABOUT — BERSAMA FORSTAFF
-   Pengganti statistik bawah
-========================= */
+/* ABOUT — BERSAMA FORSTAFF */
 
 .fs-about-connection {
     padding: 35px 0 65px;
@@ -637,51 +584,34 @@
 
 .fs-about-connection-layout {
     display: grid;
-    grid-template-columns: minmax(0, 1fr) minmax(0, 2.3fr);
+    grid-template-columns: minmax(0, 1fr);
     align-items: start;
     gap: 36px;
 }
 
-/* BERSAMA FORSTAFF — JUDUL KIRI */
-
 .fs-about-connection-intro {
     min-width: 0;
-}
-
-.fs-about-connection-label {
-    display: block;
-    margin-bottom: 10px;
-
-    color: #194a97;
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1.4;
-    letter-spacing: 0.06em;
+    max-width: 620px;
 }
 
 .fs-about-connection-intro h2 {
     margin: 0 0 14px;
-
     color: #12489d;
-    font-size: 30px;
+    font-size: 34px;
     font-weight: 700;
     line-height: 1.25;
 }
 
 .fs-about-connection-intro p {
     margin: 0;
-
     color: #63769b;
     font-size: 14px;
     line-height: 1.65;
 }
 
-/* BERSAMA FORSTAFF — EMPAT POIN */
-
 .fs-about-connection-points {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-
     margin: 0;
     padding: 12px 0 0;
     list-style: none;
@@ -697,18 +627,14 @@
     padding-right: 0;
 }
 
-/* Garis penghubung antartitik */
-
 .fs-about-connection-item::before {
     content: "";
     position: absolute;
     z-index: 0;
-
     top: 7px;
     left: 7px;
     right: -7px;
     height: 2px;
-
     background: #e5e7eb;
 }
 
@@ -716,30 +642,23 @@
     display: none;
 }
 
-/* Titik dan nomor */
-
 .fs-about-connection-marker {
     position: relative;
     z-index: 1;
-
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 13px;
-
     margin-bottom: 10px;
 }
 
 .fs-about-connection-dot {
     display: block;
     flex-shrink: 0;
-
     width: 16px;
     height: 16px;
-
     border: 3px solid #ffffff;
     border-radius: 50%;
-
     background: #194a97;
     box-shadow: 0 0 0 1px #194a97;
 }
@@ -753,7 +672,6 @@
 
 .fs-about-connection-item h3 {
     margin: 0 0 8px;
-
     color: #12489d;
     font-size: 17px;
     font-weight: 700;
@@ -761,20 +679,17 @@
 }
 
 .fs-about-connection-item p {
+    max-width: 230px;
     margin: 0;
-
     color: #63769b;
     font-size: 14px;
     line-height: 1.6;
+    text-align: left;
 }
 
-/* =========================
-   ABOUT — RESPONSIVE TABLET
-========================= */
+/* ABOUT — RESPONSIVE TABLET */
 
 @media (max-width: 991.98px) {
-    /* HERO */
-
     .fs-about-hero {
         min-height: 0;
         padding: 0 0 40px;
@@ -796,7 +711,12 @@
         object-fit: contain;
     }
 
-    /* STATISTIK ATAS*/
+    .fs-about-story-content h2,
+    .fs-about-purpose-main h2,
+    .fs-about-team-content h2,
+    .fs-about-connection-intro h2 {
+        font-size: 30px;
+    }
 
     .fs-about-statistic-wrapper {
         grid-template-columns: 1fr;
@@ -814,8 +734,6 @@
         border-bottom: 0;
     }
 
-    /* OUR STORY */
-
     .fs-about-story-wrapper {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -826,8 +744,6 @@
         aspect-ratio: 16 / 9;
     }
 
-    /* OUR PURPOSE */
-
     .fs-about-purpose-layout {
         grid-template-columns: 1fr;
         gap: 22px;
@@ -837,22 +753,26 @@
         max-width: 520px;
     }
 
-    /* OUR TEAM */
-
     .fs-about-team-layout {
         grid-template-columns: 1fr;
-        gap: 20px;
+        gap: 22px;
+    }
+
+    .fs-about-team-content {
+        justify-self: stretch;
+        max-width: none;
+    }
+
+    .fs-about-team-image {
+    width: 100%;
     }
 
     .fs-about-team-image img {
-    display: block;
-    width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-}
-
-    /* BERSAMA FORSTAFF */
+        width: 100%;
+        height: auto;
+        aspect-ratio: auto;
+        object-fit: contain;
+    }
 
     .fs-about-connection-layout {
         grid-template-columns: 1fr;
@@ -868,15 +788,18 @@
     }
 }
 
-/* =========================
-   ABOUT — RESPONSIVE HP
-========================= */
+/* ABOUT — RESPONSIVE HP */
 
 @media (max-width: 767.98px) {
-    /* HERO */
-
     .fs-about-hero h1 {
         font-size: 34px;
+    }
+
+    .fs-about-story-content h2,
+    .fs-about-purpose-main h2,
+    .fs-about-team-content h2,
+    .fs-about-connection-intro h2 {
+        font-size: 28px;
     }
 
     .fs-about-hero-actions {
@@ -887,8 +810,6 @@
         width: 100%;
     }
 
-    /* STATISTIK ATAS */
-
     .fs-about-statistic-wrapper {
         padding: 10px 18px;
     }
@@ -898,21 +819,13 @@
         padding: 14px 0;
     }
 
-    /* OUR STORY */
-
     .fs-about-story-content p {
         max-width: 100%;
         text-align: left;
     }
 
-    /* OUR PURPOSE */
-
     .fs-about-purpose {
         padding: 40px 0;
-    }
-
-    .fs-about-purpose-main h2 {
-        font-size: 28px;
     }
 
     .fs-about-purpose-cards {
@@ -923,25 +836,17 @@
         min-height: auto;
     }
 
-    /* OUR TEAM */
-
     .fs-about-team {
         padding: 40px 0;
     }
 
-    .fs-about-team-content h2 {
-        font-size: 30px;
+    .fs-about-team-content p {
+        max-width: 100%;
+        text-align: left;
     }
-
-    /* BERSAMA FORSTAFF
-       Empat poin menjadi susunan vertikal */
 
     .fs-about-connection {
         padding: 25px 0 45px;
-    }
-
-    .fs-about-connection-intro h2 {
-        font-size: 28px;
     }
 
     .fs-about-connection-points {
@@ -962,7 +867,6 @@
         bottom: -7px;
         left: 7px;
         right: auto;
-
         width: 2px;
         height: auto;
     }
@@ -985,9 +889,7 @@
     }
 }
 
-/* =========================
-   ABOUT — AKSESIBILITAS ANIMASI
-========================= */
+/* ABOUT — AKSESIBILITAS ANIMASI */
 
 @media (prefers-reduced-motion: reduce) {
     .fs-about-hero-image {
