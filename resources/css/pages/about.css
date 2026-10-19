@@ -335,7 +335,7 @@
     color: #63769b;
     font-size: 15px;
     line-height: 1.65;
-    text-align: justify;
+    text-align: left;
 }
 
 /* ABOUT — OUR PURPOSE */
@@ -791,6 +791,20 @@
 /* ABOUT — RESPONSIVE HP */
 
 @media (max-width: 767.98px) {
+        /* Rapatkan jarak navbar ke breadcrumb */
+    .fs-about-hero-content {
+        padding-top: 36px;
+    }
+
+    /* Rapatkan akhir Perjalanan Kami ke Visi–Misi */
+    .fs-about-story {
+        padding-bottom: 48px;
+    }
+
+    .fs-about-story-content p:last-child {
+        margin-bottom: 0;
+    }
+    
     .fs-about-hero h1 {
         font-size: 34px;
     }

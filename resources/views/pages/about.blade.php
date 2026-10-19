@@ -29,7 +29,8 @@
 
                     <h1 id="fs-about-title">
                         Membangun Masa<br>
-                        Berbagai Perusahaan
+                        Depan Berbagai<br>
+                        Perusahaan
                     </h1>
 
                     <p>
@@ -62,7 +63,7 @@
                 {{-- HERO — GAMBAR --}}
                 <div class="fs-about-hero-image">
                     <img
-                        src="{{ asset('images/tentang_kami/hero-about-office.png') }}"
+                        src="{{ asset('images/tentang_kami/hero-about-office.webp') }}"
                         alt="Suasana kantor Forstaff"
                     >
                 </div>
@@ -220,7 +221,7 @@
             <div class="fs-about-story-wrapper">
                 <div class="fs-about-story-image">
                     <img
-                        src="{{ asset('images/tentang_kami/story-about-team.png') }}"
+                        src="{{ asset('images/tentang_kami/story-about-team.webp') }}"
                         alt="Tim Forstaff"
                         loading="lazy"
                     >
@@ -268,7 +269,7 @@
 
                     <p class="fs-about-purpose-intro">
                         Kami berkomitmen untuk memberikan dampak positif
-                        melalui teknologi setiap perusahaan.
+                        melalui teknologi bagi setiap perusahaan.
                     </p>
 
                     <div class="fs-about-purpose-cards">
@@ -341,7 +342,7 @@
 
                             <p>
                                 Menyediakan solusi HR yang efisien dan
-                                relevan kebutuhan perusahaan di Indonesia.
+                                relevan dengan kebutuhan perusahaan di Indonesia.
                             </p>
                         </div>
 
@@ -414,8 +415,8 @@
 
                 <p>
                     Forstaff didukung oleh tim profesional yang
-                    berpengalaman di bidang teknologi, HR, dan semangat
-                    kolaborasi untuk terus menghadirkan solusi terbaik
+                    berpengalaman di bidang teknologi dan HR, serta
+                    berkolaborasi untuk menghadirkan solusi terbaik
                     bagi pelanggan.
                 </p>
 
@@ -430,7 +431,7 @@
 
             <div class="fs-about-team-image">
                 <img
-                    src="{{ asset('images/tentang_kami/team-about-forstaff.png') }}"
+                    src="{{ asset('images/tentang_kami/team-about-forstaff.webp') }}"
                     alt="Tim Forstaff bekerja sama di kantor"
                     loading="lazy"
                 >
