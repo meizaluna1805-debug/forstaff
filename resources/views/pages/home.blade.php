@@ -3,10 +3,11 @@
 @section('title', 'Forstaff')
 
 @section('content')
-    {{-- Hero --}}
+{{-- Hero --}}
     <section class="fs-hero-home">
         <div class="fs-home-container">
             <div class="fs-hero-grid">
+
                 <div class="fs-hero-content">
                     <span class="fs-badge">SOLUSI HR TERINTEGRASI</span>
 
@@ -18,7 +19,7 @@
 
                     <p>
                         Forstaff membantu perusahaan mengelola data karyawan,
-                        absensi, cuti, payroll, kinerja dan proses administrasi HR
+                        absensi, cuti, slip gaji, kinerja dan proses administrasi HR
                         dalam satu platform yang terintegrasi.
                     </p>
 
@@ -26,41 +27,86 @@
                         <a href="#" class="fs-primary-btn">Beli Sekarang</a>
                         <a href="#" class="fs-secondary-btn">Pelajari Lebih Lanjut</a>
                     </div>
-
-                    <div class="fs-stat-row">
-                        <div>
-                            <strong>500+</strong>
-                            <span>Perusahaan<br>Menggunakan Forstaff</span>
-                        </div>
-                        <div>
-                            <strong>50,000+</strong>
-                            <span>Karyawan Terkelola</span>
-                        </div>
-                        <div>
-                            <strong>99%</strong>
-                            <span>Tingkat Kepuasan<br>Pelanggan</span>
-                        </div>
-                    </div>
                 </div>
 
                 <div class="fs-device-area">
                     <div class="fs-device-bg" aria-hidden="true"></div>
+
                     <div class="fs-device-wrap">
                         <img
-                            src="{{ asset('images/dashboard/LAPTOP.png') }}"
+                            src="{{ asset('images/dashboard/LAPTOP.webp') }}"
                             alt="Dashboard Forstaff"
                             class="fs-home-laptop"
                         >
+
                         <img
-                            src="{{ asset('images/dashboard/HP.png') }}"
+                            src="{{ asset('images/dashboard/HP.webp') }}"
                             alt="Aplikasi mobile Forstaff"
                             class="fs-home-phone"
                         >
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
+
+{{-- Statistik --}}
+    <section class="fs-home-stats" aria-label="Statistik Forstaff">
+        <div class="fs-home-container">
+            <div class="fs-home-stats-box">
+
+                <div class="fs-home-stat-item">
+                    <div class="fs-home-stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+                            <path d="M5 28V11l11-6 11 6v17"/>
+                            <path d="M10 28v-8h12v8"/>
+                            <path d="M11 14h3M18 14h3"/>
+                        </svg>
+                    </div>
+
+                    <div class="fs-home-stat-content">
+                        <strong>500+</strong>
+                        <span>Perusahaan</span>
+                        <p>Menggunakan Forstaff</p>
+                    </div>
+                </div>
+
+                <div class="fs-home-stat-item">
+                    <div class="fs-home-stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+                            <circle cx="12" cy="11" r="5"/>
+                            <circle cx="23" cy="12" r="4"/>
+                            <path d="M3 27c0-5 4-8 9-8s9 3 9 8"/>
+                            <path d="M20 20c5 0 8 3 8 7"/>
+                        </svg>
+                    </div>
+
+                    <div class="fs-home-stat-content">
+                        <strong>50,000+</strong>
+                        <span>Karyawan</span>
+                        <p>Terkelola melalui Forstaff</p>
+                    </div>
+                </div>
+
+                <div class="fs-home-stat-item">
+                    <div class="fs-home-stat-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+                            <circle cx="16" cy="16" r="12"/>
+                            <path d="M10 15l4 4 8-9"/>
+                        </svg>
+                    </div>
+
+                    <div class="fs-home-stat-content">
+                        <strong>99%</strong>
+                        <span>Tingkat Kepuasan</span>
+                        <p>Pelanggan Forstaff</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+</section>
 
     {{-- Solusi --}}
     <section class="fs-solusi">
@@ -110,7 +156,7 @@
                                 <path d="M12 15c0-2 1-3 3-3s3 1 3 3M21 13l2-5 2 5ZM14 20h9M14 24h7"/>
                             </svg>
                         </div>
-                        <span>Payroll</span>
+                        <span>Slip Gaji</span>
                     </div>
 
                     <div class="fs-solusi-card">
