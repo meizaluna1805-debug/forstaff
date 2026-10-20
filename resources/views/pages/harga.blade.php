@@ -5,7 +5,11 @@
         {{-- SECTION 1: HEADER HARGA --}}
         <section class="fs-pricing-hero" aria-labelledby="fs-pricing-title">
             <div class="fs-container fs-pricing-hero-content">
-                <span class="fs-pricing-hero-label">HARGA</span>
+                <nav class="fs-pricing-breadcrumb" aria-label="Breadcrumb">
+                    <a href="{{ url('/') }}">Home</a>
+                    <span aria-hidden="true">›</span>
+                    <span aria-current="page">Harga</span>
+                </nav>
 
                 <h1 id="fs-pricing-title">
                     Pilih Paket Forstaff<br>
@@ -168,7 +172,7 @@
 
                                 <details class="fs-pricing-more">
                                     <summary>
-                                        + {{ count($package['more']) }} fitur lainnya
+                                        + fitur lainnya
                                     </summary>
 
                                     <ul class="list-unstyled">
