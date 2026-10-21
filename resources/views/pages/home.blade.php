@@ -4,52 +4,62 @@
 
 @section('content')
 {{-- Hero --}}
-    <section class="fs-hero-home">
-        <div class="fs-home-container">
-            <div class="fs-hero-grid">
+<section class="fs-hero-home">
+    <div class="fs-home-container">
+        <div class="fs-hero-grid">
 
-                <div class="fs-hero-content">
-                    <span class="fs-badge">SOLUSI HR TERINTEGRASI</span>
+            <div class="fs-hero-content">
+                <span class="fs-badge">SOLUSI HR TERINTEGRASI</span>
 
-                    <h1>
-                        Kelola SDM<br>
-                        Lebih Mudah,<br>
-                        Bisnis Lebih Fokus
-                    </h1>
+                <h1>
+                    Kelola SDM<br>
+                    Lebih Mudah,<br>
+                    Bisnis Lebih Fokus
+                </h1>
 
-                    <p>
-                        Forstaff membantu perusahaan mengelola data karyawan,
-                        absensi, cuti, slip gaji, kinerja dan proses administrasi HR
-                        dalam satu platform yang terintegrasi.
-                    </p>
+                <p>
+                    Forstaff membantu perusahaan mengelola data karyawan,
+                    absensi, cuti, slip gaji, kinerja dan proses administrasi HR
+                    dalam satu platform yang terintegrasi.
+                </p>
 
-                    <div class="fs-hero-actions">
-                        <a href="#" class="fs-primary-btn">Beli Sekarang</a>
-                        <a href="#" class="fs-secondary-btn">Pelajari Lebih Lanjut</a>
-                    </div>
+                <div class="fs-hero-actions">
+                    <button
+                        type="button"
+                        class="fs-primary-btn"
+                        data-bs-toggle="modal"
+                        data-bs-target="#buyModal"
+                    >
+                        Beli Sekarang
+                    </button>
+
+                    <a href="#solusi-forstaff" class="fs-secondary-btn">
+                        Pelajari Lebih Lanjut
+                    </a>
                 </div>
-
-                <div class="fs-device-area">
-                    <div class="fs-device-bg" aria-hidden="true"></div>
-
-                    <div class="fs-device-wrap">
-                        <img
-                            src="{{ asset('images/dashboard/LAPTOP.webp') }}"
-                            alt="Dashboard Forstaff"
-                            class="fs-home-laptop"
-                        >
-
-                        <img
-                            src="{{ asset('images/dashboard/HP.webp') }}"
-                            alt="Aplikasi mobile Forstaff"
-                            class="fs-home-phone"
-                        >
-                    </div>
-                </div>
-
             </div>
+
+            <div class="fs-device-area">
+                <div class="fs-device-bg" aria-hidden="true"></div>
+
+                <div class="fs-device-wrap">
+                    <img
+                        src="{{ asset('images/dashboard/LAPTOP.webp') }}"
+                        alt="Dashboard Forstaff"
+                        class="fs-home-laptop"
+                    >
+
+                    <img
+                        src="{{ asset('images/dashboard/HP.webp') }}"
+                        alt="Aplikasi mobile Forstaff"
+                        class="fs-home-phone"
+                    >
+                </div>
+            </div>
+
         </div>
-    </section>
+    </div>
+</section>
 
 {{-- Statistik --}}
     <section class="fs-home-stats" aria-label="Statistik Forstaff">
@@ -109,7 +119,7 @@
 </section>
 
     {{-- Solusi --}}
-    <section class="fs-solusi">
+    <section class="fs-solusi" id="solusi-forstaff">
         <div class="fs-home-container">
             <div class="fs-solusi-box">
                 <h2>Solusi Lengkap untuk Operasional HR Anda</h2>
@@ -182,9 +192,9 @@
                     </div>
                 </div>
 
-                <div class="fs-feature-more">
-                    <a href="#">Lihat Semua Fitur →</a>
-                </div>
+               <div class="fs-feature-more">
+                    <a href="{{ url('/fitur') }}">Lihat Semua Fitur →</a>
+              </div>
             </div>
         </div>
     </section>
@@ -194,7 +204,7 @@
         <div class="fs-home-container">
             <div class="fs-about-grid">
                 <div class="fs-about-image">
-                    <img src="{{ asset('images/team/team.png') }}" alt="Team Forstaff">
+                    <img src="{{ asset('images/team/team.webp') }}" alt="Team Forstaff">
                 </div>
 
                 <div class="fs-about-content">
@@ -212,7 +222,9 @@
                         <li><span>✓</span> Dirancang untuk bisnis di Indonesia</li>
                     </ul>
 
-                    <a href="#" class="fs-about-btn">Tentang Forstaff</a>
+                   <a href="{{ url('/tentang-kami') }}" class="fs-about-btn">
+                        Tentang Forstaff
+                   </a>
                 </div>
             </div>
 
@@ -226,19 +238,72 @@
                     </button>
 
                     <div class="fs-client-track">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/BALI-DISTRICT.png') }}" alt="Bali District">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/BERCUT.png') }}" alt="Bercut">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/CHUYU.png') }}" alt="Chuyu">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/GETUP.png') }}" alt="Getup">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/LINGKAR-MEDIKA.png') }}" alt="Lingkar Medika">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/LPD.png') }}" alt="LPD">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/MY-KIND.png') }}" alt="My Kind">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/ORIS-CAKE.png') }}" alt="Oris Cake">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/RED-GROUP.png') }}" alt="Red Group">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/RUMAH_SUNAT.png') }}" alt="Rumah Sunat Bali">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/TREEHUB.png') }}" alt="Treehub Social Space">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/UNIVLOX.png') }}" alt="Univlox">
-                        <img class="fs-client-logo" src="{{ asset('images/clients/VIFA-HOLIDAY.png') }}" alt="Vifa Holiday">
+
+                        {{-- Compact / simbol — mengikuti skala RED GROUP --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/BALI-DISTRICT.webp') }}"
+                            alt="Bali District">
+
+                        {{-- Logo + tulisan — mengikuti skala RUMAH SUNAT --}}
+                        <img class="fs-client-logo fs-client-logo--text"
+                            src="{{ asset('images/clients/BERCUT.webp') }}"
+                            alt="Bercut">
+
+                        {{-- Compact --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/CHUYU.webp') }}"
+                            alt="Chuyu">
+
+                        {{-- Compact --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/GETUP.webp') }}"
+                            alt="Getup">
+
+                        {{-- Logo + tulisan --}}
+                        <img class="fs-client-logo fs-client-logo--text"
+                            src="{{ asset('images/clients/LINGKAR-MEDIKA.webp') }}"
+                            alt="Lingkar Medika">
+
+                        {{-- Compact --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/LPD.webp') }}"
+                            alt="LPD">
+
+                        {{-- Compact --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/MY-KIND.webp') }}"
+                            alt="My Kind">
+
+                        {{-- Logo + tulisan --}}
+                        <img class="fs-client-logo fs-client-logo--text fs-client-logo--oris"
+                            src="{{ asset('images/clients/ORIS-CAKE.webp') }}"
+                            alt="Oris Cake">
+
+                        {{-- Compact / PATOKAN --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/RED-GROUP.webp') }}"
+                            alt="Red Group">
+
+                        {{-- Logo + tulisan / PATOKAN --}}
+                        <img class="fs-client-logo fs-client-logo--text"
+                            src="{{ asset('images/clients/RUMAH_SUNAT.webp') }}"
+                            alt="Rumah Sunat Bali">
+
+                        {{-- Compact — sesuai instruksi, ikut RED GROUP --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/TREEHUB.webp') }}"
+                            alt="Treehub Social Space">
+
+                        {{-- Compact --}}
+                        <img class="fs-client-logo fs-client-logo--compact"
+                            src="{{ asset('images/clients/UNIVLOX.webp') }}"
+                            alt="Univlox">
+
+                        {{-- Logo + tulisan --}}
+                        <img class="fs-client-logo fs-client-logo--text"
+                            src="{{ asset('images/clients/VIFA-HOLIDAY.webp') }}"
+                            alt="Vifa Holiday">
+
                     </div>
 
                     <button type="button" class="fs-client-arrow right" aria-label="Logo berikutnya">
@@ -249,102 +314,191 @@
         </div>
     </section>
 
-    {{-- Artikel --}}
-    <section class="fs-article">
-        <div class="fs-home-container">
-            <h2 class="fs-article-title">Insight Terbaru</h2>
+{{-- Insight Terbaru --}}
+<section class="fs-home-insight">
+    <div class="fs-home-insight-container">
 
-            <div class="fs-article-grid">
-                <article class="fs-article-card">
-                    <div class="fs-article-image">
-                        <img
-                            src="{{ asset('images/article/ARTICLE-1.png') }}"
-                            alt="Cara meningkatkan disiplin kehadiran karyawan"
-                        >
-                        <span class="fs-article-category">HR MANAGEMENT</span>
-                    </div>
+        <h2 class="fs-home-insight-title">
+            Insight Terbaru
+        </h2>
 
-                    <div class="fs-article-content">
-                        <h3>Cara Meningkatkan Disiplin<br>Kehadiran Karyawan</h3>
-                        <div class="fs-article-meta">
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <rect x="4" y="5" width="16" height="16" rx="2"/>
-                                    <path d="M8 3v4M16 3v4M4 11h16M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/>
-                                </svg>
-                                <time datetime="2024-06-12">12 Jun 2024</time>
-                            </span>
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                1.2K views
-                            </span>
-                        </div>
-                    </div>
-                </article>
+        <div class="fs-blog-grid">
 
-                <article class="fs-article-card">
-                    <div class="fs-article-image">
-                        <img
-                            src="{{ asset('images/article/ARTICLE-2.png') }}"
-                            alt="Memahami komponen slip gaji karyawan"
-                        >
-                        <span class="fs-article-category">PAYROLL</span>
-                    </div>
+            {{-- ARTICLE 1 --}}
+            <article class="fs-blog-card">
 
-                    <div class="fs-article-content">
-                        <h3>Memahami Komponen<br>Slip Gaji Karyawan</h3>
-                        <div class="fs-article-meta">
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <rect x="4" y="5" width="16" height="16" rx="2"/>
-                                    <path d="M8 3v4M16 3v4M4 11h16M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/>
-                                </svg>
-                                <time datetime="2024-06-10">10 Jun 2024</time>
-                            </span>
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                950 views
-                            </span>
-                        </div>
-                    </div>
-                </article>
+                <a
+                    href="{{ url('/blog/5-cara-efektif-meningkatkan-produktivitas-tim-di-era-digital') }}"
+                    class="fs-blog-card-image-link"
+                    aria-label="Baca artikel 5 Cara Efektif Meningkatkan Produktivitas Tim di Era Digital"
+                >
+                    <img
+                        src="{{ asset('images/article/ARTICLE-1.webp') }}"
+                        alt="5 Cara Efektif Meningkatkan Produktivitas Tim di Era Digital"
+                        class="fs-blog-card-image"
+                        loading="lazy"
+                    >
+                </a>
 
-                <article class="fs-article-card">
-                    <div class="fs-article-image">
-                        <img
-                            src="{{ asset('images/article/ARTICLE-3.png') }}"
-                            alt="Tips mengelola cuti dengan lebih efektif"
-                        >
-                        <span class="fs-article-category">TIPS</span>
-                    </div>
+                <div class="fs-blog-card-body">
 
-                    <div class="fs-article-content">
-                        <h3>5 Tips Mengelola Cuti<br>dengan Lebih Efektif</h3>
-                        <div class="fs-article-meta">
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <rect x="4" y="5" width="16" height="16" rx="2"/>
-                                    <path d="M8 3v4M16 3v4M4 11h16M8 15h.01M12 15h.01M16 15h.01M8 18h.01M12 18h.01"/>
-                                </svg>
-                                <time datetime="2024-06-08">08 Jun 2024</time>
-                            </span>
-                            <span>
-                                <svg viewBox="0 0 24 24" aria-hidden="true">
-                                    <path d="M2 12s4-6 10-6 10 6 10 6-4 6-10 6S2 12 2 12Z"/>
-                                    <circle cx="12" cy="12" r="3"/>
-                                </svg>
-                                650 views
-                            </span>
-                        </div>
-                    </div>
-                </article>
-            </div>
+                    <time
+                        class="fs-blog-card-date"
+                        datetime="2024-09-12"
+                    >
+                        12 Sep 2024
+                    </time>
+
+                    <h3 class="fs-blog-card-title">
+                        <a href="{{ url('/blog/5-cara-efektif-meningkatkan-produktivitas-tim-di-era-digital') }}">
+                            5 Cara Efektif Meningkatkan Produktivitas Tim di Era Digital
+                        </a>
+                    </h3>
+
+                    <p class="fs-blog-card-excerpt">
+                        Produktivitas tim bukan hanya soal bekerja lebih keras,
+                        tetapi juga bekerja lebih cerdas. Simak tipsnya di sini.
+                    </p>
+
+                    <a
+                        href="{{ url('/blog/5-cara-efektif-meningkatkan-produktivitas-tim-di-era-digital') }}"
+                        class="fs-blog-card-link"
+                    >
+                        <span>Baca Selengkapnya</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M5 12h14M14 7l5 5-5 5"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            {{-- ARTICLE 2 --}}
+            <article class="fs-blog-card">
+
+                <a
+                    href="{{ url('/blog/mengapa-transformasi-digital-penting-untuk-bisnis-saat-ini') }}"
+                    class="fs-blog-card-image-link"
+                    aria-label="Baca artikel Mengapa Transformasi Digital Penting untuk Bisnis Saat Ini"
+                >
+                    <img
+                        src="{{ asset('images/article/ARTICLE-2.webp') }}"
+                        alt="Mengapa Transformasi Digital Penting untuk Bisnis Saat Ini"
+                        class="fs-blog-card-image"
+                        loading="lazy"
+                    >
+                </a>
+
+                <div class="fs-blog-card-body">
+
+                    <time
+                        class="fs-blog-card-date"
+                        datetime="2024-09-05"
+                    >
+                        5 Sep 2024
+                    </time>
+
+                    <h3 class="fs-blog-card-title">
+                        <a href="{{ url('/blog/mengapa-transformasi-digital-penting-untuk-bisnis-saat-ini') }}">
+                            Mengapa Transformasi Digital Penting untuk Bisnis Saat Ini?
+                        </a>
+                    </h3>
+
+                    <p class="fs-blog-card-excerpt">
+                        Transformasi digital membantu perusahaan beradaptasi
+                        dengan perubahan dan menciptakan peluang baru di tengah persaingan.
+                    </p>
+
+                    <a
+                        href="{{ url('/blog/mengapa-transformasi-digital-penting-untuk-bisnis-saat-ini') }}"
+                        class="fs-blog-card-link"
+                    >
+                        <span>Baca Selengkapnya</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M5 12h14M14 7l5 5-5 5"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            {{-- ARTICLE 3 --}}
+            <article class="fs-blog-card">
+
+                <a
+                    href="{{ url('/blog/membangun-budaya-kerja-positif-di-lingkungan-hybrid') }}"
+                    class="fs-blog-card-image-link"
+                    aria-label="Baca artikel Membangun Budaya Kerja Positif di Lingkungan Hybrid"
+                >
+                    <img
+                        src="{{ asset('images/article/ARTICLE-3.webp') }}"
+                        alt="Membangun Budaya Kerja Positif di Lingkungan Hybrid"
+                        class="fs-blog-card-image"
+                        loading="lazy"
+                    >
+                </a>
+
+                <div class="fs-blog-card-body">
+
+                    <time
+                        class="fs-blog-card-date"
+                        datetime="2024-08-28"
+                    >
+                        28 Agu 2024
+                    </time>
+
+                    <h3 class="fs-blog-card-title">
+                        <a href="{{ url('/blog/membangun-budaya-kerja-positif-di-lingkungan-hybrid') }}">
+                            Membangun Budaya Kerja Positif di Lingkungan Hybrid
+                        </a>
+                    </h3>
+
+                    <p class="fs-blog-card-excerpt">
+                        Lingkungan kerja hybrid menuntut pendekatan baru
+                        dalam membangun kolaborasi dan komunikasi yang efektif.
+                    </p>
+
+                    <a
+                        href="{{ url('/blog/membangun-budaya-kerja-positif-di-lingkungan-hybrid') }}"
+                        class="fs-blog-card-link"
+                    >
+                        <span>Baca Selengkapnya</span>
+
+                        <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                            <path
+                                d="M5 12h14M14 7l5 5-5 5"
+                                stroke="currentColor"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                    </a>
+
+                </div>
+
+            </article>
+
         </div>
-    </section>
+
+    </div>
+</section>
 @endsection

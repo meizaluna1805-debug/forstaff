@@ -241,9 +241,9 @@
 .fs-home-laptop {
     position: absolute;
 
-    width: 600px;
+    width: 500px;
 
-    right: 90px;
+    right: 160px;
     top: 85px;
 
     z-index: 3;
@@ -436,6 +436,8 @@
     padding: 12px 0 0;
 
     background: transparent;
+
+    scroll-margin-top: 90px;
 }
 
 .fs-solusi-box {
@@ -455,7 +457,7 @@
 
     text-align: center;
 
-    color: #1a2340;
+    color: #194A97;
 
     font-size: 22px;
     font-weight: 700;
@@ -791,19 +793,19 @@
         font-size: 26px;
     }
 
-    /* Device */
+  /* Device */
 
     .fs-device-area {
         height: 280px;
-
         margin-top: 10px;
     }
 
     .fs-device-bg::before {
-        width: 290px;
-        height: 290px;
+        width: 230px;
+        height: 230px;
 
         right: 50%;
+        top: 28px;
 
         transform: translateX(50%);
     }
@@ -834,9 +836,7 @@
         top: 45px;
 
         transform: translateX(50%);
-
-        animation-name:
-            fsLaptopFloatMobile;
+        animation-name: fsLaptopFloatMobile;
     }
 
     .fs-home-phone {
@@ -845,7 +845,6 @@
         right: calc(50% - 170px);
         top: 72px;
     }
-
 
     /* Solusi */
 
@@ -881,34 +880,60 @@
     }
 }
 
-
-/* =========================================================
-   MOBILE SMALL
-========================================================= */
-
 @media (max-width: 480px) {
 
     .fs-hero-content h1 {
         font-size: 29px;
     }
 
-
     .fs-device-area {
         height: 240px;
     }
 
-    .fs-home-laptop {
-        width: 230px;
+    /* Background lingkaran utama */
+    .fs-device-bg::before {
+        width: 250px;
+        height: 250px;
 
-        right: calc(50% + 25px);
+        right: 50%;
+        top: 18px;
+
+        transform: translateX(50%);
+    }
+
+    /* Background lingkaran kecil */
+    .fs-device-bg::after {
+        width: 105px;
+        height: 105px;
+
+        right: calc(50% - 68px);
+        top: 88px;
+    }
+
+    /* Dotted background */
+    .fs-device-wrap::before {
+        width: 82px;
+        height: 42px;
+
+        right: calc(50% - 132px);
+        top: 27px;
+
+        background-size: 8px 8px;
+    }
+
+    /* Ukuran asset yang kamu sudah pilih */
+    .fs-home-laptop {
+        width: 240px;
+
+        right: calc(50% + 44px);
         top: 55px;
     }
 
     .fs-home-phone {
-        width: 85px;
+        width: 80px;
 
-        right: calc(50% - 150px);
-        top: 75px;
+        right: calc(50% - 154px);
+        top: 63px;
     }
 
     .fs-solusi-grid {
@@ -916,13 +941,12 @@
     }
 }
 
-
 /* =========================================================
    ABOUT FORSTAFF
 ========================================================= */
 
 .fs-about-preview {
-    padding: 70px 0 40px;
+    padding: 70px 0 0px;
 }
 
 .fs-about-grid {
@@ -955,26 +979,33 @@
 }
 
 .fs-about-label {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
 
-    padding: 6px 12px;
+    padding: 5px 13px;
 
-    background: #eaf1fb;
+    background: #F7F9FC;
 
+    border: 1px solid #E5E7EB;
     border-radius: 20px;
 
     color: #194A97;
 
-    font-size: 12px;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 11px;
     font-weight: 700;
+    line-height: 1.5;
+
+    letter-spacing: normal;
 }
 
 .fs-about-content h2 {
     margin: 15px 0;
 
-    color: #102049;
+    color: #194A97;
 
     font-size: 34px;
+    font-weight: 700;
     line-height: 1.15;
 }
 
@@ -982,6 +1013,7 @@
     color: #66758d;
 
     font-size: 16px;
+    font-weight: 400;
     line-height: 1.6;
 }
 
@@ -1101,12 +1133,6 @@
         background: transparent;
     }
 
-    .fs-about-label {
-        padding: 6px 11px;
-
-        font-size: 11px;
-    }
-
     .fs-about-content h2 {
         margin: 14px 0 13px;
 
@@ -1178,28 +1204,27 @@
 .fs-client-section {
     margin-top: 36px;
 
-    padding: 32px 28px 36px;
+    padding: 32px 0 36px;
 
-    background: #ffffff;
+    background: transparent;
 
-    border: 1px solid #dfe8f4;
-    border-radius: 18px;
+    border: none;
+    border-radius: 0;
 
-    box-shadow:
-        0 10px 30px rgba(25, 74, 151, .06);
+    box-shadow: none;
 }
 
 .fs-client-section h3 {
     margin: 0 0 40px;
 
-    color: #102049;
+    color: #194A97;
 
-    font-family: inherit;
+    font-family: 'Instrument Sans', sans-serif;
     font-size: 26px;
     font-weight: 700;
     line-height: 1.3;
 
-    letter-spacing: -.4px;
+    letter-spacing: normal;
 
     text-align: center;
 }
@@ -1232,14 +1257,12 @@
 }
 
 .fs-client-logo {
+    display: block;
     flex-shrink: 0;
-
-    width: 100px;
-    height: 45px;
 
     object-fit: contain;
 
-    opacity: .7;
+    opacity: 1;
 }
 
 .fs-client-arrow {
@@ -1287,27 +1310,28 @@
 
     flex: 0 0 auto;
 
+    width: 270px;
     height: 110px;
 
     padding: 16px 22px;
 
-    background:
-        linear-gradient(
-            180deg,
-            #ffffff 0%,
-            #f5f9ff 100%
-        );
+    overflow: hidden;
+
+    background: linear-gradient(
+        180deg,
+        #ffffff 0%,
+        #f5f9ff 100%
+    );
 
     border: 1.5px solid #cddcf3;
     border-radius: 16px;
 
-    box-shadow:
-        0 6px 16px rgba(25, 74, 151, .07);
+    box-shadow: 0 6px 16px rgba(25, 74, 151, .07);
 
-    transition:
-        border-color .25s ease,
-        box-shadow .25s ease,
-        transform .25s ease;
+transition:
+    border-color .25s ease,
+    box-shadow .25s ease,
+    transform .25s ease;
 }
 
 .fs-client-card:hover {
@@ -1320,14 +1344,38 @@
 }
 
 .fs-client-card .fs-client-logo {
-    width: 100%;
-    height: 100%;
+    display: block;
+
+    width: auto;
+    height: auto;
+
+    max-width: 82%;
+    max-height: 70px;
 
     object-fit: contain;
 
+    margin: 0 auto;
     opacity: 1;
+
+    transform: none;
 }
 
+/* Mengikuti skala visual RED GROUP */
+.fs-client-card .fs-client-logo--compact {
+    max-width: 82%;
+    max-height: 70px;
+}
+
+/* Mengikuti skala visual RUMAH SUNAT */
+.fs-client-card .fs-client-logo--text {
+    max-width: 82%;
+    max-height: 58px;
+}
+
+.fs-client-card img[src*="ORIS-CAKE"] {
+    max-width: 70% !important;
+    max-height: 50px !important;
+}
 
 /* =========================================================
    CLIENT RESPONSIVE
@@ -1338,9 +1386,9 @@
     .fs-client-section {
         margin-top: 30px;
 
-        padding: 26px 16px 28px;
+        padding: 26px 0 28px;
 
-        border-radius: 16px;
+        border-radius: 0;
     }
 
     .fs-client-section h3 {
@@ -1363,8 +1411,8 @@
     }
 
     .fs-client-card {
+        width: 220px;
         height: 84px;
-
         padding: 12px 14px;
     }
 }
@@ -1372,7 +1420,7 @@
 @media (max-width: 480px) {
 
     .fs-client-section {
-        padding-inline: 12px;
+        padding-inline: 0;
     }
 
     .fs-client-section h3 {
@@ -1382,227 +1430,307 @@
 
 
 /* =========================================================
-   ARTICLE
+   INSIGHT TERBARU
 ========================================================= */
 
-.fs-article {
-    padding: 50px 0 70px;
+.fs-home-insight {
+    width: 100%;
 
-    background: #f5f8fc;
-}
-
-.fs-article > .fs-home-container {
-    padding: 26px 24px 24px;
+    padding: 32px 0 60px;
 
     background: #ffffff;
 
-    border: 1px solid #dfe8f4;
-    border-radius: 18px;
-
-    box-shadow:
-        0 10px 30px rgba(25, 74, 151, .06);
+    font-family: "Instrument Sans", sans-serif;
 }
 
-.fs-article-title {
+.fs-home-insight-container {
+    width: min(calc(100% - 48px), 1260px);
+
+    margin-inline: auto;
+}
+
+.fs-home-insight-title {
     margin: 0 0 28px;
 
-    text-align: center;
-
-    color: #102049;
+    color: #194A97;
 
     font-size: 26px;
     font-weight: 700;
+    line-height: 1.3;
+
+    text-align: center;
 }
 
-.fs-article-grid {
+
+/* =========================================================
+   ARTICLE GRID
+========================================================= */
+
+.fs-home-insight .fs-blog-grid {
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(3, minmax(0, 1fr));
 
-    gap: 24px;
+    gap: 26px;
 }
 
-.fs-article-card {
+
+/* =========================================================
+   ARTICLE CARD
+========================================================= */
+
+.fs-home-insight .fs-blog-card {
     display: flex;
     flex-direction: column;
 
     min-width: 0;
+    height: 100%;
 
     overflow: hidden;
+
+    border: 1px solid #e3e9f1;
+    border-radius: 8px;
 
     background: #ffffff;
 
-    border: 1px solid #e3ebf6;
-    border-radius: 10px;
-
-    transition: .25s ease;
+    transition:
+        border-color 0.22s ease,
+        box-shadow 0.22s ease,
+        transform 0.22s ease;
 }
 
-.fs-article-card:hover {
-    transform: translateY(-5px);
+.fs-home-insight .fs-blog-card:hover {
+    border-color: #cad9ee;
 
     box-shadow:
-        0 12px 30px rgba(25, 74, 151, .10);
-}
+        0 10px 30px rgba(25, 74, 151, 0.075);
 
-.fs-article-image {
-    position: relative;
-
-    flex-shrink: 0;
-
-    width: 100%;
-    height: 90px;
-
-    overflow: hidden;
-}
-
-.fs-article-image img {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-}
-
-.fs-article-content {
-    display: flex;
-    flex-direction: column;
-
-    flex: 1;
-
-    padding: 10px 18px 14px;
-}
-
-.fs-article-category {
-    position: absolute;
-
-    left: 18px;
-    bottom: 0;
-
-    display: inline-flex;
-
-    margin-bottom: 0;
-    padding: 6px 12px;
-
-    background: #eaf1fb;
-
-    border-radius: 4px 4px 0 0;
-
-    color: #194A97;
-
-    font-size: 11px;
-    font-weight: 700;
-}
-
-.fs-article-content h3 {
-    margin: 0 0 12px;
-
-    color: #172447;
-
-    font-size: 17px;
-    font-weight: 700;
-    line-height: 1.4;
-}
-
-.fs-article-meta {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-
-    gap: 8px 26px;
-
-    margin-top: auto;
-
-    color: #71819b;
-
-    font-size: 13px;
-}
-
-.fs-article-meta span {
-    display: inline-flex;
-    align-items: center;
-
-    gap: 6px;
-
-    white-space: nowrap;
-}
-
-.fs-article-meta svg {
-    flex-shrink: 0;
-
-    width: 14px;
-    height: 14px;
-
-    fill: none;
-
-    stroke: currentColor;
-    stroke-width: 1.5;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    transform: translateY(-3px);
 }
 
 
 /* =========================================================
-   ARTICLE TABLET
+   ARTICLE IMAGE
+========================================================= */
+
+.fs-home-insight .fs-blog-card-image-link {
+    display: block;
+
+    overflow: hidden;
+
+    background: #eef3f8;
+}
+
+.fs-home-insight .fs-blog-card-image {
+    display: block;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 8.9;
+
+    object-fit: cover;
+    object-position: center;
+
+    transition: transform 0.35s ease;
+}
+
+.fs-home-insight .fs-blog-card:hover .fs-blog-card-image {
+    transform: scale(1.025);
+}
+
+
+/* =========================================================
+   ARTICLE BODY
+========================================================= */
+
+.fs-home-insight .fs-blog-card-body {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    padding: 17px 18px 18px;
+}
+
+
+/* =========================================================
+   ARTICLE DATE
+========================================================= */
+
+.fs-home-insight .fs-blog-card-date {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #7892b7;
+
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 1.3;
+}
+
+
+/* =========================================================
+   ARTICLE TITLE
+========================================================= */
+
+.fs-home-insight .fs-blog-card-title {
+    margin: 0 0 9px;
+
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.3;
+
+    letter-spacing: -0.25px;
+}
+
+.fs-home-insight .fs-blog-card-title a {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    color: #12489d;
+
+    text-decoration: none;
+
+    line-clamp: 2;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+
+    transition: color 0.2s ease;
+}
+
+.fs-home-insight .fs-blog-card-title a:hover {
+    color: #194a97;
+}
+
+
+/* =========================================================
+   ARTICLE EXCERPT
+========================================================= */
+
+.fs-home-insight .fs-blog-card-excerpt {
+    display: -webkit-box;
+
+    overflow: hidden;
+
+    min-height: 66px;
+
+    margin: 0 0 18px;
+
+    color: #6b7f9e;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
+
+    line-clamp: 3;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+
+
+/* =========================================================
+   ARTICLE LINK
+========================================================= */
+
+.fs-home-insight .fs-blog-card-link {
+    display: inline-flex;
+    align-items: center;
+
+    align-self: flex-start;
+
+    gap: 7px;
+
+    margin-top: auto;
+
+    color: #1260c9;
+
+    font-size: 13px;
+    font-weight: 650;
+
+    text-decoration: none;
+
+    transition:
+        color 0.2s ease,
+        gap 0.2s ease;
+}
+
+.fs-home-insight .fs-blog-card-link svg {
+    width: 16px;
+    height: 16px;
+}
+
+.fs-home-insight .fs-blog-card-link:hover {
+    gap: 10px;
+
+    color: #194a97;
+}
+
+
+/* =========================================================
+   LARGE TABLET
+========================================================= */
+
+@media (max-width: 1199.98px) {
+
+    .fs-home-insight .fs-blog-grid {
+        gap: 22px;
+    }
+
+}
+
+
+/* =========================================================
+   TABLET
 ========================================================= */
 
 @media (max-width: 991.98px) {
 
-    .fs-article-grid {
+    .fs-home-insight .fs-blog-grid {
         grid-template-columns:
-            repeat(2, 1fr);
+            repeat(2, minmax(0, 1fr));
+
+        gap: 22px;
     }
+
 }
 
 
 /* =========================================================
-   ARTICLE MOBILE
+   MOBILE
 ========================================================= */
 
 @media (max-width: 767.98px) {
 
-    .fs-article {
-        padding: 40px 0;
+    .fs-home-insight {
+        padding: 28px 0 48px;
     }
 
-    .fs-article > .fs-home-container {
-        padding: 22px 14px;
-
-        border-radius: 16px;
+    .fs-home-insight-container {
+        width: min(calc(100% - 32px), 1260px);
     }
 
-    .fs-article-title {
+    .fs-home-insight-title {
         margin-bottom: 22px;
 
         font-size: 22px;
     }
 
-    .fs-article-grid {
+    .fs-home-insight .fs-blog-grid {
         grid-template-columns: 1fr;
 
-        gap: 16px;
+        gap: 20px;
     }
 
-    .fs-article-image {
-        height: 150px;
+    .fs-home-insight .fs-blog-card-image {
+        aspect-ratio: 16 / 8.5;
     }
 
-    .fs-article-content {
-        padding: 13px 15px 16px;
+    .fs-home-insight .fs-blog-card-excerpt {
+        min-height: auto;
     }
 
-    .fs-article-content h3 {
-        font-size: 16px;
-    }
-
-    .fs-article-meta {
-        gap: 7px 18px;
-
-        font-size: 12px;
-    }
 }
 
 
@@ -1612,15 +1740,28 @@
 
 @media (max-width: 480px) {
 
-    .fs-article {
-        padding: 34px 0 40px;
+    .fs-home-insight {
+        padding: 24px 0 42px;
     }
 
-    .fs-article-title {
+    .fs-home-insight-container {
+        width: min(calc(100% - 28px), 1260px);
+    }
+
+    .fs-home-insight-title {
         font-size: 20px;
     }
 
-    .fs-article-image {
-        height: 135px;
+    .fs-home-insight .fs-blog-card-body {
+        padding: 15px 15px 17px;
     }
+
+    .fs-home-insight .fs-blog-card-title {
+        font-size: 17px;
+    }
+
+    .fs-home-insight .fs-blog-card-excerpt {
+        font-size: 13.5px;
+    }
+
 }
