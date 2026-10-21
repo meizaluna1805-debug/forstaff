@@ -84,7 +84,7 @@
     width: 115%;
     max-width: none;
     height: auto;
-    margin: auto 0 30px -7%;
+    margin: 150px 0 30px -7%;
     object-fit: contain;
 }
 
@@ -270,7 +270,7 @@
 /* Layar laptop pendek: perkecil seluruh popup, termasuk isinya */
 @media (min-width: 992px) and (max-height: 700px) {
     .fs-request-demo-dialog {
-        zoom: 0.68;
+        zoom: 0.71;
     }
 }
 

@@ -20,7 +20,7 @@
 
                 <img
                     class="fs-request-demo-devices"
-                    src="{{ asset('images/request-demo/devices.png') }}"
+                    src="{{ asset('images/request-demo/devices-demo.webp') }}"
                     alt="Tampilan Forstaff pada laptop dan ponsel"
                 >
             </div>
