@@ -18,7 +18,7 @@
             'datetime' => '2024-09-12',
             'reading_time' => '5 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-1.png',
+            'image' => 'images/article/ARTICLE-1.webp',
 
             'lead' => 'Bangun tim yang produktif melalui komunikasi yang jelas, pengelolaan kerja yang terarah, dan pemanfaatan teknologi yang tepat.',
 
@@ -105,7 +105,7 @@
             'datetime' => '2024-08-28',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-3.png',
+            'image' => 'images/article/ARTICLE-3.webp',
 
             'lead' => 'Lingkungan kerja hybrid membutuhkan komunikasi, kepercayaan, dan kebiasaan kolaborasi yang tetap kuat meskipun anggota tim bekerja dari lokasi berbeda.',
 
@@ -183,7 +183,7 @@
             'datetime' => '2024-08-14',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-2.png',
+            'image' => 'images/article/ARTICLE-2.webp',
 
             'lead' => 'Tim yang solid membutuhkan tujuan bersama, komunikasi yang terbuka, dan kemampuan untuk menyesuaikan diri terhadap perubahan.',
 
