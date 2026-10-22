@@ -11,6 +11,7 @@
             {{-- PANEL KIRI: INFORMASI DAN GAMBAR DEVICES --}}
             <div class="fs-request-demo-panel">
                 <div class="fs-request-demo-panel-copy">
+                <span class="fs-request-demo-badge">Request Demo</span>
                     <h3>Kelola SDM <br>Lebih Mudah <br>Bersama Forstaff</h3>
                     <p>
                         Kenali fitur Forstaff dan temukan solusi yang sesuai

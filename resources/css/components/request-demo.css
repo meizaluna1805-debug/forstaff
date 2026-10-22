@@ -28,7 +28,7 @@
     flex-direction: column;
     min-width: 0;
     overflow: hidden;
-    padding: 90px 40px 0;
+    padding: 30px 40px 0;
     background: #194A97;
     color: #ffffff;
 }
@@ -54,6 +54,20 @@
     height: 190px;
     left: -105px;
     bottom: 170px;
+}
+
+.fs-request-demo-badge {
+    display: inline-flex;
+    align-items: center;
+    margin-bottom: 18px;
+    padding: 5px 13px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 1.5;
 }
 
 .fs-request-demo-panel-copy {
@@ -114,8 +128,10 @@
 }
 
 .fs-request-demo-brand img {
-    width: 130px;
-    height: 42px;
+    display: block;
+    width: 150px;
+    height: auto;
+    object-fit: contain;
 }
 
 .fs-request-demo-close.btn-close {
@@ -242,7 +258,7 @@
     }
 
     .fs-request-demo-panel {
-        padding: 70px 22px 0;
+        padding: 30px 22px 0;
     }
 
     .fs-request-demo-panel h3 {
