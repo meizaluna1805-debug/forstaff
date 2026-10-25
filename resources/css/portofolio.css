@@ -99,17 +99,18 @@
 /* Heading */
 
 .fs-portfolio-hero h1 {
-    max-width: 520px;
+    max-width: 560px;
 
-    margin: 0 0 12px;
+    margin: 0 0 25px;
 
-    color: #12489d;
+    color: #194A97;
 
-    font-size: clamp(35px, 3.2vw, 50px);
-    font-weight: 750;
-    line-height: 1.05;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08;
 
-    letter-spacing: -1.3px;
+    letter-spacing: -1px;
 }
 
 
@@ -122,6 +123,7 @@
 
     color: #6280ae;
 
+    font-family: 'Instrument Sans', sans-serif;
     font-size: 15px;
     font-weight: 400;
     line-height: 1.55;
@@ -352,12 +354,12 @@
 .fs-portfolio-intro {
     position: relative;
 
-    padding: 25px 30px 24px;
+    padding: 34px 38px;
 
     margin-bottom: 26px;
 
     border: 1px solid #e1eaf4;
-    border-radius: 13px;
+    border-radius: 18px;
 
     background:
         linear-gradient(
@@ -368,7 +370,7 @@
         );
 
     box-shadow:
-        0 5px 22px rgba(25, 74, 151, 0.025);
+        0 8px 24px rgba(25, 74, 151, 0.035);
 }
 
 .fs-portfolio-intro::before {
@@ -387,6 +389,36 @@
     background: #194A97;
 }
 
+.fs-portfolio-intro-content {
+    min-width: 0;
+}
+
+.fs-portfolio-intro-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.85fr);
+    align-items: center;
+    gap: 46px;
+}
+
+.fs-portfolio-intro-visual {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 0;
+    padding: 0;
+}
+
+.fs-portfolio-intro-visual img {
+    display: block;
+
+    width: 100%;
+    max-width: 460px;
+    height: auto;
+
+    object-fit: contain;
+}
+
 
 /* Eyebrow */
 
@@ -394,53 +426,64 @@
     display: inline-flex;
     align-items: center;
 
-    min-height: 24px;
+    margin-bottom: 15px;
+    padding: 5px 13px;
 
-    margin-bottom: 8px;
+    background: #F7F9FC;
 
-    padding: 4px 12px;
-
-    border-radius: 999px;
-
-    background: #eaf3ff;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
 
     color: #194A97;
 
+    font-family: 'Instrument Sans', sans-serif;
     font-size: 11px;
     font-weight: 700;
+    line-height: 1.5;
 
-    letter-spacing: 0.35px;
+    letter-spacing: normal;
 }
 
 
 /* Title */
 
 .fs-portfolio-intro h2 {
-    margin: 0 0 11px;
+    margin: 0 0 15px;
 
-    color: #12489d;
+    color: #194A97;
 
-    font-size: clamp(29px, 2.45vw, 38px);
-    font-weight: 750;
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 34px;
+    font-weight: 700;
+    line-height: 1.15;
 
-    line-height: 1.05;
-
-    letter-spacing: -0.75px;
+    letter-spacing: normal;
 }
 
 
 /* Paragraph */
 
 .fs-portfolio-description {
-    max-width: 1160px;
+    max-width: 660px;
+}
+
+.fs-portfolio-intro-body {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(340px, 0.85fr);
+    align-items: center;
+
+    gap: 46px;
 }
 
 .fs-portfolio .fs-portfolio-description p {
-    margin: 0 0 10px;
-    color: #4B5563;
-    font-size: 14px;
+    margin: 0 0 14px;
+
+    color: #66758d;
+
+    font-family: 'Instrument Sans', sans-serif;
+    font-size: 16px;
     font-weight: 400;
-    line-height: 1.55;
+    line-height: 1.6;
 }
 
 .fs-portfolio .fs-portfolio-description p:last-child {
@@ -472,7 +515,7 @@
         0 0
         calc((100% - 60px) / 5);
 
-    min-height: 205px;
+    min-height: 232px;
 
     display: flex;
     flex-direction: column;
@@ -508,13 +551,13 @@
 
 .fs-portfolio .fs-client-logo {
     width: 100%;
-    height: 104px;
+    height: 116px;
 
     display: flex;
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 6px;
+    margin-bottom: 25px;
 }
 
 .fs-portfolio .fs-client-logo img {
@@ -533,14 +576,14 @@
 /* Client text */
 
 .fs-portfolio .fs-client-content h3 {
-    margin: 0 0 4px;
+    margin: 0 0 7px;
 
-    color: #16489b;
+    color: #194A97;
 
-    font-size: 17px;
+    font-size: 16px;
     font-weight: 700;
 
-    line-height: 1.15;
+    line-height: 1.2;
 }
 
 .fs-portfolio .fs-client-content p {
@@ -548,12 +591,12 @@
 
     margin: 0 auto;
 
-    color: #6683b3;
+    color: #7892b7;
 
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 400;
 
-    line-height: 1.25;
+    line-height: 1.4;
 }
 
 
@@ -563,6 +606,10 @@
 
 @media (max-width: 1199.98px) {
 
+   .fs-portfolio-hero h1 {
+    font-size: 40px;
+    }
+   
     .fs-portfolio-container {
         width: min(calc(100% - 40px), 1100px);
     }
@@ -662,13 +709,17 @@
     .fs-portfolio-hero h1 {
         max-width: 100%;
 
-        font-size: 36px;
+        font-size: 32px;
+        line-height: 1.1;
 
         letter-spacing: -0.8px;
     }
 
     .fs-portfolio-hero-content > p {
         max-width: 100%;
+
+        font-size: 14px;
+        line-height: 1.65;
     }
 
     .fs-portfolio-hero-image {
@@ -750,15 +801,14 @@
     }
 
     .fs-portfolio-intro h2 {
-        font-size: 30px;
+        font-size: 29px;
+        line-height: 1.16;
     }
 
-    .fs-portfolio-description p {
-        font-size: 13px;
-
-        line-height: 1.6;
+    .fs-portfolio .fs-portfolio-description p {
+        font-size: 15px;
+        line-height: 1.7;
     }
-
 
     /* Cards */
 
@@ -770,13 +820,14 @@
         flex-basis:
             calc((100% - 12px) / 2);
 
-        min-height: 183px;
+        min-height: 205px;
 
         padding: 15px 11px;
     }
 
     .fs-portfolio .fs-client-logo {
-        height: 88px;
+        height: 96px;
+        margin-bottom: 14px;
     }
 
     .fs-portfolio .fs-client-logo img {
@@ -805,7 +856,7 @@
     }
 
     .fs-portfolio-hero h1 {
-        font-size: 32px;
+        font-size: 29px;
     }
 
     .fs-portfolio-hero-note {
@@ -814,14 +865,23 @@
         font-size: 19px;
     }
 
+    .fs-portfolio-intro h2 {
+    font-size: 27px;
+    }
+
+    .fs-portfolio .fs-portfolio-description p {
+        font-size: 14px;
+    }
+
     .fs-portfolio .fs-client-card {
-        min-height: 172px;
+        min-height: 195px;
 
         padding-inline: 8px;
     }
 
     .fs-portfolio .fs-client-logo {
-        height: 80px;
+        height: 86px;
+        margin-bottom: 12px;
     }
 
     .fs-portfolio .fs-client-logo img {

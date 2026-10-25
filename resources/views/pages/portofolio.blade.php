@@ -45,7 +45,7 @@
                 <div class="fs-portfolio-hero-image">
 
                     <img
-                        src="{{ asset('images/team/kantor.jpg') }}"
+                        src="{{ asset('images/team/kantor.webp') }}"
                         alt="Lingkungan kerja Forstaff"
                     >
 
@@ -269,79 +269,79 @@
             [
                 'name' => 'Bali District',
                 'description' => 'Bar & Hiburan Malam',
-                'image' => 'BALI-DISTRICT.png',
+                'image' => 'BALI-DISTRICT.webp',
             ],
 
             [
                 'name' => 'Bercut',
                 'description' => 'Barbershop & Grooming',
-                'image' => 'BERCUT.png',
+                'image' => 'BERCUT.webp',
             ],
 
             [
                 'name' => 'Chuyu',
                 'description' => 'Food & Beverage',
-                'image' => 'CHUYU.png',
+                'image' => 'CHUYU.webp',
             ],
 
             [
                 'name' => 'Get Up',
                 'description' => 'Restaurant & Club Lounge',
-                'image' => 'GETUP.png',
+                'image' => 'GETUP.webp',
             ],
 
             [
                 'name' => 'Lingkar Medika',
                 'description' => 'Layanan kesehatan',
-                'image' => 'LINGKAR-MEDIKA.png',
+                'image' => 'LINGKAR-MEDIKA.webp',
             ],
 
             [
                 'name' => 'Lembaga Perkreditan Desa Celuk',
                 'description' => 'Lembaga Perkreditan Desa',
-                'image' => 'LPD.png',
+                'image' => 'LPD.webp',
             ],
 
             [
                 'name' => 'My of Kind Beauty',
                 'description' => 'Perawatan Kecantikan Alami',
-                'image' => 'MY-KIND.png',
+                'image' => 'MY-KIND.webp',
             ],
 
             [
                 'name' => 'Oris Cake',
                 'description' => 'Kue & pastry',
-                'image' => 'ORIS-CAKE.png',
+                'image' => 'ORIS-CAKE.webp',
             ],
 
             [
                 'name' => 'Red Group',
                 'description' => 'Grup Perusahaan',
-                'image' => 'RED-GROUP.png',
+                'image' => 'RED-GROUP.webp',
             ],
 
             [
                 'name' => 'Rumah Sunat Bali',
                 'description' => 'Layanan kesehatan',
-                'image' => 'RUMAH_SUNAT.png',
+                'image' => 'RUMAH_SUNAT.webp',
             ],
 
             [
                 'name' => 'The Hub',
                 'description' => 'Kafe & Ruang Komunitas',
-                'image' => 'TREEHUB.png',
+                'image' => 'TREEHUB.webp',
             ],
 
             [
                 'name' => 'Univlox',
                 'description' => 'Klub & Hiburan Malam',
-                'image' => 'UNIVLOX.png',
+                'image' => 'UNIVLOX.webp',
             ],
 
             [
                 'name' => 'Vifa Holiday',
                 'description' => 'Destination Management Company',
-                'image' => 'VIFA-HOLIDAY.png',
+                'image' => 'VIFA-HOLIDAY.webp',
             ],
 
         ];
@@ -358,53 +358,59 @@
             {{-- =====================================================
                 INTRO PORTOFOLIO
             ====================================================== --}}
+            
             <div class="fs-portfolio-intro">
 
                 <span class="fs-portfolio-eyebrow">
                     PORTOFOLIO
                 </span>
 
-
                 <h2>
                     Kolaborasi Nyata,<br>
                     Dampak Nyata.
                 </h2>
 
+                <div class="fs-portfolio-intro-body">
 
-                <div class="fs-portfolio-description">
+                    <div class="fs-portfolio-description">
 
-                    <p>
-                        Forstaff hadir untuk membantu perusahaan dari berbagai
-                        industri mengelola sumber daya manusia secara lebih
-                        terstruktur. Setiap bisnis memiliki kebutuhan yang berbeda,
-                        mulai dari pengaturan kehadiran, pengelolaan data karyawan,
-                        hingga proses penggajian yang saling terhubung.
-                    </p>
+                        <p>
+                            Forstaff hadir untuk membantu perusahaan dari berbagai
+                            industri mengelola sumber daya manusia secara lebih
+                            terstruktur. Setiap bisnis memiliki kebutuhan yang berbeda,
+                            mulai dari pengaturan kehadiran, pengelolaan data karyawan,
+                            hingga proses penggajian yang saling terhubung.
+                        </p>
 
+                        <p>
+                            Pengalaman tersebut menjadi dasar bagi Forstaff untuk terus
+                            menghadirkan solusi administrasi SDM dalam kegiatan
+                            operasional sehari-hari. Melalui fitur-fitur yang dirancang
+                            fleksibel dan dapat disesuaikan dengan kebutuhan
+                            masing-masing perusahaan, kami percaya lebih banyak
+                            perusahaan dapat menjalankan proses HR dengan lebih efisien.
+                        </p>
 
-                    <p>
-                        Pengalaman tersebut menjadi dasar bagi Forstaff untuk terus
-                        menghadirkan solusi administrasi SDM dalam kegiatan
-                        operasional sehari-hari. Melalui fitur-fitur yang dirancang
-                        fleksibel dan dapat disesuaikan dengan kebutuhan
-                        masing-masing perusahaan, kami percaya lebih banyak
-                        perusahaan dapat menjalankan proses HR dengan lebih efisien.
-                    </p>
+                        <p>
+                            Bagi Forstaff, setiap kolaborasi menjadi bagian dari
+                            perjalanan untuk terus memahami kebutuhan dunia kerja.
+                            Kami berupaya menghadirkan solusi yang relevan agar
+                            perusahaan dapat lebih fokus pada pengembangan tim
+                            dan pertumbuhan bisnis.
+                        </p>
 
+                    </div>
 
-                    <p>
-                        Bagi Forstaff, setiap kolaborasi menjadi bagian dari
-                        perjalanan untuk terus memahami kebutuhan dunia kerja.
-                        Kami berupaya menghadirkan solusi yang relevan agar
-                        perusahaan dapat lebih fokus pada pengembangan tim
-                        dan pertumbuhan bisnis.
-                    </p>
+                    <div class="fs-portfolio-intro-visual">
+                        <img
+                            src="{{ asset('images/team/ILLUSTRATION.webp') }}"
+                            alt="Ilustrasi kolaborasi tim Forstaff"
+                        >
+                    </div>
 
                 </div>
 
             </div>
-
-
 
             {{-- =====================================================
                 DAFTAR CLIENT
