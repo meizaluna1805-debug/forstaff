@@ -66,7 +66,7 @@
             'datetime' => '2024-09-05',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-2.png',
+            'image' => 'images/article/ARTICLE-2.webp',
 
             'lead' => 'Transformasi digital membantu perusahaan bekerja lebih efisien, cepat beradaptasi, dan mengambil keputusan berdasarkan informasi yang lebih terstruktur.',
 
@@ -144,7 +144,7 @@
             'datetime' => '2024-08-20',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-4.jpg',
+            'image' => 'images/article/ARTICLE-4.webp',
 
             'lead' => 'Pemanfaatan teknologi yang tepat membantu perusahaan meningkatkan efisiensi, mengelola informasi, dan mendukung pertumbuhan bisnis.',
 
@@ -183,7 +183,7 @@
             'datetime' => '2024-08-14',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-2.webp',
+            'image' => 'images/article/ARTICLE-5.webp',
 
             'lead' => 'Tim yang solid membutuhkan tujuan bersama, komunikasi yang terbuka, dan kemampuan untuk menyesuaikan diri terhadap perubahan.',
 
@@ -222,7 +222,7 @@
             'datetime' => '2024-08-08',
             'reading_time' => '4 menit baca',
             'author' => 'Tim Forstaff',
-            'image' => 'images/article/ARTICLE-3.png',
+            'image' => 'images/article/ARTICLE-6.webp',
 
             'lead' => 'Perubahan teknologi dan pola kerja menghadirkan tren baru yang perlu diperhatikan perusahaan dalam mengelola organisasi dan karyawan.',
 

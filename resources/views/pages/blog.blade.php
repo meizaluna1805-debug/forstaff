@@ -93,20 +93,11 @@
 
             'datetime' => '2024-08-20',
 
-            'image' => 'images/article/ARTICLE-4.jpg',
+            'image' => 'images/article/ARTICLE-4.webp',
 
             'excerpt' =>
                 'Teknologi bukan lagi sekadar alat, tetapi menjadi faktor kunci dalam menciptakan efisiensi dan inovasi di berbagai industri.',
         ],
-
-
-        /*
-         * Artikel 5 dan 6 sementara memakai ulang
-         * aset artikel yang sudah tersedia.
-         *
-         * Nanti cukup ganti nilai "image"
-         * setelah ARTICLE-5 dan ARTICLE-6 tersedia.
-         */
 
         [
             'title' =>
@@ -119,7 +110,7 @@
 
             'datetime' => '2024-08-14',
 
-            'image' => 'images/article/ARTICLE-2.png',
+            'image' => 'images/article/ARTICLE-5.webp',
 
             'excerpt' =>
                 'Tim yang solid dapat menghadapi tantangan dengan lebih baik. Simak beberapa tips untuk membangun tim yang adaptif.',
@@ -137,7 +128,7 @@
 
             'datetime' => '2024-08-08',
 
-            'image' => 'images/article/ARTICLE-3.png',
+            'image' => 'images/article/ARTICLE-6.webp',
 
             'excerpt' =>
                 'Dunia kerja terus berkembang. Ketahui tren terbaru yang dapat membantu perusahaan tetap relevan dan kompetitif.',
@@ -164,7 +155,7 @@
         <div class="fs-blog-hero-media" aria-hidden="true">
 
             <img
-                src="{{ asset('images/team/kantor2.jpg') }}"
+                src="{{ asset('images/team/kantor2.webp') }}"
                 alt=""
                 class="fs-blog-hero-image"
             >
@@ -243,76 +234,68 @@
         <div class="fs-blog-container">
 
 
-            {{-- =====================================================
-                 SEARCH
-            ====================================================== --}}
+    {{-- =====================================================
+        SEARCH
+        Sementara dinonaktifkan sampai backend search tersedia
+    ====================================================== --}}
 
-            <div class="fs-blog-search">
+    @if (false)
 
+        <div class="fs-blog-search">
 
-                <div class="fs-blog-search-field">
+            <div class="fs-blog-search-field">
 
+                {{-- SEARCH ICON --}}
 
-                    {{-- SEARCH ICON --}}
-
-                    <svg
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        aria-hidden="true"
-                    >
-
-                        <circle
-                            cx="11"
-                            cy="11"
-                            r="7"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                        />
-
-                        <path
-                            d="m16.5 16.5 4 4"
-                            stroke="currentColor"
-                            stroke-width="1.8"
-                            stroke-linecap="round"
-                        />
-
-                    </svg>
-
-
-
-                    {{-- SEARCH INPUT --}}
-
-                    <input
-                        type="search"
-                        name="search"
-                        placeholder="Cari artikel..."
-                        aria-label="Cari artikel"
-                    >
-
-                </div>
-
-
-
-                {{--
-                    Saat ini tombol search masih UI.
-
-                    Nanti saat backend:
-                    - dibungkus <form method="GET">
-                    - request dikirim ke /blog?search=...
-                    - diproses BlogController
-                --}}
-
-                <button
-                    type="button"
-                    class="fs-blog-search-button"
+                <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
                 >
-                    Cari
-                </button>
+                    <circle
+                        cx="11"
+                        cy="11"
+                        r="7"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                    />
 
+                    <path
+                        d="m16.5 16.5 4 4"
+                        stroke="currentColor"
+                        stroke-width="1.8"
+                        stroke-linecap="round"
+                    />
+                </svg>
+
+                {{-- SEARCH INPUT --}}
+
+                <input
+                    type="search"
+                    name="search"
+                    placeholder="Cari artikel..."
+                    aria-label="Cari artikel"
+                >
 
             </div>
 
+            {{--
+                Saat backend Blog sudah tersedia:
+                - bungkus search dengan <form method="GET">
+                - request dikirim ke /blog?search=...
+                - proses melalui BlogController
+            --}}
 
+            <button
+                type="button"
+                class="fs-blog-search-button"
+            >
+                Cari
+            </button>
+
+        </div>
+
+    @endif
 
             {{-- =====================================================
                  ARTICLE GRID
@@ -324,7 +307,7 @@
                 @foreach ($articles as $article)
 
 
-                    <article class="fs-blog-card">
+                 <article class="fs-blog-card">
 
 
                         {{-- ARTICLE IMAGE --}}
