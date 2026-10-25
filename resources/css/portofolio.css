@@ -810,6 +810,28 @@
         line-height: 1.7;
     }
 
+    .fs-portfolio-intro-body {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .fs-portfolio-description {
+        width: 100%;
+        max-width: none;
+        min-width: 0;
+    }
+
+    .fs-portfolio-intro-visual {
+        width: 100%;
+        min-width: 0;
+    }
+
+    .fs-portfolio-intro-visual img {
+        width: 100%;
+        max-width: 320px;
+        margin-inline: auto;
+    }
+
     /* Cards */
 
     .fs-portfolio .fs-client-grid {
