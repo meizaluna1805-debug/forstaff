@@ -29,7 +29,8 @@
 
                     <h1 id="fs-about-title">
                         Membangun Masa<br>
-                        Berbagai Perusahaan
+                        Depan Berbagai<br>
+                        Perusahaan
                     </h1>
 
                     <p>
@@ -62,7 +63,7 @@
                 {{-- HERO — GAMBAR --}}
                 <div class="fs-about-hero-image">
                     <img
-                        src="{{ asset('images/tentang_kami/hero-about-office.png') }}"
+                        src="{{ asset('images/tentang_kami/hero-about-office.webp') }}"
                         alt="Suasana kantor Forstaff"
                     >
                 </div>
@@ -220,7 +221,7 @@
             <div class="fs-about-story-wrapper">
                 <div class="fs-about-story-image">
                     <img
-                        src="{{ asset('images/tentang_kami/story-about-team.png') }}"
+                        src="{{ asset('images/tentang_kami/story-about-team.webp') }}"
                         alt="Tim Forstaff"
                         loading="lazy"
                     >
@@ -268,31 +269,35 @@
 
                     <p class="fs-about-purpose-intro">
                         Kami berkomitmen untuk memberikan dampak positif
-                        melalui teknologi setiap perusahaan.
+                        melalui teknologi bagi setiap perusahaan.
                     </p>
 
                     <div class="fs-about-purpose-cards">
                         {{-- KARTU VISI --}}
                         <div class="fs-about-purpose-card">
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linejoin="round"
-                                />
-                                <circle
-                                    cx="12"
-                                    cy="12"
-                                    r="2.5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                            </svg>
+                            <div class="fs-about-purpose-card-heading">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M2.5 12S6 6.5 12 6.5 21.5 12 21.5 12 18 17.5 12 17.5 2.5 12 2.5 12Z"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linejoin="round"
+                                    />
+                                    <circle
+                                        cx="12"
+                                        cy="12"
+                                        r="2.5"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    />
+                                </svg>
+
+                                <h3>Visi</h3>
+                            </div>
 
                             <p>
                                 Menjadi platform HR terdepan di Indonesia
@@ -303,60 +308,68 @@
 
                         {{-- KARTU MISI --}}
                         <div class="fs-about-purpose-card">
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                            >
-                                <circle
-                                    cx="11"
-                                    cy="13"
-                                    r="8"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <circle
-                                    cx="11"
-                                    cy="13"
-                                    r="4.5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                />
-                                <path
-                                    d="M11 13 20 4M16.5 4H20v3.5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
+                            <div class="fs-about-purpose-card-heading">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <circle
+                                        cx="11"
+                                        cy="13"
+                                        r="8"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    />
+                                    <circle
+                                        cx="11"
+                                        cy="13"
+                                        r="4.5"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                    />
+                                    <path
+                                        d="M11 13 20 4M16.5 4H20v3.5"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linecap="round"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+
+                                <h3>Misi</h3>
+                            </div>
 
                             <p>
                                 Menyediakan solusi HR yang efisien dan
-                                relevan kebutuhan perusahaan di Indonesia.
+                                relevan dengan kebutuhan perusahaan di Indonesia.
                             </p>
                         </div>
 
                         {{-- KARTU NILAI --}}
                         <div class="fs-about-purpose-card">
-                            <svg
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                aria-hidden="true"
-                            >
-                                <path
-                                    d="M6 4h12l4 5-10 11L2 9l4-5Z"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linejoin="round"
-                                />
-                                <path
-                                    d="M2 9h20M9 4 7 9l5 11 5-11-2-5"
-                                    stroke="currentColor"
-                                    stroke-width="1.8"
-                                    stroke-linejoin="round"
-                                />
-                            </svg>
+                            <div class="fs-about-purpose-card-heading">
+                                <svg
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    aria-hidden="true"
+                                >
+                                    <path
+                                        d="M6 4h12l4 5-10 11L2 9l4-5Z"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linejoin="round"
+                                    />
+                                    <path
+                                        d="M2 9h20M9 4 7 9l5 11 5-11-2-5"
+                                        stroke="currentColor"
+                                        stroke-width="1.8"
+                                        stroke-linejoin="round"
+                                    />
+                                </svg>
+
+                                <h3>Nilai Kami</h3>
+                            </div>
 
                             <ul>
                                 <li>Inovasi berkelanjutan</li>
@@ -402,8 +415,8 @@
 
                 <p>
                     Forstaff didukung oleh tim profesional yang
-                    berpengalaman di bidang teknologi, HR, dan semangat
-                    kolaborasi untuk terus menghadirkan solusi terbaik
+                    berpengalaman di bidang teknologi dan HR, serta
+                    berkolaborasi untuk menghadirkan solusi terbaik
                     bagi pelanggan.
                 </p>
 
@@ -418,7 +431,7 @@
 
             <div class="fs-about-team-image">
                 <img
-                    src="{{ asset('images/tentang_kami/team-about-forstaff.png') }}"
+                    src="{{ asset('images/tentang_kami/team-about-forstaff.webp') }}"
                     alt="Tim Forstaff bekerja sama di kantor"
                     loading="lazy"
                 >

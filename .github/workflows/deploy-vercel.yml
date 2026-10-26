@@ -1,0 +1,40 @@
+name: Deploy Forstaff to Vercel
+
+on:
+  push:
+    branches:
+      - ewik-pages
+
+permissions:
+  contents: read
+
+concurrency:
+  group: forstaff-production
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    name: Deploy Production
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+
+      - name: Install Vercel CLI
+        run: npm install --global vercel@63.1.2
+
+      - name: Deploy to Vercel
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+        run: vercel deploy --prod --yes --token "$VERCEL_TOKEN"

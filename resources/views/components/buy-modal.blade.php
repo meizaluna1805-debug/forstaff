@@ -54,12 +54,6 @@
             >
                 {{-- PANEL KIRI --}}
                 <div class="fs-buy-panel">
-                    <div class="fs-buy-brand">
-                        <img
-                            src="{{ asset('images/forstaff-logo.png') }}"
-                            alt="Forstaff"
-                        >
-                    </div>
 
                     <div class="fs-buy-panel-copy">
                         <span class="fs-buy-panel-badge">
@@ -71,15 +65,16 @@
                             Forstaff Sekarang
                         </h3>
 
-                        <p>
-                            Kelola kehadiran, slip gaji, dan proses HR
-                            sesuai paket yang Anda pilih.
+                        <p>Kelola kehadiran, slip gaji, dan proses HR sesuai paket yang Anda pilih. 
+                            Bantu tim Anda bekerja lebih efisien dengan administrasi 
+                            karyawan yang lebih tertata.
                         </p>
+                        
                     </div>
 
                     <img
                         class="fs-buy-devices"
-                        src="{{ asset('images/request-demo/devices.png') }}"
+                        src="{{ asset('images/request-demo/devices-demo.webp') }}"
                         alt="Tampilan Forstaff pada laptop dan ponsel"
                     >
                 </div>
@@ -87,9 +82,12 @@
                 {{-- PANEL KANAN --}}
                 <div class="fs-buy-main">
                     <div class="fs-buy-heading">
-                        <span class="fs-buy-eyebrow">
-                            PEMBELIAN PAKET
-                        </span>
+                        <div class="fs-buy-brand">
+                            <img
+                                src="{{ asset('images/forstaff-logo.png') }}"
+                                alt="Forstaff"
+                            >
+                        </div>
 
                         <h3 id="buyOrderTitle" tabindex="-1">
                             Konfirmasi Pembelian Paket

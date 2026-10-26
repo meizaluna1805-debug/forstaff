@@ -31,7 +31,7 @@
 
 .fs-buy-modal .fs-buy-dialog {
     width: calc(100% - 32px);
-    max-width: 900px;
+    max-width: 850px;
     margin: 28px auto;
 }
 
@@ -131,24 +131,25 @@
 .fs-buy-brand {
     position: relative;
     z-index: 1;
-    display: inline-flex;
-    align-items: center;
-    align-self: flex-start;
-    justify-content: center;
-
+    display: block;
+    height: 15.4px;
     max-width: 100%;
-    margin-bottom: 28px;
-    padding: 8px 12px;
-    border-radius: 8px;
-    background: #ffffff;
+    margin: 0 0 7px;
+    padding: 0;
+    border-radius: 0;
+    background: transparent;
 }
 
 .fs-buy-brand img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
     display: block;
     width: 120px;
     max-width: 100%;
-    height: 38px;
+    height: auto;
     object-fit: contain;
+    object-position: left;
 }
 
 .fs-buy-panel-copy {
@@ -196,7 +197,7 @@
     max-width: 300px;
     height: auto;
     max-height: 210px;
-    margin: auto auto 0;
+    margin: auto auto 40px;
     padding-top: 24px;
 
     object-fit: contain;
@@ -208,7 +209,7 @@
 
 .fs-buy-main {
     min-width: 0;
-    padding: 46px 28px 28px;
+    padding: 36px 28px 21px;
 }
 
 .fs-buy-heading {
@@ -480,7 +481,7 @@
 ========================= */
 
 .fs-buy-package-view {
-    padding: 42px 30px 28px;
+    padding: 28px 30px 16px;
 }
 
 .fs-buy-package-view .fs-buy-heading {
@@ -723,6 +724,9 @@
 
     .fs-buy-brand {
         margin-bottom: 18px;
+        padding: 0;
+        border-radius: 0;
+        background: transparent;
     }
 
     .fs-buy-brand img {
@@ -743,11 +747,7 @@
     }
 
     .fs-buy-devices {
-        width: 70%;
-        max-width: 220px;
-        max-height: 150px;
-        margin: 18px auto 0;
-        padding-top: 0;
+    display: none;
     }
 
     .fs-buy-main {
