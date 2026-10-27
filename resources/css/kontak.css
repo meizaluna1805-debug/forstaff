@@ -5,6 +5,10 @@
 .fs-contact {
     width: 100%;
     overflow-x: hidden;
+
+    background: #ffffff;
+    color: #1f3558;
+
     font-family: "Instrument Sans", sans-serif;
 }
 
@@ -15,8 +19,11 @@
 
 .fs-contact .fs-contact-hero {
     position: relative;
+
     min-height: 320px;
+
     overflow: hidden;
+
     background: #f7f9fc;
 }
 
@@ -58,6 +65,7 @@
 .fs-contact .fs-contact-breadcrumb {
     display: flex;
     align-items: center;
+
     gap: 10px;
 
     margin-bottom: 16px;
@@ -72,7 +80,9 @@
 
 .fs-contact .fs-contact-breadcrumb a {
     color: #6680aa;
+
     font-weight: 500;
+
     text-decoration: none;
 
     transition: color 0.2s ease;
@@ -82,8 +92,14 @@
     color: #194a97;
 }
 
+.fs-contact .fs-contact-breadcrumb a:focus-visible {
+    outline: 2px solid #194a97;
+    outline-offset: 3px;
+}
+
 .fs-contact .fs-contact-breadcrumb [aria-current="page"] {
     color: #194a97;
+
     font-weight: 700;
 }
 
@@ -103,14 +119,14 @@
 .fs-contact .fs-contact-hero-content h1 {
     margin: 0 0 12px;
 
-    color: #12489d;
+    color: #194a97;
 
     font-family: "Instrument Sans", sans-serif;
-    font-size: clamp(35px, 3.2vw, 50px);
-    font-weight: 750;
+    font-size: 48px;
+    font-weight: 700;
     line-height: 1.08;
 
-    letter-spacing: -1.2px;
+    letter-spacing: -1px;
 }
 
 
@@ -118,8 +134,9 @@
    HERO DESCRIPTION
 ===================================================== */
 
-.fs-contact .fs-contact-hero-content p {
+.fs-contact .fs-contact-hero-content > p {
     max-width: 500px;
+
     margin: 0;
 
     color: #6280ae;
@@ -240,10 +257,7 @@
 
 @media (max-width: 991.98px) {
 
-    .fs-contact .fs-contact-hero {
-        min-height: 300px;
-    }
-
+    .fs-contact .fs-contact-hero,
     .fs-contact .fs-contact-hero-container {
         min-height: 300px;
     }
@@ -259,7 +273,7 @@
         font-size: 40px;
     }
 
-    .fs-contact .fs-contact-hero-content p {
+    .fs-contact .fs-contact-hero-content > p {
         font-size: 15px;
     }
 
@@ -318,16 +332,17 @@
     .fs-contact .fs-contact-hero-content h1 {
         margin-bottom: 11px;
 
-        font-size: 36px;
+        font-size: 32px;
         line-height: 1.1;
 
         letter-spacing: -0.8px;
     }
 
-    .fs-contact .fs-contact-hero-content p {
+    .fs-contact .fs-contact-hero-content > p {
         max-width: 520px;
 
-        font-size: 15px;
+        font-size: 14px;
+        line-height: 1.65;
     }
 
     .fs-contact .fs-contact-hero-media {
@@ -393,11 +408,11 @@
     }
 
     .fs-contact .fs-contact-hero-content h1 {
-        font-size: 32px;
+        font-size: 29px;
     }
 
-    .fs-contact .fs-contact-hero-content p {
-        font-size: 14.5px;
+    .fs-contact .fs-contact-hero-content > p {
+        font-size: 14px;
     }
 
     .fs-contact .fs-contact-hero-media {
@@ -406,7 +421,6 @@
 
     .fs-contact .fs-contact-hero-note {
         top: 20px;
-        right: auto;
         left: 9%;
 
         font-size: 14px;
@@ -421,11 +435,11 @@
 
 
 /* =====================================================
-   CONTACT INFORMATION + FORM
+   CONTACT FORM SECTION
 ===================================================== */
 
 .fs-contact .fs-contact-main {
-    padding: 64px 0 34px;
+    padding: 58px 0 32px;
 
     background: #ffffff;
 }
@@ -434,156 +448,6 @@
     width: min(calc(100% - 48px), 1260px);
 
     margin-inline: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        minmax(0, 0.78fr)
-        minmax(0, 1.22fr);
-
-    gap: 56px;
-
-    align-items: start;
-}
-
-
-/* =====================================================
-   CONTACT SECTION HEADING
-===================================================== */
-
-.fs-contact .fs-contact-section-heading {
-    margin-bottom: 22px;
-}
-
-.fs-contact .fs-contact-eyebrow {
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 26px;
-
-    padding: 5px 11px;
-    margin-bottom: 8px;
-
-    border-radius: 6px;
-
-    background: #edf4ff;
-    color: #194a97;
-
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1;
-
-    letter-spacing: 0.35px;
-}
-
-.fs-contact .fs-contact-section-heading h2 {
-    margin: 0 0 8px;
-
-    color: #12489d;
-
-    font-size: 32px;
-    font-weight: 750;
-    line-height: 1.15;
-
-    letter-spacing: -0.7px;
-}
-
-.fs-contact .fs-contact-section-heading > p {
-    max-width: 390px;
-
-    margin: 0;
-
-    color: #6280ae;
-
-    font-size: 15px;
-    line-height: 1.55;
-}
-
-
-/* =====================================================
-   CONTACT INFORMATION CARDS
-===================================================== */
-
-.fs-contact .fs-contact-info-list {
-    display: grid;
-
-    gap: 12px;
-}
-
-.fs-contact .fs-contact-info-card {
-    display: flex;
-    align-items: center;
-
-    gap: 16px;
-
-    min-height: 88px;
-
-    padding: 15px 17px;
-
-    border: 1px solid #e3e9f1;
-    border-radius: 9px;
-
-    background: #ffffff;
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
-}
-
-.fs-contact .fs-contact-info-card:hover {
-    border-color: #cbdaf0;
-
-    box-shadow:
-        0 8px 24px rgba(25, 74, 151, 0.07);
-
-    transform: translateY(-1px);
-}
-
-.fs-contact .fs-contact-info-icon {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    flex: 0 0 50px;
-
-    width: 50px;
-    height: 50px;
-
-    border-radius: 13px;
-
-    background: #edf4ff;
-    color: #194a97;
-}
-
-.fs-contact .fs-contact-info-icon svg {
-    width: 25px;
-    height: 25px;
-}
-
-.fs-contact .fs-contact-info-copy {
-    min-width: 0;
-}
-
-.fs-contact .fs-contact-info-copy h3 {
-    margin: 0 0 4px;
-
-    color: #12489d;
-
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 1.3;
-}
-
-.fs-contact .fs-contact-info-copy p {
-    margin: 0;
-
-    color: #6280ae;
-
-    font-size: 14px;
-    line-height: 1.45;
-
-    overflow-wrap: anywhere;
 }
 
 
@@ -592,7 +456,9 @@
 ===================================================== */
 
 .fs-contact .fs-contact-form-panel {
-    padding: 28px 30px 30px;
+    width: 100%;
+
+    padding: 30px 32px 32px;
 
     border: 1px solid #edf1f6;
     border-radius: 12px;
@@ -608,28 +474,30 @@
 }
 
 .fs-contact .fs-contact-form-heading {
-    margin-bottom: 20px;
+    margin-bottom: 22px;
 }
 
 .fs-contact .fs-contact-form-heading h2 {
-    margin: 0 0 5px;
+    margin: 0 0 6px;
 
-    color: #12489d;
+    color: #194a97;
 
-    font-size: 23px;
-    font-weight: 750;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 28px;
+    font-weight: 700;
     line-height: 1.2;
 
-    letter-spacing: -0.4px;
+    letter-spacing: normal;
 }
 
 .fs-contact .fs-contact-form-heading p {
     margin: 0;
 
-    color: #6280ae;
+    color: #66758d;
 
-    font-size: 14px;
-    line-height: 1.5;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.55;
 }
 
 
@@ -647,7 +515,7 @@
     grid-template-columns:
         repeat(2, minmax(0, 1fr));
 
-    gap: 16px 14px;
+    gap: 16px 16px;
 }
 
 .fs-contact .fs-contact-field {
@@ -789,91 +657,49 @@
 
 
 /* =====================================================
-   CONTACT — TABLET
+   FORM — TABLET
 ===================================================== */
 
 @media (max-width: 991.98px) {
 
     .fs-contact .fs-contact-main {
-        padding: 54px 0 30px;
-    }
-
-    .fs-contact .fs-contact-main-container {
-        gap: 32px;
-
-        grid-template-columns:
-            minmax(0, 0.85fr)
-            minmax(0, 1.15fr);
-    }
-
-    .fs-contact .fs-contact-section-heading h2 {
-        font-size: 28px;
-    }
-
-    .fs-contact .fs-contact-info-card {
-        gap: 13px;
-
-        padding: 14px;
-    }
-
-    .fs-contact .fs-contact-info-icon {
-        flex-basis: 46px;
-
-        width: 46px;
-        height: 46px;
-    }
-
-    .fs-contact .fs-contact-info-icon svg {
-        width: 23px;
-        height: 23px;
+        padding: 50px 0 30px;
     }
 
     .fs-contact .fs-contact-form-panel {
-        padding: 24px;
+        padding: 26px;
     }
 }
 
 
 /* =====================================================
-   CONTACT — MOBILE
+   FORM — MOBILE
 ===================================================== */
 
 @media (max-width: 767.98px) {
 
     .fs-contact .fs-contact-main {
-        padding: 44px 0 28px;
+        padding: 40px 0 26px;
     }
 
     .fs-contact .fs-contact-main-container {
         width: min(calc(100% - 32px), 1260px);
-
-        grid-template-columns: 1fr;
-
-        gap: 36px;
-    }
-
-    .fs-contact .fs-contact-section-heading {
-        margin-bottom: 19px;
-    }
-
-    .fs-contact .fs-contact-section-heading h2 {
-        font-size: 27px;
-    }
-
-    .fs-contact .fs-contact-section-heading > p {
-        max-width: none;
-    }
-
-    .fs-contact .fs-contact-info-card {
-        min-height: 82px;
     }
 
     .fs-contact .fs-contact-form-panel {
         padding: 22px 18px;
     }
 
+    .fs-contact .fs-contact-form-heading {
+        margin-bottom: 20px;
+    }
+
     .fs-contact .fs-contact-form-heading h2 {
         font-size: 22px;
+    }
+
+    .fs-contact .fs-contact-form-heading p {
+        font-size: 14px;
     }
 
     .fs-contact .fs-contact-form-grid {
@@ -887,49 +713,17 @@
 
 
 /* =====================================================
-   CONTACT — SMALL MOBILE
+   FORM — SMALL MOBILE
 ===================================================== */
 
 @media (max-width: 480px) {
 
     .fs-contact .fs-contact-main {
-        padding: 38px 0 24px;
+        padding: 36px 0 24px;
     }
 
     .fs-contact .fs-contact-main-container {
         width: min(calc(100% - 28px), 1260px);
-    }
-
-    .fs-contact .fs-contact-section-heading h2 {
-        font-size: 25px;
-    }
-
-    .fs-contact .fs-contact-info-card {
-        gap: 12px;
-
-        padding: 13px;
-    }
-
-    .fs-contact .fs-contact-info-icon {
-        flex-basis: 44px;
-
-        width: 44px;
-        height: 44px;
-
-        border-radius: 11px;
-    }
-
-    .fs-contact .fs-contact-info-icon svg {
-        width: 22px;
-        height: 22px;
-    }
-
-    .fs-contact .fs-contact-info-copy h3 {
-        font-size: 15px;
-    }
-
-    .fs-contact .fs-contact-info-copy p {
-        font-size: 13px;
     }
 
     .fs-contact .fs-contact-form-panel {
@@ -943,11 +737,11 @@
 
 
 /* =====================================================
-   LOCATION
+   LOCATION + CONTACT INFORMATION
 ===================================================== */
 
 .fs-contact .fs-contact-location {
-    padding: 0 0 18px;
+    padding: 0 0 34px;
 
     background: #ffffff;
 }
@@ -970,17 +764,111 @@
 
 
 /* =====================================================
+   LOCATION CARD
+===================================================== */
+
+.fs-contact .fs-contact-location-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    min-width: 0;
+
+    padding: 30px;
+
+    overflow: hidden;
+
+    border: 1px solid #e2eaf4;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #f9fbfe 0%,
+        #f2f7fd 100%
+    );
+}
+
+
+/* =====================================================
+   LOCATION EYEBROW
+===================================================== */
+
+.fs-contact .fs-contact-location-eyebrow {
+    position: relative;
+    z-index: 2;
+
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+
+    margin-bottom: 12px;
+    padding: 5px 13px;
+
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+
+    background: #f7f9fc;
+    color: #194a97;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+
+    letter-spacing: normal;
+}
+
+
+/* =====================================================
+   LOCATION HEADING
+===================================================== */
+
+.fs-contact .fs-contact-location-card h2 {
+    position: relative;
+    z-index: 2;
+
+    margin: 0 0 10px;
+
+    color: #194a97;
+
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 29px;
+    font-weight: 700;
+    line-height: 1.15;
+
+    letter-spacing: normal;
+}
+
+.fs-contact .fs-contact-location-card > p {
+    position: relative;
+    z-index: 2;
+
+    max-width: 460px;
+
+    margin: 0 0 20px;
+
+    color: #66758d;
+
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+/* =====================================================
    MAP
 ===================================================== */
 
 .fs-contact .fs-contact-map-wrap {
     min-width: 0;
-    min-height: 270px;
+    min-height: 250px;
 
     overflow: hidden;
 
     border: 1px solid #e2e9f2;
-    border-radius: 12px;
+    border-radius: 10px;
 
     background: #f4f7fb;
 }
@@ -995,9 +883,11 @@
     gap: 15px;
 
     width: 100%;
-    min-height: 270px;
+    min-height: 250px;
 
     padding: 30px;
+
+    overflow: hidden;
 
     background: linear-gradient(
         135deg,
@@ -1075,7 +965,7 @@
 .fs-contact .fs-contact-map-placeholder-copy strong {
     margin-bottom: 5px;
 
-    color: #12489d;
+    color: #194a97;
 
     font-size: 17px;
     font-weight: 700;
@@ -1083,168 +973,107 @@
 }
 
 .fs-contact .fs-contact-map-placeholder-copy span {
-    color: #6280ae;
+    color: #66758d;
 
     font-size: 14px;
+    font-weight: 400;
     line-height: 1.5;
 }
 
 
 /* =====================================================
-   REAL MAP IFRAME — FOR LATER
+   REAL GOOGLE MAPS IFRAME — FOR LATER
 ===================================================== */
 
 .fs-contact .fs-contact-map-iframe {
     display: block;
 
     width: 100%;
-    height: 100%;
-    min-height: 270px;
+    min-height: 250px;
 
     border: 0;
 }
 
 
 /* =====================================================
-   LOCATION CARD
+   CONTACT INFO
 ===================================================== */
 
-.fs-contact .fs-contact-location-card {
+.fs-contact .fs-contact-location-info-list {
     position: relative;
+    z-index: 2;
 
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
+
+    gap: 12px;
+
+    margin-top: 4px;
+}
+
+.fs-contact .fs-contact-location-info-item {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    align-items: center;
 
-    min-height: 270px;
+    gap: 12px;
 
-    padding: 32px 34px;
+    min-width: 0;
 
-    overflow: hidden;
+    padding: 12px;
 
-    border: 1px solid #e2eaf4;
-    border-radius: 12px;
+    border: 1px solid #e3e9f1;
+    border-radius: 10px;
 
-    background: linear-gradient(
-        135deg,
-        #f7faff 0%,
-        #edf5ff 100%
-    );
+    background: rgba(255, 255, 255, 0.78);
 }
 
-.fs-contact .fs-contact-location-eyebrow {
-    position: relative;
-    z-index: 2;
-
-    align-self: flex-start;
-
-    margin-bottom: 8px;
-
-    color: #194a97;
-
-    font-size: 11px;
-    font-weight: 700;
-    line-height: 1;
-
-    letter-spacing: 0.4px;
-}
-
-.fs-contact .fs-contact-location-card h2 {
-    position: relative;
-    z-index: 2;
-
-    margin: 0 0 9px;
-
-    color: #12489d;
-
-    font-size: 29px;
-    font-weight: 750;
-    line-height: 1.15;
-
-    letter-spacing: -0.6px;
-}
-
-.fs-contact .fs-contact-location-card p {
-    position: relative;
-    z-index: 2;
-
-    max-width: 440px;
-
-    margin: 0 0 21px;
-
-    color: #6280ae;
-
-    font-size: 14px;
-    line-height: 1.55;
-}
-
-
-/* =====================================================
-   BUILDING DECORATION
-===================================================== */
-
-.fs-contact .fs-contact-location-building {
-    position: absolute;
-    z-index: 0;
-
-    right: 18px;
-    bottom: 0;
-
-    width: 115px;
-    height: 100px;
-
-    color: #bfd9f6;
-
-    opacity: 0.62;
-
-    pointer-events: none;
-}
-
-.fs-contact .fs-contact-location-building svg {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-}
-
-
-/* =====================================================
-   MAP BUTTON
-===================================================== */
-
-.fs-contact .fs-contact-map-button {
-    position: relative;
-    z-index: 2;
-
-    display: inline-flex;
+.fs-contact .fs-contact-info-icon {
+    display: flex;
     align-items: center;
     justify-content: center;
-    align-self: flex-start;
 
-    gap: 9px;
+    flex: 0 0 42px;
 
-    min-height: 44px;
+    width: 42px;
+    height: 42px;
 
-    padding: 10px 20px;
+    border-radius: 11px;
 
-    border: 1px solid #194a97;
-    border-radius: 6px;
-
-    background: #ffffff;
+    background: #edf4ff;
     color: #194a97;
-
-    font-family: "Instrument Sans", sans-serif;
-    font-size: 13px;
-    font-weight: 650;
-
-    opacity: 0.82;
-
-    cursor: not-allowed;
 }
 
-.fs-contact .fs-contact-map-button svg {
-    width: 17px;
-    height: 17px;
+.fs-contact .fs-contact-info-icon svg {
+    width: 21px;
+    height: 21px;
+}
+
+.fs-contact .fs-contact-info-copy {
+    min-width: 0;
+}
+
+.fs-contact .fs-contact-info-copy h3 {
+    margin: 0 0 3px;
+
+    color: #194a97;
+
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.fs-contact .fs-contact-info-copy p {
+    margin: 0;
+
+    color: #66758d;
+
+    font-size: 12.5px;
+    font-weight: 400;
+    line-height: 1.45;
+
+    overflow-wrap: anywhere;
 }
 
 
@@ -1255,35 +1084,53 @@
 @media (max-width: 991.98px) {
 
     .fs-contact .fs-contact-location {
-        padding-bottom: 16px;
+        padding-bottom: 30px;
     }
 
     .fs-contact .fs-contact-location-container {
         grid-template-columns:
             minmax(0, 1.05fr)
             minmax(0, 0.95fr);
-    }
 
-    .fs-contact .fs-contact-map-wrap,
-    .fs-contact .fs-contact-map-placeholder,
-    .fs-contact .fs-contact-location-card {
-        min-height: 250px;
+        gap: 16px;
     }
 
     .fs-contact .fs-contact-location-card {
-        padding: 28px;
+        padding: 24px;
     }
 
     .fs-contact .fs-contact-location-card h2 {
         font-size: 26px;
     }
 
-    .fs-contact .fs-contact-location-building {
-        width: 100px;
-        height: 88px;
+    .fs-contact .fs-contact-location-info-list {
+        gap: 10px;
+    }
 
-        right: 12px;
-        bottom: 0;
+    .fs-contact .fs-contact-location-info-item {
+        gap: 10px;
+
+        padding: 10px;
+    }
+
+    .fs-contact .fs-contact-info-icon {
+        flex-basis: 40px;
+
+        width: 40px;
+        height: 40px;
+    }
+
+    .fs-contact .fs-contact-info-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .fs-contact .fs-contact-info-copy h3 {
+        font-size: 13.5px;
+    }
+
+    .fs-contact .fs-contact-info-copy p {
+        font-size: 12px;
     }
 }
 
@@ -1295,7 +1142,7 @@
 @media (max-width: 767.98px) {
 
     .fs-contact .fs-contact-location {
-        padding-bottom: 16px;
+        padding-bottom: 28px;
     }
 
     .fs-contact .fs-contact-location-container {
@@ -1306,29 +1153,54 @@
         gap: 16px;
     }
 
-    .fs-contact .fs-contact-map-wrap,
-    .fs-contact .fs-contact-map-placeholder {
-        min-height: 250px;
-    }
-
     .fs-contact .fs-contact-location-card {
-        min-height: auto;
-
-        padding: 27px 24px;
+        padding: 24px 20px;
     }
 
     .fs-contact .fs-contact-location-card h2 {
         font-size: 25px;
     }
 
-    .fs-contact .fs-contact-location-building {
-        width: 90px;
-        height: 78px;
+    .fs-contact .fs-contact-location-card > p {
+        max-width: none;
 
-        right: 10px;
-        bottom: 0;
+        font-size: 14px;
+    }
 
-        opacity: 0.5;
+    .fs-contact .fs-contact-map-wrap,
+    .fs-contact .fs-contact-map-placeholder,
+    .fs-contact .fs-contact-map-iframe {
+        min-height: 240px;
+    }
+
+    .fs-contact .fs-contact-location-info-list {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .fs-contact .fs-contact-location-info-item {
+        padding: 12px;
+    }
+
+    .fs-contact .fs-contact-info-icon {
+        flex: 0 0 42px;
+
+        width: 42px;
+        height: 42px;
+    }
+
+    .fs-contact .fs-contact-info-icon svg {
+        width: 21px;
+        height: 21px;
+    }
+
+    .fs-contact .fs-contact-info-copy h3 {
+        font-size: 14px;
+    }
+
+    .fs-contact .fs-contact-info-copy p {
+        font-size: 12.5px;
     }
 }
 
@@ -1343,44 +1215,49 @@
         width: min(calc(100% - 28px), 1260px);
     }
 
-    .fs-contact .fs-contact-map-placeholder {
-        flex-direction: column;
-
-        min-height: 225px;
-
-        padding: 25px 20px;
-
-        text-align: center;
-    }
-
-    .fs-contact .fs-contact-map-placeholder-copy {
-        align-items: center;
-    }
-
     .fs-contact .fs-contact-location-card {
-        padding: 24px 20px;
+        padding: 22px 18px;
     }
 
     .fs-contact .fs-contact-location-card h2 {
         font-size: 23px;
     }
 
-    .fs-contact .fs-contact-map-button {
-        width: 100%;
+    .fs-contact .fs-contact-map-placeholder {
+        flex-direction: column;
+
+        min-height: 225px;
+
+        padding: 24px 18px;
+
+        text-align: center;
     }
 
-    .fs-contact .fs-contact-location-building {
-        width: 78px;
-        height: 68px;
+    .fs-contact .fs-contact-map-wrap,
+    .fs-contact .fs-contact-map-iframe {
+        min-height: 225px;
+    }
 
-        right: 6px;
-        bottom: 0;
+    .fs-contact .fs-contact-map-placeholder-copy {
+        align-items: center;
+    }
+
+    .fs-contact .fs-contact-map-placeholder-icon {
+        flex-basis: 54px;
+
+        width: 54px;
+        height: 54px;
+    }
+
+    .fs-contact .fs-contact-map-placeholder-icon svg {
+        width: 26px;
+        height: 26px;
     }
 }
 
 
 /* =====================================================
-   FAQ STYLE SECTION
+   FAQ
 ===================================================== */
 
 .fs-contact .fs-contact-faq {
@@ -1390,232 +1267,103 @@
 }
 
 .fs-contact .fs-contact-faq-container {
-    position: relative;
-
     width: min(calc(100% - 48px), 1260px);
-    min-height: 140px;
 
     margin-inline: auto;
-    padding: 24px 28px;
+}
 
-    display: flex;
-    align-items: center;
+.fs-contact .fs-contact-faq h2 {
+    margin: 0 0 12px;
 
-    overflow: hidden;
+    color: #194a97;
 
-    border: 1px solid #e1e9f3;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+
+/* =====================================================
+   FAQ LIST
+===================================================== */
+
+.fs-contact .fs-contact-faq-list {
+    display: grid;
+
+    gap: 7px;
+}
+
+.fs-contact .fs-contact-faq-item {
+    border: 1px solid #e5e7eb;
     border-radius: 10px;
 
-    background: linear-gradient(
-        105deg,
-        #f8fbff 0%,
-        #f2f7fd 100%
-    );
-}
-
-
-/* =====================================================
-   FAQ CONTENT
-===================================================== */
-
-.fs-contact .fs-contact-faq-content {
-    position: relative;
-    z-index: 2;
-
-    max-width: 650px;
-
-    padding-right: 30px;
-}
-
-.fs-contact .fs-contact-faq-eyebrow {
-    display: inline-flex;
-    align-items: center;
-
-    min-height: 24px;
-
-    margin-bottom: 7px;
-    padding: 4px 9px;
-
-    border-radius: 5px;
-
-    background: #e8f2ff;
-    color: #194a97;
-
-    font-size: 10px;
-    font-weight: 700;
-    line-height: 1;
-
-    letter-spacing: 0.4px;
-}
-
-.fs-contact .fs-contact-faq-content h2 {
-    margin: 0 0 6px;
-
-    color: #12489d;
-
-    font-size: 28px;
-    font-weight: 750;
-    line-height: 1.15;
-
-    letter-spacing: -0.5px;
-}
-
-.fs-contact .fs-contact-faq-content p {
-    max-width: 610px;
-
-    margin: 0;
-
-    color: #6280ae;
+    background: #ffffff;
+    color: #526384;
 
     font-size: 14px;
-    line-height: 1.55;
+    line-height: 1.4;
 }
 
-
-/* =====================================================
-   FAQ DECORATION
-===================================================== */
-
-.fs-contact .fs-contact-faq-decoration {
-    position: absolute;
-    z-index: 1;
-
-    top: 50%;
-    right: 220px;
-
-    width: 110px;
-    height: 90px;
-
-    transform: translateY(-50%);
-
-    pointer-events: none;
-}
-
-.fs-contact .fs-contact-question-bubble {
-    position: absolute;
-
+.fs-contact .fs-contact-faq-item summary {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
 
-    border-radius: 12px 12px 12px 3px;
+    gap: 16px;
 
-    background: #cfe2fa;
-    color: #ffffff;
+    min-height: 42px;
 
-    font-weight: 700;
+    padding: 8px 16px;
 
-    opacity: 0.7;
+    color: #465675;
+
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 1.5;
+
+    cursor: pointer;
+
+    list-style: none;
 }
 
-.fs-contact .fs-contact-question-bubble-one {
-    width: 48px;
-    height: 48px;
-
-    top: 6px;
-    right: 4px;
-
-    font-size: 28px;
+.fs-contact .fs-contact-faq-item summary::-webkit-details-marker {
+    display: none;
 }
 
-.fs-contact .fs-contact-question-bubble-two {
-    width: 39px;
-    height: 39px;
-
-    bottom: 2px;
-    left: 8px;
-
-    font-size: 22px;
-
-    opacity: 0.5;
+.fs-contact .fs-contact-faq-item summary::marker {
+    content: "";
 }
 
+.fs-contact .fs-contact-faq-plus {
+    flex-shrink: 0;
 
-/* =====================================================
-   FAQ BUTTON
-===================================================== */
-
-.fs-contact .fs-contact-faq-button {
-    position: relative;
-    z-index: 2;
-
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 9px;
-
-    flex: 0 0 auto;
-
-    min-width: 150px;
-    min-height: 46px;
-
-    margin-left: auto;
-    padding: 10px 19px;
-
-    border: 1px solid #194a97;
-    border-radius: 6px;
-
-    background: #ffffff;
     color: #194a97;
 
-    font-size: 13px;
-    font-weight: 650;
-
-    text-decoration: none;
-
-    transition:
-        background 0.2s ease,
-        color 0.2s ease,
-        box-shadow 0.2s ease,
-        transform 0.2s ease;
+    font-size: 22px;
+    font-weight: 600;
+    line-height: 1;
 }
 
-.fs-contact .fs-contact-faq-button svg {
-    width: 18px;
-    height: 18px;
+.fs-contact .fs-contact-faq-plus::before {
+    content: "+";
 }
 
-.fs-contact .fs-contact-faq-button:hover {
-    background: #194a97;
-    color: #ffffff;
-
-    box-shadow:
-        0 8px 18px rgba(25, 74, 151, 0.14);
-
-    transform: translateY(-1px);
+.fs-contact .fs-contact-faq-item[open]
+.fs-contact-faq-plus::before {
+    content: "−";
 }
 
+.fs-contact .fs-contact-faq-item p {
+    margin: 0;
 
-/* =====================================================
-   FAQ — TABLET
-===================================================== */
+    padding: 6px 16px 14px;
 
-@media (max-width: 991.98px) {
+    color: #63769b;
 
-    .fs-contact .fs-contact-faq-container {
-        min-height: 135px;
-
-        padding: 23px 25px;
-    }
-
-    .fs-contact .fs-contact-faq-content {
-        max-width: 540px;
-    }
-
-    .fs-contact .fs-contact-faq-content h2 {
-        font-size: 25px;
-    }
-
-    .fs-contact .fs-contact-faq-decoration {
-        right: 175px;
-
-        width: 95px;
-    }
-
-    .fs-contact .fs-contact-faq-button {
-        min-width: 140px;
-    }
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
 
@@ -1631,53 +1379,24 @@
 
     .fs-contact .fs-contact-faq-container {
         width: min(calc(100% - 32px), 1260px);
-        min-height: auto;
-
-        padding: 23px 21px;
-
-        flex-direction: column;
-        align-items: flex-start;
     }
 
-    .fs-contact .fs-contact-faq-content {
-        max-width: none;
-
-        padding-right: 50px;
+    .fs-contact .fs-contact-faq h2 {
+        font-size: 19px;
     }
 
-    .fs-contact .fs-contact-faq-content h2 {
-        font-size: 24px;
+    .fs-contact .fs-contact-faq-item summary {
+        min-height: 46px;
+
+        padding: 9px 14px;
+
+        font-size: 14px;
     }
 
-    .fs-contact .fs-contact-faq-decoration {
-        top: 26px;
-        right: 15px;
+    .fs-contact .fs-contact-faq-item p {
+        padding: 5px 14px 13px;
 
-        width: 75px;
-        height: 70px;
-
-        transform: none;
-    }
-
-    .fs-contact .fs-contact-question-bubble-one {
-        width: 38px;
-        height: 38px;
-
-        font-size: 22px;
-    }
-
-    .fs-contact .fs-contact-question-bubble-two {
-        width: 31px;
-        height: 31px;
-
-        font-size: 18px;
-    }
-
-    .fs-contact .fs-contact-faq-button {
-        width: 100%;
-
-        margin-top: 20px;
-        margin-left: 0;
+        font-size: 13.5px;
     }
 }
 
@@ -1690,23 +1409,5 @@
 
     .fs-contact .fs-contact-faq-container {
         width: min(calc(100% - 28px), 1260px);
-
-        padding: 21px 18px;
-    }
-
-    .fs-contact .fs-contact-faq-content {
-        padding-right: 0;
-    }
-
-    .fs-contact .fs-contact-faq-content h2 {
-        font-size: 22px;
-    }
-
-    .fs-contact .fs-contact-faq-content p {
-        font-size: 13.5px;
-    }
-
-    .fs-contact .fs-contact-faq-decoration {
-        display: none;
     }
 }
