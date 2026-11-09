@@ -17,7 +17,7 @@
         <div class="fs-contact-hero-media" aria-hidden="true">
 
             <img
-                src="{{ asset('images/team/luna.png') }}"
+                src="{{ asset('images/team/luna.webp') }}"
                 alt=""
                 class="fs-contact-hero-image"
             >
