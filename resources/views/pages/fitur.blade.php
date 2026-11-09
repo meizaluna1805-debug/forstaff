@@ -4,12 +4,13 @@
 
 @section(
     'meta',
-    'Temukan fitur Forstaff untuk membantu perusahaan mengelola data karyawan, absensi, payroll, cuti, approval, KPI, organisasi, pelatihan, dan kebutuhan HR lainnya.'
+    'Temukan fitur Forstaff untuk membantu perusahaan mengelola data staff, absensi, cuti dan izin, lembur, reimburse, tugas keluar, slip gaji, serta kebutuhan operasional HR lainnya.'
 )
 
 @section('content')
 
 @php
+
     /*
     |--------------------------------------------------------------------------
     | ICONS
@@ -18,14 +19,7 @@
 
     $icons = [
 
-        'calendar' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
-                <path d="M7 3v4M17 3v4M3 10h18"></path>
-            </svg>
-        ',
-
-        'users' => '
+        'staff' => '
             <svg viewBox="0 0 24 24" aria-hidden="true">
                 <circle cx="9" cy="8" r="3"></circle>
                 <circle cx="17" cy="9" r="2.5"></circle>
@@ -34,63 +28,50 @@
             </svg>
         ',
 
-        'wallet' => '
+        'attendance' => '
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="5" width="18" height="16" rx="2"></rect>
+                <path d="M7 3v4M17 3v4M3 10h18"></path>
+                <path d="M8 15l2 2 5-5"></path>
+            </svg>
+        ',
+
+        'leave' => '
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="5" width="16" height="16" rx="2"></rect>
+                <path d="M8 3v4M16 3v4M4 10h16"></path>
+                <path d="M8 14h3M8 17h5"></path>
+            </svg>
+        ',
+
+        'overtime' => '
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M12 7v5l4 2"></path>
+            </svg>
+        ',
+
+        'reimburse' => '
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <path d="M8 8h8M8 12h5M8 16h3"></path>
+                <path d="M16 14v5M13.5 16.5h5"></path>
+            </svg>
+        ',
+
+        'outside-duty' => '
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 21s7-6.1 7-12a7 7 0 1 0-14 0c0 5.9 7 12 7 12Z"></path>
+                <circle cx="12" cy="9" r="2.3"></circle>
+            </svg>
+        ',
+
+        'payroll' => '
             <svg viewBox="0 0 24 24" aria-hidden="true">
                 <rect x="3" y="5" width="18" height="15" rx="2"></rect>
                 <path d="M3 9h18"></path>
                 <path d="M14 13h5"></path>
                 <path d="M16.5 10.5v5"></path>
-            </svg>
-        ',
-
-        'clock' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 7v6l4 2"></path>
-            </svg>
-        ',
-
-        'approval' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="5" y="4" width="14" height="17" rx="2"></rect>
-                <path d="M9 4V2h6v2"></path>
-                <path d="m9 12 2 2 4-5"></path>
-            </svg>
-        ',
-
-        'chart' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="M4 20V10"></path>
-                <path d="M10 20V5"></path>
-                <path d="M16 20v-8"></path>
-                <path d="M22 20V2"></path>
-                <path d="m3 9 6-4 6 4 7-7"></path>
-            </svg>
-        ',
-
-        'dashboard' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <circle cx="12" cy="12" r="9"></circle>
-                <path d="M12 12V6"></path>
-                <path d="m12 12 5 3"></path>
-                <path d="M3 12h3M18 12h3"></path>
-            </svg>
-        ',
-
-        'organization' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="9" y="3" width="6" height="5" rx="1"></rect>
-                <rect x="3" y="16" width="6" height="5" rx="1"></rect>
-                <rect x="15" y="16" width="6" height="5" rx="1"></rect>
-                <path d="M12 8v4M6 12h12M6 12v4M18 12v4"></path>
-            </svg>
-        ',
-
-        'education' => '
-            <svg viewBox="0 0 24 24" aria-hidden="true">
-                <path d="m2 9 10-5 10 5-10 5L2 9Z"></path>
-                <path d="M6 11v5c3 2 9 2 12 0v-5"></path>
-                <path d="M22 9v6"></path>
             </svg>
         ',
 
@@ -160,6 +141,7 @@
                 <path d="M7 3 4 6M17 3l3 3"></path>
             </svg>
         ',
+
     ];
 
 
@@ -172,199 +154,138 @@
     $mainFeatures = [
 
         [
+            'id' => 'staff-management',
+            'title' => 'Manajemen Staff',
+            'icon' => 'staff',
+            'image' => 'Manage Staff.webp',
+
+            'description' =>
+                'Kelola data karyawan secara terpusat, mulai dari informasi staff, posisi, kontrak, hingga status keaktifan.',
+
+            'points' => [
+                'Tambah dan kelola data staff',
+                'Import data staff',
+                'Download data staff',
+                'Informasi posisi karyawan',
+                'Informasi periode kontrak kerja',
+                'Pantau status dan pembaruan data staff',
+            ],
+        ],
+
+        [
             'id' => 'attendance',
-            'title' => 'Attendance',
-            'icon' => 'calendar',
-            'image' => 'attandence.png',
+            'title' => 'Absensi',
+            'icon' => 'attendance',
+            'image' => 'Absensi.webp',
 
             'description' =>
-                'Kelola absensi, jadwal kerja, shift, dan rekap kehadiran karyawan secara terpusat.',
+                'Pantau data kehadiran karyawan dengan informasi jam kerja, keterlambatan, dan status presensi yang terstruktur.',
 
             'points' => [
-                'Pengelolaan data absensi karyawan',
-                'Rangkuman dan detail absensi',
-                'Pengaturan jadwal kerja',
-                'Manajemen shift karyawan',
-                'Pengelolaan hari libur',
-                'Rekap dan laporan kehadiran',
-            ],
-        ],
-
-        [
-            'id' => 'employee',
-
-            'title' => 'Employee Management',
-
-            'icon' => 'users',
-
-            'image' => 'employee.png',
-
-            'description' =>
-                'Kelola data karyawan, kontrak kerja, informasi pribadi, benefit, dan dokumen kepegawaian secara terpusat.',
-
-            'points' => [
-                'Data lengkap karyawan',
-                'Manajemen kontrak staff',
-                'Deskripsi pekerjaan',
-                'Pengelolaan benefit staff',
-                'Riwayat pendidikan dan pekerjaan',
-                'Dokumen serta sertifikat staff',
-            ],
-        ],
-
-        [
-            'id' => 'payroll',
-
-            'title' => 'Payroll & Salary',
-
-            'icon' => 'wallet',
-
-            'image' => 'salary.png',
-
-            'description' =>
-                'Kelola slip gaji, penerimaan, potongan, serta riwayat gaji karyawan secara lebih terstruktur.',
-
-            'points' => [
-                'Pembuatan slip gaji',
-                'Komponen penerimaan gaji',
-                'Komponen potongan gaji',
-                'Perhitungan total gaji',
-                'History gaji staff',
-                'Template penerimaan dan potongan',
+                'Riwayat tanggal kerja karyawan',
+                'Pencatatan jam masuk',
+                'Pencatatan jam pulang',
+                'Informasi keterlambatan',
+                'Rekap total jam kerja',
+                'Status kehadiran dan akumulasi presensi',
             ],
         ],
 
         [
             'id' => 'leave',
-
-            'title' => 'Leave & Overtime',
-
-            'icon' => 'clock',
-
-            'image' => 'leave.png',
+            'title' => 'Cuti & Izin',
+            'icon' => 'leave',
+            'image' => 'Pengajuan Cuti.webp',
 
             'description' =>
-                'Kelola cuti, izin, kuota cuti, lembur, serta jadwal kerja karyawan dengan proses yang lebih terstruktur.',
+                'Kelola proses cuti dan izin mulai dari data pengajuan, approval, kuota, hingga status pengajuan karyawan.',
 
             'points' => [
-                'Pengajuan cuti dan izin',
-                'Pemantauan kuota cuti',
-                'Manajemen jenis cuti dan izin',
-                'Pengelolaan lembur',
-                'Approval lembur',
-                'Pengaturan shift kerja',
+                'Data pengajuan cuti dan izin',
+                'Approval cuti dan izin',
+                'Pengelolaan kuota cuti dan izin',
+                'Pengaturan jenis cuti dan izin',
+                'Informasi periode dan durasi cuti',
+                'Pantau status pengajuan',
             ],
         ],
 
         [
-            'id' => 'request',
-
-            'title' => 'Request & Approval',
-
-            'icon' => 'approval',
-
-            'image' => 'request.png',
+            'id' => 'overtime',
+            'title' => 'Lembur',
+            'icon' => 'overtime',
+            'image' => 'Pengajuan Lembur.webp',
 
             'description' =>
-                'Kelola berbagai pengajuan karyawan dengan proses konfirmasi dan persetujuan yang lebih terkontrol.',
+                'Kelola lembur karyawan secara lebih terstruktur, termasuk approval, upah per jam, estimasi upah, dan pembayaran.',
 
             'points' => [
-                'Pengajuan cuti dan izin',
-                'Pengajuan lembur',
-                'Pengajuan reimburse',
-                'Pengajuan tugas keluar',
-                'Konfirmasi dan penolakan',
-                'Pemantauan status pengajuan',
+                'Pengelolaan data lembur',
+                'Approval pengajuan lembur',
+                'Pengaturan upah lembur per jam',
+                'Perhitungan estimasi upah',
+                'Pantau status dan pembayaran lembur',
+                'Unduh data lembur',
             ],
         ],
 
         [
-            'id' => 'kpi',
-
-            'title' => 'KPI & Performance',
-
-            'icon' => 'chart',
-
-            'image' => 'kpi.png',
+            'id' => 'reimburse',
+            'title' => 'Reimburse',
+            'icon' => 'reimburse',
+            'image' => 'Pengajuan Reimburse.webp',
 
             'description' =>
-                'Kelola KPI staff berdasarkan kategori, periode, dan pengaturan penilaian yang telah ditentukan perusahaan.',
+                'Kelola pengajuan reimburse dengan informasi nominal, bukti, proses approval, dan status pembayaran dalam satu tampilan.',
 
             'points' => [
-                'Pengelolaan data KPI staff',
-                'Pengaturan KPI',
-                'Kategori hasil KPI',
-                'Periode penilaian KPI',
-                'Pemantauan hasil KPI',
-                'Riwayat performa staff',
+                'Pengelolaan data reimburse',
+                'Approval pengajuan reimburse',
+                'Pencatatan nominal reimburse',
+                'Pemeriksaan bukti pengajuan',
+                'Pantau status pengajuan',
+                'Pantau status pembayaran',
             ],
         ],
 
         [
-            'id' => 'dashboard',
-
-            'title' => 'Dashboard & Reporting',
-
-            'icon' => 'dashboard',
-
-            'image' => 'dashboard_hr.png',
+            'id' => 'outside-duty',
+            'title' => 'Tugas Keluar',
+            'icon' => 'outside-duty',
+            'image' => 'Pengajuan Tugas Keluar.webp',
 
             'description' =>
-                'Pantau ringkasan informasi HR, pengajuan, kehadiran, dan aktivitas karyawan melalui dashboard terpusat.',
+                'Pantau aktivitas tugas keluar karyawan lengkap dengan tujuan, jarak tempuh, status proses, dan informasi pembayaran.',
 
             'points' => [
-                'Ringkasan total staff aktif',
-                'Ringkasan cuti dan izin',
-                'Ringkasan reimburse',
-                'Ringkasan overtime',
-                'Grafik data kehadiran',
-                'Jejak aktivitas pengguna',
+                'Data tugas keluar karyawan',
+                'Informasi tanggal kegiatan',
+                'Pencatatan tujuan tugas keluar',
+                'Informasi jarak tempuh',
+                'Pantau status pengajuan',
+                'Informasi status pembayaran',
             ],
         ],
 
         [
-            'id' => 'organization',
-
-            'title' => 'Organization & HR Management',
-
-            'icon' => 'organization',
-
-            'image' => 'organization.png',
+            'id' => 'payroll',
+            'title' => 'Slip Gaji',
+            'icon' => 'payroll',
+            'image' => 'Slip Gaji.webp',
 
             'description' =>
-                'Kelola struktur organisasi, departemen, posisi, dan pembagian peran karyawan secara lebih terstruktur.',
+                'Kelola proses penggajian karyawan melalui data gaji, riwayat, template, status publikasi, dan informasi total gaji.',
 
             'points' => [
-                'Bagan organisasi perusahaan',
-                'Pengelolaan departemen',
-                'Pengelolaan posisi',
-                'Struktur organisasi terpusat',
-                'Pembagian posisi karyawan',
-                'Informasi organisasi perusahaan',
+                'Pembuatan data gaji baru',
+                'Daftar dan riwayat gaji',
+                'Pengelolaan template gaji',
+                'Preview template dalam PDF',
+                'Pantau status Publish dan Draft',
+                'Informasi total gaji setiap staff',
             ],
         ],
 
-        [
-            'id' => 'learning',
-
-            'title' => 'Learning & Development',
-
-            'icon' => 'education',
-
-            'image' => 'learning.png',
-
-            'description' =>
-                'Kelola pengajuan, konfirmasi, dan aktivitas pengembangan serta pelatihan karyawan melalui Forstaff.',
-
-            'points' => [
-                'Pengajuan pelatihan staff',
-                'Menunggu konfirmasi',
-                'Konfirmasi pengajuan',
-                'Penolakan pengajuan',
-                'Detail pelatihan',
-                'Pemantauan status pelatihan',
-            ],
-        ],
     ];
 
 
@@ -439,7 +360,9 @@
             'description' =>
                 'Pantau jejak aktivitas penggunaan sistem untuk membantu proses monitoring aktivitas pengguna.',
         ],
+
     ];
+
 @endphp
 
 
@@ -453,16 +376,13 @@
 
         <div class="fs-feature-hero-grid">
 
-
             {{-- HERO CONTENT --}}
-
             <div class="fs-feature-hero-content">
 
                 <nav
                     class="fs-feature-breadcrumb"
                     aria-label="Breadcrumb"
                 >
-
                     <a href="{{ url('/') }}">
                         Home
                     </a>
@@ -477,7 +397,6 @@
                     >
                         Fitur
                     </span>
-
                 </nav>
 
 
@@ -495,69 +414,30 @@
                     lebih terstruktur dan efisien.
                 </p>
 
-
-                {{-- SEARCH --}}
-
-                <div class="fs-feature-search">
-
-                    <span
-                        class="fs-feature-search-icon"
-                        aria-hidden="true"
-                    >
-
-                        <svg viewBox="0 0 24 24">
-
-                            <circle
-                                cx="11"
-                                cy="11"
-                                r="7"
-                            ></circle>
-
-                            <path
-                                d="m20 20-4-4"
-                            ></path>
-
-                        </svg>
-
-                    </span>
-
-
-                    <input
-                        type="search"
-                        id="featureSearch"
-                        class="fs-feature-search-input"
-                        placeholder="Cari fitur..."
-                        autocomplete="off"
-                        aria-label="Cari fitur Forstaff"
-                    >
-
-                </div>
-
             </div>
 
 
             {{-- HERO VISUAL --}}
-
-            <div class="fs-feature-hero-visual">
+            <div class="fs-feature-device-area">
 
                 <div
-                    class="fs-feature-hero-shape"
+                    class="fs-feature-device-bg"
                     aria-hidden="true"
                 ></div>
 
 
-                <div class="fs-feature-hero-device">
+                <div class="fs-feature-device-wrap">
 
                     <img
-                        src="{{ asset('images/dashboard/LAPTOP.png') }}"
+                        src="{{ asset('images/dashboard/LAPTOP.webp') }}"
                         alt="Dashboard Forstaff pada laptop"
                         class="fs-feature-hero-laptop"
                     >
 
 
                     <img
-                        src="{{ asset('images/dashboard/HP.png') }}"
-                        alt="Dashboard Forstaff pada smartphone"
+                        src="{{ asset('images/dashboard/HP.webp') }}"
+                        alt="Aplikasi mobile Forstaff"
                         class="fs-feature-hero-phone"
                     >
 
@@ -574,7 +454,6 @@
 
 {{-- =========================================================
     FEATURE EXPLORER
-    LANGSUNG SETELAH HERO + SEARCH
 ========================================================= --}}
 
 <section
@@ -586,11 +465,7 @@
 
         <div class="fs-feature-explorer-grid">
 
-
-            {{-- =================================================
-                SIDEBAR
-            ================================================= --}}
-
+            {{-- SIDEBAR --}}
             <aside
                 class="fs-feature-sidebar"
                 aria-label="Daftar fitur Forstaff"
@@ -598,12 +473,11 @@
 
                 <div class="fs-feature-sidebar-head">
 
-                    <span class="fs-feature-sidebar-head-icon">
-
-                        <svg
-                            viewBox="0 0 24 24"
-                            aria-hidden="true"
-                        >
+                    <span
+                        class="fs-feature-sidebar-head-icon"
+                        aria-hidden="true"
+                    >
+                        <svg viewBox="0 0 24 24">
 
                             <rect
                                 x="3"
@@ -638,7 +512,6 @@
                             ></rect>
 
                         </svg>
-
                     </span>
 
 
@@ -660,7 +533,7 @@
                 <div
                     class="fs-feature-sidebar-list"
                     role="tablist"
-                    aria-label="Pilih fitur"
+                    aria-label="Pilih fitur Forstaff"
                 >
 
                     @foreach ($mainFeatures as $feature)
@@ -677,38 +550,25 @@
 
                             data-feature-target="{{ $feature['id'] }}"
 
-                            data-feature-search-text="
-                                {{ strtolower(
-                                    $feature['title']
-                                    . ' '
-                                    . $feature['description']
-                                    . ' '
-                                    . implode(' ', $feature['points'])
-                                ) }}
-                            "
-
                             role="tab"
 
-                            aria-selected="
-                                {{ $loop->first ? 'true' : 'false' }}
-                            "
+                            aria-selected="{{ $loop->first ? 'true' : 'false' }}"
 
-                            aria-controls="
-                                feature-panel-{{ $feature['id'] }}
-                            "
+                            aria-controls="feature-panel-{{ $feature['id'] }}"
+
+                            tabindex="{{ $loop->first ? '0' : '-1' }}"
                         >
 
-                            <span class="fs-feature-tab-icon">
-
+                            <span
+                                class="fs-feature-tab-icon"
+                                aria-hidden="true"
+                            >
                                 {!! $icons[$feature['icon']] !!}
-
                             </span>
 
 
                             <span class="fs-feature-tab-text">
-
                                 {{ $feature['title'] }}
-
                             </span>
 
                         </button>
@@ -720,16 +580,12 @@
             </aside>
 
 
-            {{-- =================================================
-                MAIN FEATURE PANEL
-            ================================================= --}}
-
+            {{-- FEATURE CONTENT --}}
             <div class="fs-feature-content">
 
                 @foreach ($mainFeatures as $feature)
 
                     <article
-
                         id="feature-panel-{{ $feature['id'] }}"
 
                         class="
@@ -741,9 +597,7 @@
 
                         role="tabpanel"
 
-                        aria-labelledby="
-                            feature-tab-{{ $feature['id'] }}
-                        "
+                        aria-labelledby="feature-tab-{{ $feature['id'] }}"
 
                         @if (!$loop->first)
                             hidden
@@ -751,7 +605,6 @@
                     >
 
                         {{-- HEADER --}}
-
                         <header class="fs-feature-panel-header">
 
                             <h2>
@@ -766,41 +619,10 @@
                         </header>
 
 
-                        {{-- IMAGE --}}
-
+                        {{-- SCREENSHOT --}}
                         <div class="fs-feature-preview">
 
-                            <div
-                                class="fs-feature-preview-bg"
-                                aria-hidden="true"
-                            >
-
-                                <span
-                                    class="
-                                        fs-feature-preview-circle
-                                        fs-circle-one
-                                    "
-                                ></span>
-
-                                <span
-                                    class="
-                                        fs-feature-preview-circle
-                                        fs-circle-two
-                                    "
-                                ></span>
-
-                                <span
-                                    class="fs-feature-preview-dot"
-                                ></span>
-
-                            </div>
-
-
-                            <div
-                                class="
-                                    fs-feature-preview-image-wrap
-                                "
-                            >
+                            <div class="fs-feature-preview-image-wrap">
 
                                 <img
                                     src="{{ asset(
@@ -808,22 +630,11 @@
                                         . $feature['image']
                                     ) }}"
 
-                                    alt="
-                                        Tampilan fitur
-                                        {{ $feature['title'] }}
-                                        Forstaff
-                                    "
+                                    alt="Tampilan fitur {{ $feature['title'] }} pada sistem Forstaff"
 
-                                    class="
-                                        fs-feature-preview-image
-                                    "
+                                    class="fs-feature-preview-image"
 
-                                    loading="
-                                        {{ $loop->first
-                                            ? 'eager'
-                                            : 'lazy'
-                                        }}
-                                    "
+                                    loading="lazy"
 
                                     decoding="async"
                                 >
@@ -833,16 +644,12 @@
                         </div>
 
 
-                        {{-- POINTS --}}
-
+                        {{-- CHECKLIST --}}
                         <div class="fs-feature-panel-bottom">
 
                             <ul class="fs-feature-point-list">
 
-                                @foreach (
-                                    $feature['points']
-                                    as $point
-                                )
+                                @foreach ($feature['points'] as $point)
 
                                     <li>
 
@@ -864,40 +671,11 @@
 
                             </ul>
 
-
-                            <a
-                                href="#fitur-lainnya"
-                                class="fs-feature-more-button"
-                            >
-
-                                Lihat Fitur Lainnya
-
-                                <span aria-hidden="true">
-                                    →
-                                </span>
-
-                            </a>
-
                         </div>
 
                     </article>
 
                 @endforeach
-
-
-                {{-- SEARCH EMPTY STATE --}}
-
-                <div
-                    class="fs-feature-search-empty"
-                    id="featureSearchEmpty"
-                    hidden
-                >
-
-                    <p>
-                        Fitur yang Anda cari tidak ditemukan.
-                    </p>
-
-                </div>
 
             </div>
 
@@ -919,11 +697,10 @@
 
     <div class="fs-feature-container">
 
-
         <div class="fs-other-features-heading">
 
-            <span>
-                Lebih Banyak Kemudahan
+            <span class="fs-other-features-eyebrow">
+                FITUR PENDUKUNG
             </span>
 
 
@@ -933,9 +710,8 @@
 
 
             <p>
-                Selain fitur utama, Forstaff juga menyediakan
-                fungsi pendukung untuk membantu pengelolaan
-                operasional HR dan informasi perusahaan.
+                Selain fitur utama, Forstaff juga menyediakan fungsi pendukung
+                untuk membantu pengelolaan operasional HR dan informasi perusahaan.
             </p>
 
         </div>
@@ -945,24 +721,13 @@
 
             @foreach ($otherFeatures as $feature)
 
-                <article
-                    class="fs-other-feature-card"
+                <article class="fs-other-feature-card">
 
-                    data-other-feature-card
-
-                    data-feature-search-text="
-                        {{ strtolower(
-                            $feature['title']
-                            . ' '
-                            . $feature['description']
-                        ) }}
-                    "
-                >
-
-                    <div class="fs-other-feature-icon">
-
+                    <div
+                        class="fs-other-feature-icon"
+                        aria-hidden="true"
+                    >
                         {!! $icons[$feature['icon']] !!}
-
                     </div>
 
 
@@ -989,33 +754,45 @@
 
 </section>
 
-</section>
+
+{{-- =========================================================
+    REQUEST DEMO
+========================================================= --}}
 
 <section class="fs-feature-demo">
+
     <div class="fs-feature-container">
 
         <div class="fs-feature-demo-card">
 
             <div class="fs-feature-demo-image-wrap">
+
                 <img
-                    src="{{ asset('images/team/ria.png') }}"
+                    src="{{ asset('images/team/ria.webp') }}"
                     alt="Tim Forstaff"
                     class="fs-feature-demo-image"
                     loading="lazy"
+                    decoding="async"
                 >
+
             </div>
+
 
             <div class="fs-feature-demo-content">
 
                 <h2>
                     Ingin tahu lebih banyak
-                    <span>tentang cara kerja Forstaff?</span>
+                    <span>
+                        tentang cara kerja Forstaff?
+                    </span>
                 </h2>
+
 
                 <p>
                     Ajukan demo dan tim kami akan membantu Anda
                     memahami fitur Forstaff sesuai kebutuhan perusahaan.
                 </p>
+
 
                 <button
                     type="button"
@@ -1024,7 +801,10 @@
                     data-bs-target="#requestDemoModal"
                 >
                     Request Demo
-                    <span aria-hidden="true">→</span>
+
+                    <span aria-hidden="true">
+                        →
+                    </span>
                 </button>
 
             </div>
@@ -1032,5 +812,7 @@
         </div>
 
     </div>
+
 </section>
+
 @endsection
