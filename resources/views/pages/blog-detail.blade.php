@@ -653,7 +653,7 @@
                     >
 
                         <img
-                            src="{{ asset('images/share/link.jpg') }}"
+                            src="{{ asset('images/share/link.webp') }}"
                             alt=""
                             aria-hidden="true"
                         >
@@ -676,7 +676,7 @@
                     >
 
                         <img
-                            src="{{ asset('images/share/whatsapp.png') }}"
+                            src="{{ asset('images/share/whatsapp.webp') }}"
                             alt=""
                             aria-hidden="true"
                         >
