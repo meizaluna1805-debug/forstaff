@@ -3,7 +3,6 @@ import './components/buy-modal';
 
 /* =========================================================
    HOME - SLIDER LOGO KLIEN
-   Running text + tombol kiri / kanan
 ========================================================= */
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -17,8 +16,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (!track) return;
 
-
-    /* Ambil data logo dari Blade */
     const logos = Array.from(
         track.querySelectorAll('img')
     ).map(function (img) {
@@ -47,11 +44,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const cards = [];
 
-
-    /*
-     * Dibuat 2 salinan logo supaya slider
-     * dapat berjalan terus tanpa terputus.
-     */
     for (let copy = 0; copy < 2; copy++) {
 
         logos.forEach(function (logo) {
@@ -313,7 +305,6 @@ document.addEventListener('DOMContentLoaded', function () {
 /* =========================================================
    FORSTAFF - FEATURE PAGE
    - Feature Tabs
-   - Feature Search
 ========================================================= */
 
 function initForstaffFeatures() {
@@ -342,20 +333,6 @@ function initForstaffFeatures() {
         )
     );
 
-    const searchInput = document.getElementById(
-        'featureSearch'
-    );
-
-    const searchEmpty = document.getElementById(
-        'featureSearchEmpty'
-    );
-
-    const otherFeatureCards = Array.from(
-        document.querySelectorAll(
-            '[data-other-feature-card]'
-        )
-    );
-
 
     if (tabs.length === 0 || panels.length === 0) {
         return;
@@ -363,39 +340,10 @@ function initForstaffFeatures() {
 
 
     /* =====================================================
-       HELPERS
-    ===================================================== */
-
-    function normalizeText(value = '') {
-        return value
-            .toLowerCase()
-            .trim();
-    }
-
-
-    function getVisibleTabs() {
-        return tabs.filter(
-            (tab) => !tab.hidden
-        );
-    }
-
-
-    function getActiveTab() {
-        return tabs.find(
-            (tab) =>
-                tab.classList.contains('is-active')
-        );
-    }
-
-
-    /* =====================================================
        ACTIVATE FEATURE
     ===================================================== */
 
-    function activateFeature(
-        featureId,
-        focusTab = false
-    ) {
+    function activateFeature(featureId, focusTab = false) {
         const selectedTab = tabs.find(
             (tab) =>
                 tab.dataset.featureTarget === featureId
@@ -456,34 +404,6 @@ function initForstaffFeatures() {
 
 
     /* =====================================================
-       RESET FEATURE PANELS
-    ===================================================== */
-
-    function hideAllFeaturePanels() {
-        tabs.forEach((tab) => {
-            tab.classList.remove('is-active');
-
-            tab.setAttribute(
-                'aria-selected',
-                'false'
-            );
-
-            tab.setAttribute(
-                'tabindex',
-                '-1'
-            );
-        });
-
-
-        panels.forEach((panel) => {
-            panel.classList.remove('is-active');
-
-            panel.hidden = true;
-        });
-    }
-
-
-    /* =====================================================
        SIDEBAR CLICK
     ===================================================== */
 
@@ -503,32 +423,18 @@ function initForstaffFeatures() {
 
     /* =====================================================
        KEYBOARD NAVIGATION
-
-       Arrow Down / Right = Next
-       Arrow Up / Left    = Previous
-       Home               = First
-       End                = Last
     ===================================================== */
 
     tabs.forEach((tab) => {
         tab.addEventListener(
             'keydown',
             (event) => {
-                const visibleTabs =
-                    getVisibleTabs();
-
-                if (visibleTabs.length === 0) {
-                    return;
-                }
-
-
                 const currentIndex =
-                    visibleTabs.indexOf(tab);
+                    tabs.indexOf(tab);
 
                 if (currentIndex === -1) {
                     return;
                 }
-
 
                 let targetIndex = null;
 
@@ -537,8 +443,7 @@ function initForstaffFeatures() {
                     case 'ArrowRight':
                     case 'ArrowDown':
                         targetIndex =
-                            currentIndex ===
-                            visibleTabs.length - 1
+                            currentIndex === tabs.length - 1
                                 ? 0
                                 : currentIndex + 1;
                         break;
@@ -548,7 +453,7 @@ function initForstaffFeatures() {
                     case 'ArrowUp':
                         targetIndex =
                             currentIndex === 0
-                                ? visibleTabs.length - 1
+                                ? tabs.length - 1
                                 : currentIndex - 1;
                         break;
 
@@ -560,7 +465,7 @@ function initForstaffFeatures() {
 
                     case 'End':
                         targetIndex =
-                            visibleTabs.length - 1;
+                            tabs.length - 1;
                         break;
 
 
@@ -573,7 +478,7 @@ function initForstaffFeatures() {
 
 
                 const targetTab =
-                    visibleTabs[targetIndex];
+                    tabs[targetIndex];
 
                 const featureId =
                     targetTab?.dataset.featureTarget;
@@ -591,206 +496,6 @@ function initForstaffFeatures() {
             }
         );
     });
-
-
-    /* =====================================================
-       FEATURE SEARCH
-    ===================================================== */
-
-    function handleFeatureSearch() {
-        if (!searchInput) {
-            return;
-        }
-
-
-        const query =
-            normalizeText(searchInput.value);
-
-
-        /* -----------------------------------------
-           RESET SEARCH
-        ----------------------------------------- */
-
-        if (query === '') {
-            tabs.forEach((tab) => {
-                tab.hidden = false;
-            });
-
-
-            otherFeatureCards.forEach((card) => {
-                card.hidden = false;
-            });
-
-
-            if (searchEmpty) {
-                searchEmpty.hidden = true;
-            }
-
-
-            const activeTab = getActiveTab();
-
-            if (
-                !activeTab ||
-                activeTab.hidden
-            ) {
-                const firstTab = tabs[0];
-
-                if (firstTab) {
-                    activateFeature(
-                        firstTab.dataset.featureTarget
-                    );
-                }
-            }
-
-            return;
-        }
-
-
-        /* -----------------------------------------
-           FILTER MAIN FEATURES
-        ----------------------------------------- */
-
-        tabs.forEach((tab) => {
-            const searchText =
-                normalizeText(
-                    tab.dataset.featureSearchText
-                );
-
-            const isMatch =
-                searchText.includes(query);
-
-            tab.hidden = !isMatch;
-        });
-
-
-        /* -----------------------------------------
-           FILTER OTHER FEATURES
-        ----------------------------------------- */
-
-        otherFeatureCards.forEach((card) => {
-            const searchText =
-                normalizeText(
-                    card.dataset.featureSearchText
-                );
-
-            const isMatch =
-                searchText.includes(query);
-
-            card.hidden = !isMatch;
-        });
-
-
-        const visibleTabs =
-            getVisibleTabs();
-
-        const visibleOtherFeatures =
-            otherFeatureCards.filter(
-                (card) => !card.hidden
-            );
-
-
-        /* -----------------------------------------
-           MAIN FEATURE FOUND
-        ----------------------------------------- */
-
-        if (visibleTabs.length > 0) {
-            if (searchEmpty) {
-                searchEmpty.hidden = true;
-            }
-
-
-            const activeTab =
-                getActiveTab();
-
-
-            /*
-             * Kalau fitur aktif tidak termasuk
-             * hasil pencarian, otomatis buka
-             * hasil pertama.
-             */
-            if (
-                !activeTab ||
-                activeTab.hidden
-            ) {
-                activateFeature(
-                    visibleTabs[0]
-                        .dataset.featureTarget
-                );
-            }
-
-            return;
-        }
-
-
-        /* -----------------------------------------
-           ONLY "FITUR LAINNYA" FOUND
-        ----------------------------------------- */
-
-        hideAllFeaturePanels();
-
-
-        if (
-            visibleOtherFeatures.length > 0
-        ) {
-            if (searchEmpty) {
-                const message =
-                    searchEmpty.querySelector('p');
-
-                if (message) {
-                    message.textContent =
-                        'Fitur ditemukan pada bagian Fitur Lainnya.';
-                }
-
-                searchEmpty.hidden = false;
-            }
-
-            return;
-        }
-
-
-        /* -----------------------------------------
-           NOTHING FOUND
-        ----------------------------------------- */
-
-        if (searchEmpty) {
-            const message =
-                searchEmpty.querySelector('p');
-
-            if (message) {
-                message.textContent =
-                    'Fitur yang Anda cari tidak ditemukan.';
-            }
-
-            searchEmpty.hidden = false;
-        }
-    }
-
-
-    if (searchInput) {
-        searchInput.addEventListener(
-            'input',
-            handleFeatureSearch
-        );
-
-
-        /*
-         * Escape untuk menghapus pencarian.
-         */
-        searchInput.addEventListener(
-            'keydown',
-            (event) => {
-                if (event.key !== 'Escape') {
-                    return;
-                }
-
-                searchInput.value = '';
-
-                handleFeatureSearch();
-
-                searchInput.blur();
-            }
-        );
-    }
 
 
     /* =====================================================
@@ -815,7 +520,7 @@ function initForstaffFeatures() {
 
 
 /* =========================================================
-   INITIALIZE
+   INITIALIZE FEATURE PAGE
 ========================================================= */
 
 if (document.readyState === 'loading') {

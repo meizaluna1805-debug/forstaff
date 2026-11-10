@@ -118,86 +118,192 @@
         </div>
 </section>
 
-    {{-- Solusi --}}
-    <section class="fs-solusi" id="solusi-forstaff">
-        <div class="fs-home-container">
-            <div class="fs-solusi-box">
-                <h2>Solusi Lengkap untuk Operasional HR Anda</h2>
+   {{-- Solusi --}}
+<section class="fs-solusi" id="solusi-forstaff">
+    <div class="fs-home-container">
 
-                <div class="fs-solusi-grid">
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <circle cx="12" cy="9" r="5"/>
-                                <path d="M2 27c0-5 4-8 10-8s10 3 10 8Z"/>
-                                <path d="M25 6v8M21 10h8M25 20c3 1 5 3 5 6h-5"/>
-                            </svg>
-                        </div>
-                        <span>Data Karyawan</span>
+        <div class="fs-solusi-box">
+
+            <h2>
+                Solusi Lengkap untuk Operasional HR Anda
+            </h2>
+
+
+            <div class="fs-solusi-grid">
+
+                {{-- Manajemen Staff --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+                            <circle cx="12" cy="10" r="5"></circle>
+                            <circle cx="23" cy="11" r="4"></circle>
+
+                            <path d="M3 28c0-6 4-10 9-10s9 4 9 10"></path>
+
+                            <path d="M20 19c5-.2 9 3 9 9"></path>
+                        </svg>
                     </div>
 
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <rect x="5" y="6" width="22" height="23" rx="2"/>
-                                <path d="M10 3v6M22 3v6M5 12h22"/>
-                                <path d="M10 17h.01M16 17h.01M22 17h.01M10 22h.01M16 22h.01M22 22h.01M10 26h.01M16 26h.01"/>
-                            </svg>
-                        </div>
-                        <span>Absensi</span>
-                    </div>
+                    <span>
+                        Manajemen Staff
+                    </span>
 
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <path d="M16 3 27 7v9c0 6-5 10-11 14C10 26 5 22 5 16V7Z"/>
-                                <path d="m11 16 4 4 7-9"/>
-                            </svg>
-                        </div>
-                        <span>Cuti &amp; Lembur</span>
-                    </div>
-
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <rect x="5" y="3" width="22" height="26" rx="2"/>
-                                <path d="M10 3v26M3 9h4M3 15h4M3 21h4"/>
-                                <circle cx="15" cy="9" r="1.5"/>
-                                <path d="M12 15c0-2 1-3 3-3s3 1 3 3M21 13l2-5 2 5ZM14 20h9M14 24h7"/>
-                            </svg>
-                        </div>
-                        <span>Slip Gaji</span>
-                    </div>
-
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <rect x="4" y="18" width="5" height="11" rx="2"/>
-                                <rect x="13.5" y="11" width="5" height="18" rx="2"/>
-                                <rect x="23" y="4" width="5" height="25" rx="2"/>
-                            </svg>
-                        </div>
-                        <span>Kinerja</span>
-                    </div>
-
-                    <div class="fs-solusi-card">
-                        <div class="fs-icon" aria-hidden="true">
-                            <svg viewBox="0 0 32 32">
-                                <rect x="3" y="10" width="26" height="19" rx="3"/>
-                                <path d="M10 10V6a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v4M14 7h4"/>
-                                <path d="m16 15 5 5-5 5-5-5Z" fill="#194A97" stroke="none"/>
-                            </svg>
-                        </div>
-                        <span>Reporting</span>
-                    </div>
                 </div>
 
-               <div class="fs-feature-more">
-                    <a href="{{ url('/fitur') }}">Lihat Semua Fitur →</a>
-              </div>
+
+                {{-- Absensi --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+
+                            <rect
+                                x="5"
+                                y="6"
+                                width="22"
+                                height="23"
+                                rx="2"
+                            ></rect>
+
+                            <path d="M10 3v6M22 3v6M5 12h22"></path>
+
+                            <path d="m10 20 4 4 8-9"></path>
+
+                        </svg>
+                    </div>
+
+                    <span>
+                        Absensi
+                    </span>
+
+                </div>
+
+
+                {{-- Cuti & Izin --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+
+                            <rect
+                                x="5"
+                                y="6"
+                                width="22"
+                                height="23"
+                                rx="2"
+                            ></rect>
+
+                            <path d="M10 3v6M22 3v6M5 12h22"></path>
+
+                            <path d="M10 18h5M10 23h9"></path>
+
+                        </svg>
+                    </div>
+
+                    <span>
+                        Cuti &amp; Izin
+                    </span>
+
+                </div>
+
+
+                {{-- Lembur --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+
+                            <circle
+                                cx="16"
+                                cy="16"
+                                r="12"
+                            ></circle>
+
+                            <path d="M16 9v8l6 3"></path>
+
+                        </svg>
+                    </div>
+
+                    <span>
+                        Lembur
+                    </span>
+
+                </div>
+
+
+                {{-- Reimburse --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+
+                            <rect
+                                x="6"
+                                y="4"
+                                width="20"
+                                height="24"
+                                rx="2"
+                            ></rect>
+
+                            <path d="M11 10h10M11 15h7M11 20h5"></path>
+
+                            <path d="M22 18v7M18.5 21.5h7"></path>
+
+                        </svg>
+                    </div>
+
+                    <span>
+                        Reimburse
+                    </span>
+
+                </div>
+
+
+                {{-- Slip Gaji --}}
+                <div class="fs-solusi-card">
+
+                    <div class="fs-icon" aria-hidden="true">
+                        <svg viewBox="0 0 32 32">
+
+                            <rect
+                                x="4"
+                                y="6"
+                                width="24"
+                                height="21"
+                                rx="3"
+                            ></rect>
+
+                            <path d="M4 12h24"></path>
+
+                            <path d="M18 18h7"></path>
+
+                            <path d="M21.5 15v6"></path>
+
+                        </svg>
+                    </div>
+
+                    <span>
+                        Slip Gaji
+                    </span>
+
+                </div>
+
             </div>
+
+
+            <div class="fs-feature-more">
+
+                <a href="{{ url('/fitur') }}">
+                    Lihat Semua Fitur →
+                </a>
+
+            </div>
+
         </div>
-    </section>
+
+    </div>
+</section>
 
     {{-- Tentang Forstaff --}}
     <section class="fs-about-preview">

@@ -1,125 +1,49 @@
-/* =========================================================
-   FORSTAFF - FITUR PAGE
-   File: resources/css/fitur.css
-
-   Primary Color : #194A97
-   Secondary     : #FFFFFF / Light Grey
-========================================================= */
-
-
-/* =========================================================
-   VARIABLES
-========================================================= */
-
-.fs-feature-hero,
-.fs-feature-explorer,
-.fs-other-features {
-    --fs-primary: #194A97;
-    --fs-primary-dark: #123D7E;
-    --fs-primary-deep: #0D326B;
-
-    --fs-blue: #1475E8;
-    --fs-blue-soft: #EAF3FF;
-    --fs-blue-light: #F4F8FD;
-
-    --fs-white: #FFFFFF;
-    --fs-bg: #F7F9FC;
-
-    --fs-heading: #123F80;
-    --fs-text: #617DA6;
-    --fs-text-dark: #36577F;
-
-    --fs-border: #DCE6F2;
-
-    --fs-shadow:
-        0 14px 36px rgba(25, 74, 151, 0.08);
-
-    --fs-shadow-soft:
-        0 8px 24px rgba(25, 74, 151, 0.06);
-}
-
-
-/* =========================================================
-   CONTAINER
-========================================================= */
-
 .fs-feature-container {
-    width: min(100% - 48px, 1260px);
+    width: min(calc(100% - 48px), 1260px);
     margin-inline: auto;
 }
 
-
-/* =========================================================
-   HERO
-========================================================= */
-
 .fs-feature-hero {
-    position: relative;
+    width: 100%;
     overflow: hidden;
-
-    padding: 46px 0 38px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #F8FAFD 0%,
-            #F3F8FF 52%,
-            #F7F9FC 100%
-        );
+    background: #f7f9fc;
+    padding: 38px 0 34px;
 }
 
 .fs-feature-hero-grid {
     display: grid;
-    grid-template-columns:
-        minmax(0, 0.95fr)
-        minmax(0, 1.05fr);
-
+    grid-template-columns: 42fr 58fr;
     align-items: center;
-
-    gap: 40px;
+    gap: 10px;
 }
-
-
-/* =========================================================
-   HERO CONTENT
-========================================================= */
 
 .fs-feature-hero-content {
     position: relative;
-    z-index: 5;
-
-    max-width: 585px;
+    z-index: 2;
+    padding-top: 8px;
+    margin-top: -34px;
 }
-
-
-/* =========================================================
-   BREADCRUMB
-========================================================= */
 
 .fs-feature-breadcrumb {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-
     gap: 8px;
-
     margin: 0 0 18px;
-
+    font-family: "Instrument Sans", sans-serif;
     font-size: 13px;
     line-height: 1.4;
 }
 
 .fs-feature-breadcrumb a {
     color: #6680AA;
-
     font-weight: 500;
     text-decoration: none;
-
     transition: color 0.2s ease;
 }
 
 .fs-feature-breadcrumb a:hover {
-    color: var(--fs-primary);
+    color: #194A97;
 }
 
 .fs-feature-breadcrumb > span:not(.is-current) {
@@ -127,456 +51,239 @@
 }
 
 .fs-feature-breadcrumb .is-current {
-    color: var(--fs-primary);
-
+    color: #194A97;
     font-weight: 700;
 }
 
-
-/* =========================================================
-   HERO TITLE
-========================================================= */
-
 .fs-feature-hero-content h1 {
-    max-width: 580px;
-
-    margin: 0;
-
-    color: #12489D;
-
-    font-size: clamp(36px, 3.2vw, 50px);
-    font-weight: 750;
-
-    line-height: 1.05;
-
-    letter-spacing: -1.2px;
+    max-width: 560px;
+    margin: 0 0 25px;
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.08;
+    letter-spacing: -1px;
 }
 
 .fs-feature-hero-content h1 span {
     display: block;
 }
 
-
-/* =========================================================
-   HERO DESCRIPTION
-========================================================= */
-
 .fs-feature-hero-description {
-    max-width: 555px;
-
-    margin: 18px 0 0;
-
-    color: #6280AE;
-
+    max-width: 520px;
+    margin: 0;
+    color: #6280ae;
     font-size: 15px;
     font-weight: 400;
-
-    line-height: 1.65;
+    line-height: 1.55;
 }
 
-
-/* =========================================================
-   SEARCH
-========================================================= */
-
-.fs-feature-search {
+.fs-feature-device-area {
     position: relative;
-
-    display: flex;
-    align-items: center;
-
-    width: min(100%, 500px);
-
-    margin-top: 23px;
+    height: 500px;
+    overflow: visible;
 }
 
-.fs-feature-search-icon {
+.fs-feature-device-bg {
     position: absolute;
-
-    left: 17px;
-    top: 50%;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 20px;
-    height: 20px;
-
-    color: #8299BA;
-
-    transform: translateY(-50%);
-
+    inset: 0;
+    z-index: 1;
     pointer-events: none;
 }
 
-.fs-feature-search-icon svg {
-    width: 20px;
-    height: 20px;
-
-    fill: none;
-    stroke: currentColor;
-
-    stroke-width: 1.8;
-
-    stroke-linecap: round;
-    stroke-linejoin: round;
-}
-
-.fs-feature-search-input {
-    width: 100%;
-    height: 50px;
-
-    padding: 0 18px 0 48px;
-
-    border: 1px solid #DFE8F4;
-    border-radius: 12px;
-
-    outline: none;
-
-    background: #FFFFFF;
-    color: #304E78;
-
-    font-family: inherit;
-    font-size: 14px;
-
-    box-shadow:
-        0 7px 20px rgba(25, 74, 151, 0.05);
-
-    transition:
-        border-color 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.fs-feature-search-input::placeholder {
-    color: #97A9C1;
-}
-
-.fs-feature-search-input:focus {
-    border-color: #9FC5F2;
-
-    box-shadow:
-        0 0 0 4px rgba(25, 74, 151, 0.08);
-}
-
-
-/* =========================================================
-   HERO VISUAL
-   Referensi:
-   - laptop kiri
-   - HP kanan
-   - tidak saling menumpuk berlebihan
-   - keduanya sama-sama terlihat jelas
-========================================================= */
-
-.fs-feature-hero-visual {
-    position: relative;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    min-height: 350px;
-
-    overflow: hidden;
-}
-
-
-/* Lingkaran besar belakang */
-.fs-feature-hero-visual::before {
+.fs-feature-device-bg::before {
     content: "";
-
     position: absolute;
-
-    width: 610px;
-    height: 610px;
-
-    left: -20px;
-    top: 50%;
-
-    border: 1px solid rgba(25, 74, 151, 0.12);
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            rgba(214, 231, 253, 0.58),
-            rgba(235, 244, 255, 0.30)
-        );
-
-    transform: translateY(-50%);
-
-    pointer-events: none;
-}
-
-
-/* Pola titik kanan atas */
-.fs-feature-hero-visual::after {
-    content: "";
-
-    position: absolute;
-
-    width: 205px;
-    height: 125px;
-
-    right: 0;
-    top: 3px;
-
-    background-image:
-        radial-gradient(
-            circle,
-            rgba(25, 74, 151, 0.26) 2px,
-            transparent 2.2px
-        );
-
-    background-size: 18px 18px;
-
-    opacity: 0.75;
-
-    pointer-events: none;
-}
-
-
-/* Shape biru kanan */
-.fs-feature-hero-shape {
-    position: absolute;
-
-    width: 370px;
-    height: 265px;
-
-    right: -20px;
-    bottom: -15px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(25, 74, 151, 0.065);
-
+    width: 520px;
+    height: 520px;
+    right: 70px;
+    top: 0;
+    border-radius: 46% 54% 56% 44% / 44% 42% 58% 56%;
+    border: 1px solid rgba(25, 74, 151, 0.16);
+    background: linear-gradient(145deg, #dceafe 0%, #edf5ff 100%);
     transform: rotate(-12deg);
-
-    pointer-events: none;
 }
 
+.fs-feature-device-bg::after {
+    content: "";
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    right: 0;
+    top: 90px;
+    border-radius: 58% 42% 49% 51% / 51% 45% 55% 49%;
+    background: linear-gradient(
+        150deg,
+        rgba(161, 197, 249, 0.62),
+        rgba(223, 238, 255, 0.4)
+    );
+    transform: rotate(16deg);
+}
 
-/* =========================================================
-   HERO DEVICE WRAPPER
-========================================================= */
-
-.fs-feature-hero-device {
+.fs-feature-device-wrap {
     position: relative;
+    width: 100%;
+    height: 100%;
     z-index: 3;
-
-    width: min(100%, 650px);
-    height: 330px;
-
-    margin-inline: auto;
 }
 
-
-/* =========================================================
-   HERO LAPTOP
-========================================================= */
+.fs-feature-device-wrap::before {
+    content: "";
+    position: absolute;
+    width: 150px;
+    height: 110px;
+    right: 0;
+    top: 30px;
+    background-image: radial-gradient(
+        rgba(25, 74, 151, 0.24) 1.5px,
+        transparent 1.5px
+    );
+    background-size: 12px 12px;
+}
 
 .fs-feature-hero-laptop {
     position: absolute;
-
-    left: 1%;
-    bottom: 13px;
-
-    display: block;
-
-    width: 74%;
-    height: auto;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 18px 23px rgba(18, 48, 91, 0.14)
-        );
+    width: 500px;
+    right: 160px;
+    top: 85px;
+    z-index: 3;
+    animation: fsFeatureLaptopFloat 5.5s ease-in-out infinite;
+    filter: drop-shadow(0 20px 34px rgba(28, 46, 88, 0.18));
 }
-
-
-/* =========================================================
-   HERO PHONE
-========================================================= */
 
 .fs-feature-hero-phone {
     position: absolute;
-
-    right: 1%;
-    bottom: 23px;
-
-    display: block;
-
-    width: 25%;
-    height: auto;
-
-    object-fit: contain;
-
-    filter:
-        drop-shadow(
-            0 16px 20px rgba(18, 48, 91, 0.16)
-        );
+    width: 170px;
+    right: 15px;
+    top: 126px;
+    z-index: 4;
+    animation: fsFeaturePhoneFloat 4.8s ease-in-out infinite;
+    filter: drop-shadow(0 14px 26px rgba(28, 46, 88, 0.18));
 }
 
+@keyframes fsFeatureLaptopFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
 
-/* =========================================================
-   FEATURE EXPLORER
+    50% {
+        transform: translateY(-8px);
+    }
+}
 
-   Langsung setelah hero.
-   Tidak ada section intro tambahan.
-========================================================= */
+@keyframes fsFeaturePhoneFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes fsFeatureLaptopFloatMobile {
+    0%,
+    100% {
+        transform: translateX(50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(50%) translateY(-8px);
+    }
+}
 
 .fs-feature-explorer {
-    padding: 24px 0 22px;
-
-    background:
-        linear-gradient(
-            180deg,
-            #FFFFFF 0%,
-            #F7F9FC 100%
-        );
+    --fs-border: #DCE6F2;
+    --fs-shadow: 0 12px 32px rgba(25, 74, 151, 0.07);
+    padding: 34px 0 36px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F7F9FC 100%);
 }
 
 .fs-feature-explorer-grid {
     display: grid;
-    grid-template-columns:
-        285px
-        minmax(0, 1fr);
-
+    grid-template-columns: 285px minmax(0, 1fr);
     align-items: start;
-
     gap: 22px;
 }
 
-
-/* =========================================================
-   SIDEBAR
-========================================================= */
-
 .fs-feature-sidebar {
-    position: sticky;
-    top: 96px;
-
+    position: static;
+    min-width: 0;
     overflow: hidden;
-
     padding: 13px;
-
     border: 1px solid var(--fs-border);
-    border-radius: 18px;
-
+    border-radius: 16px;
     background: #FFFFFF;
-
     box-shadow: var(--fs-shadow);
 }
-
-
-/* =========================================================
-   SIDEBAR HEADER
-========================================================= */
 
 .fs-feature-sidebar-head {
     display: flex;
     align-items: center;
-
     gap: 11px;
-
     min-height: 60px;
-
     padding: 12px 15px;
-
-    border-radius: 12px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #194A97 0%,
-            #1268CB 100%
-        );
-
+    border-radius: 11px;
+    background: linear-gradient(135deg, #194A97 0%, #1268CB 100%);
     color: #FFFFFF;
-
+    font-family: "Instrument Sans", sans-serif;
     font-size: 14px;
     font-weight: 700;
-
-    box-shadow:
-        0 8px 18px rgba(25, 74, 151, 0.17);
+    box-shadow: 0 8px 18px rgba(25, 74, 151, 0.17);
 }
 
 .fs-feature-sidebar-head-icon {
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 28px;
     height: 28px;
-
     flex: 0 0 28px;
 }
 
 .fs-feature-sidebar-head-icon svg {
     width: 22px;
     height: 22px;
-
     fill: none;
     stroke: currentColor;
-
     stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
 }
 
 .fs-feature-sidebar-head-arrow {
     margin-left: auto;
-
     font-size: 19px;
+    line-height: 1;
 }
-
-
-/* =========================================================
-   SIDEBAR LIST
-========================================================= */
 
 .fs-feature-sidebar-list {
     display: flex;
     flex-direction: column;
-
     gap: 4px;
-
     margin-top: 9px;
 }
-
-
-/* =========================================================
-   FEATURE TAB
-========================================================= */
 
 .fs-feature-tab {
     display: flex;
     align-items: center;
-
     gap: 11px;
-
     width: 100%;
     min-height: 53px;
-
     padding: 9px 11px;
-
     border: 1px solid transparent;
-    border-radius: 11px;
-
+    border-radius: 10px;
     background: transparent;
-    color: #24466F;
-
-    font-family: inherit;
+    color: #36577F;
+    font-family: "Instrument Sans", sans-serif;
     font-size: 13.5px;
-    font-weight: 550;
-
+    font-weight: 500;
     line-height: 1.35;
-
     text-align: left;
-
     cursor: pointer;
-
     transition:
         color 0.2s ease,
         background-color 0.2s ease,
@@ -585,21 +292,18 @@
 
 .fs-feature-tab:hover {
     background: #F5F9FF;
-    color: var(--fs-primary);
+    color: #194A97;
 }
 
 .fs-feature-tab.is-active {
     border-color: #CDE0F7;
-
     background: #EAF3FF;
-    color: var(--fs-primary);
-
+    color: #194A97;
     font-weight: 700;
 }
 
 .fs-feature-tab:focus-visible {
     outline: 3px solid rgba(25, 74, 151, 0.13);
-
     outline-offset: 1px;
 }
 
@@ -607,24 +311,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 33px;
     height: 33px;
-
     flex: 0 0 33px;
-
     color: #0876E8;
 }
 
 .fs-feature-tab-icon svg {
     width: 23px;
     height: 23px;
-
     fill: none;
     stroke: currentColor;
-
     stroke-width: 1.8;
-
     stroke-linecap: round;
     stroke-linejoin: round;
 }
@@ -633,28 +331,16 @@
     min-width: 0;
 }
 
-
-/* =========================================================
-   FEATURE CONTENT
-========================================================= */
-
 .fs-feature-content {
     min-width: 0;
 }
 
-
-/* =========================================================
-   FEATURE PANEL
-========================================================= */
-
 .fs-feature-panel {
-    padding: 27px;
-
+    min-width: 0;
+    padding: 24px;
     border: 1px solid var(--fs-border);
-    border-radius: 18px;
-
+    border-radius: 16px;
     background: #FFFFFF;
-
     box-shadow: var(--fs-shadow);
 }
 
@@ -662,453 +348,173 @@
     display: none !important;
 }
 
-
-/* =========================================================
-   FEATURE PANEL HEADER
-========================================================= */
-
 .fs-feature-panel-header {
-    margin-bottom: 18px;
+    margin-bottom: 16px;
 }
 
 .fs-feature-panel-header h2 {
     margin: 0;
-
-    color: #113D7C;
-
-    font-size: clamp(27px, 2vw, 35px);
-    font-weight: 750;
-
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 30px;
+    font-weight: 700;
     line-height: 1.12;
-
-    letter-spacing: -0.6px;
+    letter-spacing: -0.5px;
 }
 
 .fs-feature-panel-header p {
-    max-width: 850px;
-
-    margin: 9px 0 0;
-
-    color: var(--fs-text);
-
-    font-size: 14.5px;
-
-    line-height: 1.65;
+    max-width: 100%;
+    margin: 8px 0 0;
+    color: #6280AE;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.55;
 }
-
-
-/* =========================================================
-   FEATURE PREVIEW
-========================================================= */
 
 .fs-feature-preview {
     position: relative;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: min(100%, 900px);
+    margin-inline: auto;
     overflow: hidden;
-
-    width: 100%;
-    height: clamp(330px, 29vw, 410px);
-
-    padding: 18px 24px 12px;
-
+    padding: 8px;
     border: 1px solid #D5E6F8;
-    border-radius: 16px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #F2F8FF 0%,
-            #E6F2FF 51%,
-            #DDEEFF 100%
-        );
+    border-radius: 13px;
+    background: linear-gradient(
+        135deg,
+        #F0F7FF 0%,
+        #E4F1FF 50%,
+        #DCEEFF 100%
+    );
 }
-
-
-/* =========================================================
-   FEATURE PREVIEW BACKGROUND
-========================================================= */
-
-.fs-feature-preview-bg {
-    position: absolute;
-
-    inset: 0;
-
-    overflow: hidden;
-
-    pointer-events: none;
-}
-
-.fs-feature-preview-bg::before {
-    content: "";
-
-    position: absolute;
-
-    width: 55%;
-    height: 140%;
-
-    top: -50%;
-    right: -11%;
-
-    border-radius: 50%;
-
-    background:
-        rgba(25, 74, 151, 0.045);
-}
-
-.fs-feature-preview-bg::after {
-    content: "";
-
-    position: absolute;
-
-    width: 380px;
-    height: 130px;
-
-    left: 11%;
-    bottom: -67px;
-
-    border-radius: 50%;
-
-    background:
-        rgba(15, 115, 231, 0.055);
-}
-
-.fs-feature-preview-circle {
-    position: absolute;
-
-    display: block;
-
-    border-radius: 50%;
-}
-
-.fs-circle-one {
-    width: 130px;
-    height: 130px;
-
-    top: 23px;
-    right: 36px;
-
-    border: 1px solid rgba(25, 74, 151, 0.08);
-
-    background:
-        rgba(255, 255, 255, 0.18);
-}
-
-.fs-circle-two {
-    width: 70px;
-    height: 70px;
-
-    left: 28px;
-    bottom: 20px;
-
-    background:
-        rgba(25, 74, 151, 0.04);
-}
-
-.fs-feature-preview-dot {
-    position: absolute;
-
-    width: 5px;
-    height: 5px;
-
-    top: 24px;
-    left: 26px;
-
-    border-radius: 50%;
-
-    background: rgba(25, 74, 151, 0.17);
-
-    box-shadow:
-        15px 0 0 rgba(25, 74, 151, 0.11),
-        30px 0 0 rgba(25, 74, 151, 0.07),
-        0 15px 0 rgba(25, 74, 151, 0.10),
-        15px 15px 0 rgba(25, 74, 151, 0.07),
-        30px 15px 0 rgba(25, 74, 151, 0.05);
-}
-
-
-/* =========================================================
-   FEATURE IMAGE
-========================================================= */
 
 .fs-feature-preview-image-wrap {
     position: relative;
-    z-index: 2;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 100%;
-    height: 100%;
+    aspect-ratio: 1600 / 750;
+    overflow: hidden;
+    border-radius: 9px;
+    background: #FFFFFF;
 }
 
 .fs-feature-preview-image {
     display: block;
-
     width: 100%;
     height: 100%;
-
-    max-width: 1050px;
-    max-height: 385px;
-
     object-fit: contain;
     object-position: center;
-
-    filter:
-        drop-shadow(
-            0 15px 18px rgba(20, 52, 99, 0.11)
-        );
+    background: #FFFFFF;
 }
-
-
-/* =========================================================
-   FEATURE PANEL BOTTOM
-========================================================= */
 
 .fs-feature-panel-bottom {
-    margin-top: 20px;
+    margin-top: 18px;
 }
-
-
-/* =========================================================
-   FEATURE POINT LIST
-========================================================= */
 
 .fs-feature-point-list {
     display: grid;
-    grid-template-columns:
-        repeat(2, minmax(0, 1fr));
-
-    gap: 12px 30px;
-
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px 24px;
     margin: 0;
     padding: 0;
-
     list-style: none;
 }
 
 .fs-feature-point-list li {
     display: flex;
     align-items: flex-start;
-
-    gap: 10px;
-
+    gap: 9px;
     min-width: 0;
-
     color: #4D698F;
-
-    font-size: 13.8px;
-
-    line-height: 1.5;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 13.2px;
+    font-weight: 400;
+    line-height: 1.45;
 }
 
 .fs-feature-check {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    width: 23px;
-    height: 23px;
-
-    flex: 0 0 23px;
-
+    width: 22px;
+    height: 22px;
+    flex: 0 0 22px;
     margin-top: -1px;
-
     border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #0B77E9,
-            #1763BE
-        );
-
+    background: linear-gradient(135deg, #0B77E9, #1763BE);
     color: #FFFFFF;
-
-    font-size: 12px;
+    font-size: 11px;
     font-weight: 700;
-
-    box-shadow:
-        0 4px 10px rgba(15, 115, 231, 0.15);
+    box-shadow: 0 4px 10px rgba(15, 115, 231, 0.15);
 }
-
-
-/* =========================================================
-   BUTTON FITUR LAINNYA
-========================================================= */
-
-.fs-feature-more-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 14px;
-
-    min-height: 44px;
-
-    margin-top: 21px;
-    padding: 9px 18px;
-
-    border: 1.5px solid var(--fs-primary);
-    border-radius: 9px;
-
-    background: #FFFFFF;
-    color: var(--fs-primary);
-
-    font-size: 13.5px;
-    font-weight: 700;
-
-    text-decoration: none;
-
-    transition:
-        color 0.2s ease,
-        background-color 0.2s ease,
-        transform 0.2s ease,
-        box-shadow 0.2s ease;
-}
-
-.fs-feature-more-button:hover {
-    transform: translateY(-2px);
-
-    background: var(--fs-primary);
-    color: #FFFFFF;
-
-    box-shadow:
-        0 9px 18px rgba(25, 74, 151, 0.14);
-}
-
-
-/* =========================================================
-   SEARCH EMPTY STATE
-========================================================= */
-
-.fs-feature-search-empty {
-    padding: 45px 24px;
-
-    border: 1px solid var(--fs-border);
-    border-radius: 18px;
-
-    background: #FFFFFF;
-
-    text-align: center;
-
-    box-shadow: var(--fs-shadow-soft);
-}
-
-.fs-feature-search-empty[hidden] {
-    display: none !important;
-}
-
-.fs-feature-search-empty p {
-    margin: 0;
-
-    color: var(--fs-text);
-
-    font-size: 14px;
-}
-
-
-/* =========================================================
-   FITUR LAINNYA
-   Jarak dibuat dekat dengan card utama.
-========================================================= */
 
 .fs-other-features {
-    padding: 26px 0 72px;
-
+    padding: 36px 0 68px;
     background: #F4F8FD;
 }
 
-
-/* =========================================================
-   FITUR LAINNYA HEADER
-========================================================= */
-
 .fs-other-features-heading {
-    max-width: 680px;
-
-    margin-bottom: 25px;
+    max-width: 720px;
+    margin-bottom: 28px;
 }
 
-.fs-other-features-heading > span {
-    display: block;
-
-    margin-bottom: 8px;
-
-    color: var(--fs-primary);
-
-    font-size: 12px;
-    font-weight: 750;
-
-    letter-spacing: 0.08em;
-
-    text-transform: uppercase;
+.fs-other-features-eyebrow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 11px;
+    padding: 5px 13px;
+    border: 1px solid #E5E7EB;
+    border-radius: 20px;
+    background: #F7F9FC;
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: normal;
 }
 
 .fs-other-features-heading h2 {
     margin: 0;
-
-    color: #123F80;
-
-    font-size: clamp(29px, 2.4vw, 37px);
-    font-weight: 750;
-
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 36px;
+    font-weight: 700;
     line-height: 1.12;
-
     letter-spacing: -0.6px;
 }
 
 .fs-other-features-heading p {
-    max-width: 640px;
-
+    max-width: 680px;
     margin: 11px 0 0;
-
-    color: var(--fs-text);
-
-    font-size: 14.5px;
-
-    line-height: 1.65;
+    color: #6280AE;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
 }
-
-
-/* =========================================================
-   OTHER FEATURES GRID
-========================================================= */
 
 .fs-other-feature-grid {
     display: grid;
-    grid-template-columns:
-        repeat(4, minmax(0, 1fr));
-
+    grid-template-columns: repeat(4, minmax(0, 1fr));
     gap: 17px;
 }
 
-
-/* =========================================================
-   OTHER FEATURE CARD
-========================================================= */
-
 .fs-other-feature-card {
     position: relative;
-
     overflow: hidden;
-
     min-height: 205px;
-
     padding: 23px;
-
     border: 1px solid #DCE7F4;
     border-radius: 16px;
-
     background: #FFFFFF;
-
-    box-shadow:
-        0 8px 22px rgba(25, 74, 151, 0.045);
-
+    box-shadow: 0 8px 22px rgba(25, 74, 151, 0.045);
     transition:
         transform 0.2s ease,
         border-color 0.2s ease,
@@ -1117,83 +523,45 @@
 
 .fs-other-feature-card::after {
     content: "";
-
     position: absolute;
-
     width: 105px;
     height: 105px;
-
     top: -55px;
     right: -45px;
-
     border-radius: 50%;
-
-    background:
-        rgba(25, 74, 151, 0.045);
-
+    background: rgba(25, 74, 151, 0.045);
     pointer-events: none;
 }
 
 .fs-other-feature-card:hover {
     transform: translateY(-3px);
-
     border-color: #BCD6F3;
-
-    box-shadow:
-        0 14px 30px rgba(25, 74, 151, 0.08);
+    box-shadow: 0 14px 30px rgba(25, 74, 151, 0.08);
 }
-
-.fs-other-feature-card[hidden] {
-    display: none !important;
-}
-
-
-/* =========================================================
-   OTHER FEATURE ICON
-========================================================= */
 
 .fs-other-feature-icon {
     position: relative;
     z-index: 2;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     width: 50px;
     height: 50px;
-
     margin-bottom: 16px;
-
     border-radius: 13px;
-
-    background:
-        linear-gradient(
-            135deg,
-            #EEF6FF,
-            #E3F0FF
-        );
-
+    background: linear-gradient(135deg, #EEF6FF, #E3F0FF);
     color: #0875E8;
 }
 
 .fs-other-feature-icon svg {
     width: 26px;
     height: 26px;
-
     fill: none;
     stroke: currentColor;
-
     stroke-width: 1.7;
-
     stroke-linecap: round;
     stroke-linejoin: round;
 }
-
-
-/* =========================================================
-   OTHER FEATURE CONTENT
-========================================================= */
 
 .fs-other-feature-content {
     position: relative;
@@ -1202,415 +570,492 @@
 
 .fs-other-feature-content h3 {
     margin: 0;
-
-    color: #123F80;
-
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
     font-size: 16px;
-    font-weight: 750;
-
+    font-weight: 700;
     line-height: 1.35;
 }
 
 .fs-other-feature-content p {
     margin: 8px 0 0;
-
     color: #657FA5;
-
+    font-family: "Instrument Sans", sans-serif;
     font-size: 13.5px;
-
+    font-weight: 400;
     line-height: 1.6;
 }
 
+.fs-feature-demo {
+    padding: 18px 0 46px;
+    background: #F4F8FD;
+}
 
-/* =========================================================
-   RESPONSIVE - LARGE LAPTOP
-========================================================= */
+.fs-feature-demo-card {
+    display: grid;
+    grid-template-columns: 340px minmax(0, 1fr);
+    align-items: center;
+    gap: 42px;
+    min-height: 280px;
+    padding: 28px;
+    overflow: hidden;
+    border: 1px solid #D9E8F8;
+    border-radius: 18px;
+    background: linear-gradient(
+        110deg,
+        #EAF4FF 0%,
+        #F3F8FF 55%,
+        #E7F2FF 100%
+    );
+    box-shadow: 0 12px 30px rgba(25, 74, 151, 0.07);
+}
+
+.fs-feature-demo-image-wrap {
+    width: 100%;
+    height: 230px;
+    overflow: hidden;
+    border-radius: 14px;
+    background: #DCEBFA;
+}
+
+.fs-feature-demo-image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.fs-feature-demo-content {
+    max-width: 650px;
+}
+
+.fs-feature-demo-content h2 {
+    margin: 0;
+    color: #194A97;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: clamp(28px, 2.4vw, 36px);
+    font-weight: 700;
+    line-height: 1.12;
+    letter-spacing: -0.6px;
+}
+
+.fs-feature-demo-content h2 span {
+    display: block;
+}
+
+.fs-feature-demo-content p {
+    max-width: 570px;
+    margin: 13px 0 0;
+    color: #6280AE;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.fs-feature-demo-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    min-height: 47px;
+    margin-top: 21px;
+    padding: 10px 22px;
+    border: 1px solid #194A97;
+    border-radius: 8px;
+    background: #194A97;
+    color: #FFFFFF;
+    font-family: "Instrument Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 8px 18px rgba(25, 74, 151, 0.16);
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.fs-feature-demo-button:hover {
+    transform: translateY(-2px);
+    background: #123D7E;
+    box-shadow: 0 11px 22px rgba(25, 74, 151, 0.20);
+}
+
+.fs-feature-demo-button span {
+    font-size: 18px;
+    line-height: 1;
+}
+
+@media (max-width: 1366px) {
+    .fs-feature-hero-laptop {
+        width: 500px;
+        right: 150px;
+        top: 90px;
+    }
+
+    .fs-feature-hero-phone {
+        width: 160px;
+        right: 10px;
+        top: 120px;
+    }
+}
 
 @media (max-width: 1199.98px) {
-
     .fs-feature-container {
-        width: min(100% - 40px, 1140px);
+        width: min(calc(100% - 40px), 1140px);
     }
 
-    .fs-feature-hero-grid {
-        gap: 30px;
-    }
-
-    .fs-feature-hero-visual {
-        min-height: 325px;
-    }
-
-    .fs-feature-hero-device {
-        width: min(100%, 590px);
-        height: 305px;
-    }
-
-    .fs-feature-hero-laptop {
-        width: 74%;
-    }
-
-    .fs-feature-hero-phone {
-        width: 25%;
-    }
-
-    .fs-feature-hero-visual::before {
-        width: 540px;
-        height: 540px;
-    }
-
-    .fs-feature-explorer-grid {
-        grid-template-columns:
-            260px
-            minmax(0, 1fr);
-    }
-
-    .fs-feature-panel {
-        padding: 23px;
-    }
-
-    .fs-feature-preview {
-        height: 350px;
-    }
-
-    .fs-feature-preview-image {
-        max-height: 330px;
-    }
-
-    .fs-other-feature-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
-    }
-
-    .fs-other-feature-card {
-        min-height: 185px;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE - TABLET
-========================================================= */
-
-@media (max-width: 991.98px) {
-
-    .fs-feature-container {
-        width: min(100% - 36px, 920px);
-    }
-
-    .fs-feature-hero {
-        padding: 42px 0 32px;
-    }
-
-    .fs-feature-hero-grid {
-        grid-template-columns: 1fr;
-
-        gap: 18px;
-    }
-
-    .fs-feature-hero-content {
-        max-width: 650px;
-    }
-
-    .fs-feature-search {
-        width: min(100%, 580px);
-    }
-
-    .fs-feature-hero-visual {
-        min-height: 335px;
-    }
-
-    .fs-feature-hero-device {
-        width: min(100%, 610px);
-        height: 320px;
-    }
-
-    .fs-feature-hero-laptop {
-        left: 1%;
-
-        width: 74%;
-    }
-
-    .fs-feature-hero-phone {
-        right: 1%;
-
-        width: 25%;
-    }
-
-    .fs-feature-hero-visual::before {
-        width: 570px;
-        height: 570px;
-    }
-
-    .fs-feature-hero-visual::after {
-        width: 170px;
-        height: 105px;
-    }
-
-    .fs-feature-explorer {
-        padding-top: 20px;
-    }
-
-    .fs-feature-explorer-grid {
-        grid-template-columns: 1fr;
-
-        gap: 16px;
-    }
-
-    .fs-feature-sidebar {
-        position: static;
-    }
-
-    .fs-feature-sidebar-list {
-        display: grid;
-        grid-template-columns:
-            repeat(3, minmax(0, 1fr));
-
-        gap: 6px;
-    }
-
-    .fs-feature-preview {
-        height: 370px;
-    }
-
-    .fs-feature-preview-image {
-        max-height: 345px;
-    }
-
-    .fs-other-features {
-        padding-top: 24px;
-    }
-}
-
-
-/* =========================================================
-   RESPONSIVE - MOBILE
-========================================================= */
-
-@media (max-width: 767.98px) {
-
-    .fs-feature-container {
-        width: min(100% - 28px, 720px);
+    .fs-feature-hero .fs-feature-container {
+        width: min(calc(100% - 40px), 1260px);
     }
 
     .fs-feature-hero {
         padding: 34px 0 28px;
     }
 
+    .fs-feature-hero-grid {
+        grid-template-columns: minmax(0, 44fr) minmax(0, 56fr);
+        align-items: center;
+        gap: 24px;
+    }
+
+    .fs-feature-hero-content {
+        min-width: 0;
+    }
+
+    .fs-feature-hero-content h1 {
+        font-size: 40px;
+    }
+
+    .fs-feature-hero-description {
+        max-width: 520px;
+    }
+
+    .fs-feature-device-area {
+        min-width: 0;
+        height: 430px;
+    }
+
+    .fs-feature-device-bg::before {
+        width: 430px;
+        height: 430px;
+        right: 30px;
+        top: 0;
+    }
+
+    .fs-feature-device-bg::after {
+        width: 260px;
+        height: 260px;
+        right: 0;
+        top: 90px;
+    }
+
+    .fs-feature-device-wrap::before {
+        right: 10px;
+        top: 30px;
+    }
+
+    .fs-feature-hero-laptop {
+        width: 76%;
+        max-width: 430px;
+        left: 0;
+        right: auto;
+        top: 82px;
+    }
+
+    .fs-feature-hero-phone {
+        width: 22%;
+        max-width: 145px;
+        right: 1%;
+        top: 94px;
+    }
+
+    .fs-feature-explorer-grid {
+        grid-template-columns: 260px minmax(0, 1fr);
+    }
+
+    .fs-feature-panel {
+        padding: 22px;
+    }
+
+    .fs-feature-preview {
+        width: min(100%, 590px);
+    }
+
+    .fs-other-feature-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .fs-feature-demo-card {
+        grid-template-columns: 300px minmax(0, 1fr);
+        gap: 34px;
+    }
+
+    .fs-feature-demo-image-wrap {
+        height: 220px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .fs-feature-container {
+        width: min(calc(100% - 36px), 920px);
+    }
+
+    .fs-feature-hero .fs-feature-container {
+        width: min(calc(100% - 40px), 1260px);
+    }
+
+    .fs-feature-hero-content h1 {
+        font-size: 36px;
+        line-height: 1.07;
+    }
+
+    .fs-feature-explorer {
+        padding: 30px 0 34px;
+    }
+
+    .fs-feature-explorer-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .fs-feature-sidebar-list {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 6px;
+    }
+
+    .fs-feature-tab {
+        min-height: 52px;
+    }
+
+    .fs-feature-preview {
+        width: 100%;
+        max-width: 760px;
+    }
+
+    .fs-feature-panel {
+        padding: 24px;
+    }
+
+    .fs-feature-demo-card {
+        grid-template-columns: 260px minmax(0, 1fr);
+        gap: 28px;
+        min-height: 250px;
+        padding: 24px;
+    }
+
+    .fs-feature-demo-image-wrap {
+        height: 205px;
+    }
+
+    .fs-feature-demo-content h2 {
+        font-size: 29px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .fs-feature-container {
+        width: min(calc(100% - 28px), 720px);
+    }
+
+    .fs-feature-hero .fs-feature-container {
+        width: min(calc(100% - 28px), 1260px);
+    }
+
+    .fs-feature-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .fs-feature-hero {
+        padding: 28px 0 24px;
+    }
+
+    .fs-feature-hero-content {
+        margin-top: 0;
+        text-align: center;
+    }
+
     .fs-feature-breadcrumb {
+        justify-content: center;
         margin-bottom: 14px;
     }
 
     .fs-feature-hero-content h1 {
+        max-width: 100%;
+        margin-bottom: 13px;
         font-size: 32px;
-
-        line-height: 1.07;
-
-        letter-spacing: -0.8px;
+        line-height: 1.1;
     }
 
     .fs-feature-hero-description {
-        margin-top: 14px;
-
+        max-width: 100%;
         font-size: 14px;
+        line-height: 1.65;
     }
 
-    .fs-feature-search {
-        margin-top: 19px;
+    .fs-feature-device-area {
+        height: 280px;
+        margin-top: 10px;
     }
 
-    .fs-feature-search-input {
-        height: 47px;
+    .fs-feature-device-bg::before {
+        width: 230px;
+        height: 230px;
+        right: 50%;
+        top: 28px;
+        transform: translateX(50%);
     }
 
-    .fs-feature-hero-visual {
-        min-height: 285px;
+    .fs-feature-device-bg::after {
+        width: 130px;
+        height: 130px;
+        right: calc(50% - 80px);
+        top: 90px;
     }
 
-    .fs-feature-hero-device {
-        width: min(100%, 520px);
-        height: 270px;
+    .fs-feature-device-wrap::before {
+        width: 100px;
+        height: 50px;
+        right: calc(50% - 145px);
+        top: 20px;
+        background-size: 9px 9px;
     }
 
     .fs-feature-hero-laptop {
-        left: 0;
-
-        width: 73%;
+        width: 260px;
+        left: auto;
+        right: calc(50% + 30px);
+        top: 45px;
+        transform: translateX(50%);
+        animation-name: fsFeatureLaptopFloatMobile;
     }
 
     .fs-feature-hero-phone {
-        right: 0;
-
-        width: 26%;
+        width: 90px;
+        right: calc(50% - 170px);
+        top: 72px;
     }
 
-    .fs-feature-hero-visual::before {
-        width: 450px;
-        height: 450px;
-
-        left: 0;
-    }
-
-    .fs-feature-hero-visual::after {
-        width: 135px;
-        height: 90px;
-
-        background-size: 15px 15px;
-    }
-
-    .fs-feature-hero-shape {
-        width: 290px;
-        height: 210px;
+    .fs-feature-explorer {
+        padding: 26px 0 30px;
     }
 
     .fs-feature-sidebar {
         padding: 11px;
+        border-radius: 14px;
+    }
+
+    .fs-feature-sidebar-head {
+        min-height: 55px;
     }
 
     .fs-feature-sidebar-list {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+        grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
     .fs-feature-tab {
         padding: 8px 9px;
-
         font-size: 13px;
     }
 
     .fs-feature-panel {
-        padding: 18px;
-
-        border-radius: 16px;
+        padding: 19px;
+        border-radius: 14px;
     }
 
     .fs-feature-panel-header h2 {
         font-size: 27px;
     }
 
-    .fs-feature-panel-header p {
-        font-size: 14px;
-    }
-
     .fs-feature-preview {
-        height: 290px;
-
-        padding: 14px 16px 10px;
+        padding: 8px;
+        border-radius: 12px;
     }
 
-    .fs-feature-preview-image {
-        max-height: 270px;
+    .fs-feature-preview-image-wrap {
+        border-radius: 8px;
     }
 
     .fs-feature-point-list {
         grid-template-columns: 1fr;
-
         gap: 10px;
     }
 
     .fs-other-features {
-        padding:
-            22px 0
-            58px;
+        padding: 30px 0 54px;
     }
 
     .fs-other-features-heading {
         margin-bottom: 22px;
     }
 
-    .fs-other-feature-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+    .fs-other-features-heading h2 {
+        font-size: 30px;
+    }
 
+    .fs-other-features-heading p {
+        font-size: 14px;
+    }
+
+    .fs-other-feature-grid {
         gap: 13px;
     }
 
     .fs-other-feature-card {
-        min-height: 180px;
-
+        min-height: 185px;
         padding: 19px;
     }
-}
 
-
-/* =========================================================
-   RESPONSIVE - SMALL MOBILE
-========================================================= */
-
-@media (max-width: 575.98px) {
-
-    .fs-feature-container {
-        width: min(100% - 24px, 540px);
+    .fs-feature-demo {
+        padding: 12px 0 34px;
     }
 
-    .fs-feature-hero {
-        padding: 29px 0 25px;
+    .fs-feature-demo-card {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 22px;
+        min-height: 230px;
+        padding: 20px;
     }
 
-    .fs-feature-hero-content h1 {
-        font-size: 29px;
+    .fs-feature-demo-image-wrap {
+        height: 190px;
     }
 
-    .fs-feature-hero-description {
+    .fs-feature-demo-content h2 {
+        font-size: 25px;
+    }
+
+    .fs-feature-demo-content p {
+        margin-top: 10px;
         font-size: 13.5px;
     }
 
-    .fs-feature-search {
-        width: 100%;
+    .fs-feature-demo-button {
+        margin-top: 16px;
+        min-height: 44px;
+        padding: 9px 18px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .fs-feature-container {
+        width: min(calc(100% - 24px), 540px);
     }
 
-    .fs-feature-hero-visual {
-        min-height: 240px;
-    }
-
-    .fs-feature-hero-device {
-        width: 100%;
-        height: 230px;
-    }
-
-    .fs-feature-hero-laptop {
-        left: 0;
-        bottom: 10px;
-
-        width: 72%;
-    }
-
-    .fs-feature-hero-phone {
-        right: 0;
-        bottom: 17px;
-
-        width: 27%;
-    }
-
-    .fs-feature-hero-visual::before {
-        width: 365px;
-        height: 365px;
-
-        left: 0;
-    }
-
-    .fs-feature-hero-visual::after {
-        width: 105px;
-        height: 70px;
-
-        background-size: 13px 13px;
+    .fs-feature-hero .fs-feature-container {
+        width: min(calc(100% - 28px), 1260px);
     }
 
     .fs-feature-explorer {
-        padding:
-            17px 0
-            20px;
-    }
-
-    .fs-feature-sidebar-head {
-        min-height: 53px;
+        padding: 24px 0 27px;
     }
 
     .fs-feature-sidebar-list {
         grid-template-columns: 1fr;
-
-        max-height: 330px;
-
-        overflow-y: auto;
     }
 
     .fs-feature-tab {
@@ -1618,7 +1063,7 @@
     }
 
     .fs-feature-panel {
-        padding: 15px;
+        padding: 16px;
     }
 
     .fs-feature-panel-header h2 {
@@ -1629,32 +1074,8 @@
         font-size: 13.5px;
     }
 
-    .fs-feature-preview {
-        height: 225px;
-
-        padding: 10px;
-    }
-
-    .fs-feature-preview-image {
-        max-height: 210px;
-    }
-
-    .fs-feature-more-button {
-        width: 100%;
-    }
-
-    .fs-other-features {
-        padding:
-            20px 0
-            54px;
-    }
-
-    .fs-other-features-heading h2 {
-        font-size: 28px;
-    }
-
-    .fs-other-features-heading p {
-        font-size: 14px;
+    .fs-feature-point-list li {
+        font-size: 13.5px;
     }
 
     .fs-other-feature-grid {
@@ -1663,252 +1084,120 @@
 
     .fs-other-feature-card {
         min-height: auto;
+    }
 
-        padding: 19px;
+    .fs-other-features-heading h2 {
+        font-size: 28px;
+    }
+
+    .fs-feature-demo {
+        padding: 10px 0 30px;
+    }
+
+    .fs-feature-demo-card {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        min-height: 0;
+        padding: 16px;
+    }
+
+    .fs-feature-demo-image-wrap {
+        height: 220px;
+    }
+
+    .fs-feature-demo-content h2 {
+        font-size: 24px;
+    }
+
+    .fs-feature-demo-content p {
+        font-size: 14px;
+    }
+
+    .fs-feature-demo-button {
+        width: 100%;
     }
 }
 
-
-/* =========================================================
-   RESPONSIVE - VERY SMALL MOBILE
-========================================================= */
-
-@media (max-width: 399.98px) {
-
-    .fs-feature-container {
-        width: min(100% - 20px, 380px);
-    }
-
+@media (max-width: 480px) {
     .fs-feature-hero-content h1 {
-        font-size: 27px;
+        font-size: 29px;
     }
 
-    .fs-feature-hero-visual {
-        min-height: 215px;
+    .fs-feature-device-area {
+        height: 240px;
     }
 
-    .fs-feature-hero-device {
-        height: 205px;
+    .fs-feature-device-bg::before {
+        width: 250px;
+        height: 250px;
+        right: 50%;
+        top: 18px;
+        transform: translateX(50%);
+    }
+
+    .fs-feature-device-bg::after {
+        width: 105px;
+        height: 105px;
+        right: calc(50% - 68px);
+        top: 88px;
+    }
+
+    .fs-feature-device-wrap::before {
+        width: 82px;
+        height: 42px;
+        right: calc(50% - 132px);
+        top: 27px;
+        background-size: 8px 8px;
     }
 
     .fs-feature-hero-laptop {
-        width: 71%;
+        width: 240px;
+        left: auto;
+        right: calc(50% + 44px);
+        top: 55px;
     }
 
     .fs-feature-hero-phone {
-        width: 28%;
+        width: 80px;
+        left: auto;
+        right: calc(50% - 154px);
+        top: 63px;
+    }
+}
+
+@media (max-width: 399.98px) {
+    .fs-feature-container {
+        width: min(calc(100% - 20px), 380px);
     }
 
-    .fs-feature-preview {
-        height: 200px;
-    }
-
-    .fs-feature-preview-image {
-        max-height: 185px;
+    .fs-feature-panel {
+        padding: 14px;
     }
 
     .fs-feature-panel-header h2 {
         font-size: 22px;
     }
+
+    .fs-feature-check {
+        width: 21px;
+        height: 21px;
+        flex-basis: 21px;
+    }
+
+    .fs-feature-demo-image-wrap {
+        height: 195px;
+    }
 }
-
-
-/* =========================================================
-   REDUCED MOTION
-========================================================= */
 
 @media (prefers-reduced-motion: reduce) {
+    .fs-feature-hero-laptop,
+    .fs-feature-hero-phone {
+        animation: none;
+    }
 
     .fs-feature-tab,
-    .fs-feature-more-button,
     .fs-other-feature-card,
-    .fs-feature-search-input {
-        transition: none;
-    }
-}
-
-/* =========================================================
-   REQUEST DEMO
-========================================================= */
-
-.fs-feature-demo {
-    padding: 10px 0 34px;
-    background: #F4F8FD;
-}
-
-.fs-feature-demo-card {
-    display: grid;
-    grid-template-columns: 215px minmax(0, 1fr);
-    align-items: center;
-    gap: 28px;
-
-    min-height: 175px;
-    padding: 18px;
-
-    overflow: hidden;
-
-    border: 1px solid #D9E8F8;
-    border-radius: 18px;
-
-    background: linear-gradient(
-        110deg,
-        #EAF4FF 0%,
-        #F3F8FF 55%,
-        #E7F2FF 100%
-    );
-
-    box-shadow: 0 10px 28px rgba(25, 74, 151, 0.06);
-}
-
-
-/* Image */
-
-.fs-feature-demo-image-wrap {
-    width: 100%;
-    height: 140px;
-
-    overflow: hidden;
-
-    border-radius: 13px;
-    background: #DCEBFA;
-}
-
-.fs-feature-demo-image {
-    display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-    object-position: center;
-}
-
-
-/* Content */
-
-.fs-feature-demo-content {
-    max-width: 620px;
-}
-
-.fs-feature-demo-content h2 {
-    margin: 0;
-
-    color: #123F80;
-
-    font-size: clamp(22px, 2vw, 29px);
-    font-weight: 750;
-
-    line-height: 1.12;
-    letter-spacing: -0.5px;
-}
-
-.fs-feature-demo-content h2 span {
-    display: block;
-}
-
-.fs-feature-demo-content p {
-    max-width: 540px;
-
-    margin: 9px 0 0;
-
-    color: #617DA6;
-
-    font-size: 14px;
-    line-height: 1.55;
-}
-
-
-/* Button */
-
-.fs-feature-demo-button {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-
-    gap: 12px;
-
-    min-height: 43px;
-
-    margin-top: 15px;
-    padding: 9px 18px;
-
-    border: 1px solid #194A97;
-    border-radius: 9px;
-
-    background: #194A97;
-    color: #FFFFFF;
-
-    font-family: inherit;
-    font-size: 13.5px;
-    font-weight: 700;
-
-    cursor: pointer;
-
-    box-shadow: 0 8px 18px rgba(25, 74, 151, 0.16);
-
-    transition:
-        background-color 0.2s ease,
-        transform 0.2s ease;
-}
-
-.fs-feature-demo-button:hover {
-    transform: translateY(-2px);
-    background: #123D7E;
-}
-
-.fs-feature-demo-button span {
-    font-size: 17px;
-    line-height: 1;
-}
-
-
-/* Tablet */
-
-@media (max-width: 767.98px) {
-
-    .fs-feature-demo-card {
-        grid-template-columns: 150px minmax(0, 1fr);
-        gap: 18px;
-    }
-
-    .fs-feature-demo-image-wrap {
-        height: 135px;
-    }
-
-    .fs-feature-demo-content h2 {
-        font-size: 21px;
-    }
-
-    .fs-feature-demo-content p {
-        font-size: 13.5px;
-    }
-}
-
-
-/* Mobile */
-
-@media (max-width: 575.98px) {
-
-    .fs-feature-demo {
-        padding: 8px 0 28px;
-    }
-
-    .fs-feature-demo-card {
-        grid-template-columns: 1fr;
-        gap: 16px;
-
-        padding: 15px;
-    }
-
-    .fs-feature-demo-image-wrap {
-        height: 190px;
-    }
-
-    .fs-feature-demo-content h2 {
-        font-size: 22px;
-    }
-
     .fs-feature-demo-button {
-        width: 100%;
+        transition: none;
     }
 }

@@ -1152,13 +1152,28 @@
        RELATED
     ================================================= */
 
-    .fs-blog-detail .fs-blog-detail-related-card {
-        display: block;
+   .fs-blog-detail .fs-blog-detail-related-card {
+    display: block;
+    }
+
+    .fs-blog-detail .fs-blog-detail-related-image {
+        height: auto;
     }
 
     .fs-blog-detail .fs-blog-detail-related-image img {
+        display: block;
+        width: 100%;
         height: auto;
 
         aspect-ratio: 16 / 8.5;
+
+        object-fit: cover;
+        object-position: center;
     }
-}
+
+    .fs-blog-detail .fs-blog-detail-related-content {
+        display: block;
+
+        padding: 15px 16px 17px;
+    }
+    }

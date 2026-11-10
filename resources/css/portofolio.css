@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@500&display=swap');
+
 .fs-portfolio {
     --fs-primary: #194A97;
     --fs-primary-dark: #103e84;
@@ -209,10 +211,10 @@
 
     color: #1261d7;
 
-    font-family: "Segoe Print", "Comic Sans MS", cursive;
-    font-size: clamp(12px, 1vw, 17px);
+    font-family: 'Caveat', cursive;
+    font-size: 18px;
+    font-style: normal;
     font-weight: 500;
-    font-style: italic;
 
     line-height: 1.08;
     text-align: left;
@@ -747,7 +749,7 @@
         top: 31px;
         left: 56%;
 
-        font-size: 23px;
+        font-size: 18px;
     }
 
 
@@ -884,7 +886,7 @@
     .fs-portfolio-hero-note {
         left: 58%;
 
-        font-size: 19px;
+        font-size: 18px;
     }
 
     .fs-portfolio-intro h2 {
